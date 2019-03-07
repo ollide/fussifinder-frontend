@@ -1,0 +1,10 @@
+@import '~bulma/sass/utilities/_all.sass';
+@import '~bulma/sass/base/generic.sass';
+@import '~bulma/sass/components/navbar.sass';
+
+nav .navbar-item img {
+    max-height: 2.75rem;
+    margin-bottom: -1rem;
+    margin-top: -0.5rem;
+    margin-right: 0.5rem;
+}

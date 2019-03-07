@@ -1,0 +1,48 @@
+@import '~bulma/sass/utilities/_all.sass';
+@import '~bulma/sass/base/_all.sass';
+@import '~bulma/sass/grid/columns.sass';
+
+
+.match-header {
+    height: 29px;
+    background-color: #f5f5f5;
+    font-family: monospace;
+    padding: .15rem 0;
+    &:first-child {
+        padding-left: .75rem;
+    }
+    &.right {
+        padding-right: .5rem;
+        text-align: right;
+    }
+    a {
+        color: #9C3;
+        &:hover {
+            color: #336600;
+        }
+    }
+}
+.match-details {
+    padding: 0;
+    padding-right: .5rem;
+    text-align: right;
+}
+
+.match .home-team {
+    text-align: end;
+    padding: .5rem 0;
+}
+.match .match-separator {
+    font-weight: bold;
+    text-align: center;
+    padding: .5rem .75rem;
+}
+.match .away-team {
+    padding: .5rem 0;
+}
+
+.columns {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}

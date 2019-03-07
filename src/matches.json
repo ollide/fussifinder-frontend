@@ -1,0 +1,2906 @@
+[
+    {
+        "day": [
+            2019,
+            3,
+            6
+        ],
+        "matches": [
+            {
+                "date": [
+                    2019,
+                    3,
+                    6,
+                    20,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Alstertal-Langenhorn 5.",
+                "clubAway": "Victoria 5.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/alstertal-langenhorn-5-victoria-5/-/spiel/023R65GKSO000000VS54898EVUSCTAUB"
+            }
+        ]
+    },
+    {
+        "day": [
+            2019,
+            3,
+            7
+        ],
+        "matches": [
+            {
+                "date": [
+                    2019,
+                    3,
+                    7,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Teutonia 10 2.",
+                "clubAway": "St. Pauli VI",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/teutonia-10-2-st-pauli-vi/-/spiel/023R65TDNS000000VS54898EVUSCTAUB"
+            }
+        ]
+    },
+    {
+        "day": [
+            2019,
+            3,
+            8
+        ],
+        "matches": [
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "TSG Bergedorf 2.",
+                "clubAway": "SV Wilhelmsburg 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/tsg-bergedorf-2-sv-wilhelmsburg-2/-/spiel/023R65UMI8000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "ETSV Hamburg 1.",
+                "clubAway": "ASV Bergedorf 85 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/etsv-hamburg-1-asv-bergedorf-85-1/-/spiel/023R65KVSK000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Landesliga",
+                "clubHome": "SVNA 1.",
+                "clubAway": "Düneberg 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/svna-1-dueneberg-1/-/spiel/023R65J1C4000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Dersimspor 2.",
+                "clubAway": "Altenwerder 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/dersimspor-2-altenwerder-2/-/spiel/023R6618QK000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "VfL 93 1.",
+                "clubAway": "HFC Falke 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/vfl-93-1-hfc-falke-1/-/spiel/023R65NEO4000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Union 03 1.",
+                "clubAway": "Heidgraben 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/union-03-1-heidgraben-1/-/spiel/023R65HVT4000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    15
+                ],
+                "teamType": "Herren",
+                "league": "K-FS",
+                "clubHome": "BU 5.",
+                "clubAway": "Hansa 11 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/bu-5-hansa-11-3/-/spiel/026AP0E3CS000000VS5489B4VVRALJLE"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    15
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "West-Eimsbüttel 4.",
+                "clubAway": "Eilbek 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/west-eimsbuettel-4-eilbek-3/-/spiel/023R65GKP4000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "St. Pauli V",
+                "clubAway": "Farmsen 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/st-pauli-v-farmsen-2/-/spiel/023R65UMK0000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "St. Pauli III",
+                "clubAway": "Sasel 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/st-pauli-iii-sasel-2/-/spiel/023R65NF0S000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Bergedorf-West 1.",
+                "clubAway": "FC Bergedorf 85 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/bergedorf-west-1-fc-bergedorf-85-2/-/spiel/023R66AOH8000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Landesliga",
+                "clubHome": "Harburger TB 1.",
+                "clubAway": "Nikola Tesla 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/harburger-tb-1-nikola-tesla-1/-/spiel/023R65EB90000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Oststeinbek 1.",
+                "clubAway": "Glinde 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/oststeinbek-1-glinde-1/-/spiel/023R65L07O000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Stapelfeld 1.",
+                "clubAway": "Rahlstedt 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/stapelfeld-1-rahlstedt-2/-/spiel/023R65QSEC000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Landesliga",
+                "clubHome": "Rahlstedt 1.",
+                "clubAway": "Bramfeld 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/rahlstedt-1-bramfeld-1/-/spiel/023R65J1DS000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Sperber 1.",
+                "clubAway": "Victoria 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sperber-1-victoria-2/-/spiel/023R65NETC000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Lemsahl 1.",
+                "clubAway": "TuS Berne 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/lemsahl-1-tus-berne-2/-/spiel/023R65QSNG000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Duvenstedt 2.",
+                "clubAway": "Condor 4.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/duvenstedt-2-condor-4/-/spiel/023R6699US000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Verbandsliga",
+                "clubHome": "Niendorf 1.",
+                "clubAway": "Curslack-Neuengamme 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/niendorf-1-curslack-neuengamme-1/-/spiel/023R6AFPR8000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Verbandsliga",
+                "clubHome": "Victoria 1.",
+                "clubAway": "BU 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/victoria-1-bu-1/-/spiel/023R6AFPTC000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Lurup 2.",
+                "clubAway": "Niendorf 6.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/lurup-2-niendorf-6/-/spiel/023R6665UK000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "TuS Osdorf 2.",
+                "clubAway": "Blankenese 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/tus-osdorf-2-blankenese-1/-/spiel/023R65S75K000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Rissen 2.",
+                "clubAway": "Hörnerkirchen 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/rissen-2-hoernerkirchen-2/-/spiel/023R66C3R8000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Blankenese 3.",
+                "clubAway": "Lurup 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/blankenese-3-lurup-3/-/spiel/023R65FDUO000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    30
+                ],
+                "teamType": "Frauen",
+                "league": "Landesliga",
+                "clubHome": "Altona 93 1.Fr.",
+                "clubAway": "Harburger TB 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/altona-93-1fr-harburger-tb-1fr/-/spiel/023VAHM1RK000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    19,
+                    45
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "GW Eimsbüttel 2.",
+                "clubAway": "Blankenese 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/gw-eimsbuettel-2-blankenese-2/-/spiel/023R65TDIO000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    20,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "SC V. M. 3.",
+                "clubAway": "Vereinigung Tunesien 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sc-v-m-3-vereinigung-tunesien-1/-/spiel/023R661900000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    20,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Harburger SC 1.",
+                "clubAway": "HNT 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/harburger-sc-1-hnt-1/-/spiel/023R66193K000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    8,
+                    20,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Verbandsliga",
+                "clubHome": "Süderelbe 1.",
+                "clubAway": "TuS Osdorf 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/suederelbe-1-tus-osdorf-1/-/spiel/023R6AFQ1K000000VS54898DVTVU1VI3"
+            }
+        ]
+    },
+    {
+        "day": [
+            2019,
+            3,
+            9
+        ],
+        "matches": [
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    10,
+                    45
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Tonndorf-Lohe 2.",
+                "clubAway": "DSC Hanseat 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/tonndorf-lohe-2-dsc-hanseat-1/-/spiel/023R65DT4K000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "St. Pauli VII",
+                "clubAway": "Tonndorf-Lohe 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/st-pauli-vii-tonndorf-lohe-1/-/spiel/023R663ARS000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    11,
+                    0
+                ],
+                "teamType": "B-Juniorinnen",
+                "league": "K-FS",
+                "clubHome": "Rahlstedt 1.B-Mäd.",
+                "clubAway": "Rahlstedt 1.C",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/rahlstedt-1b-maed-rahlstedt-1c-a1/-/spiel/026CVSR7O8000000VS5489B3VSSUE03N"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    11,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Landesliga",
+                "clubHome": "Walddörfer 2.Fr.",
+                "clubAway": "Germania 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/walddoerfer-2fr-germania-1fr/-/spiel/023VAHM20C000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    11,
+                    0
+                ],
+                "teamType": "A-Junioren",
+                "league": "Bundesliga",
+                "clubHome": "Niendorfer TSV",
+                "clubAway": "FC Carl Zeiss Jena",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/niendorfer-tsv-fc-carl-zeiss-jena/-/spiel/0243FIJSVO000000VS54898DVSE4SAI6"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    11,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Niendorf 3.",
+                "clubAway": "Alsterbrüder 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/niendorf-3-alsterbrueder-1/-/spiel/023R65NF2K000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    12,
+                    0
+                ],
+                "teamType": "B-Junioren",
+                "league": "L-FS",
+                "clubHome": "HEBC 2.B",
+                "clubAway": "Eimsbüttel 2.B",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/hebc-2b-j1-eimsbuettel-2b-j1/-/spiel/02684IE3I4000000VS5489B3VVRESQAR"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    12,
+                    0
+                ],
+                "teamType": "B-Junioren",
+                "league": "L-FS",
+                "clubHome": "Harburger TB 2.B",
+                "clubAway": "U16 MTV Treubund Lüneburg I",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/harburger-tb-2b-j1-u16-mtv-treubund-lueneburg-i/-/spiel/02601MA5IG000000VS54898DVT2QCQM4"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    12,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Hellbrook 2.",
+                "clubAway": "Bergstedt 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/hellbrook-2-bergstedt-2/-/spiel/023R6699R8000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    12,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "FC Hamburg 1.",
+                "clubAway": "Victoria/Nestwerk e.V. 4. SG",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/fc-hamburg-1-victoria-nestwerk-ev-4-sg/-/spiel/023R664QDO000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    12,
+                    0
+                ],
+                "teamType": "B-Junioren",
+                "league": "L-FS",
+                "clubHome": "Germania 1.B",
+                "clubAway": "Germania 2.B",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/germania-1b-a1-germania-2b-j1/-/spiel/026C6C7IK0000000VS5489B3VVRESQAR"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    12,
+                    45
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Börnsen 2.",
+                "clubAway": "MSV Hamburg 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/boernsen-2-msv-hamburg-1/-/spiel/023R65PD74000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Sternschanze 6.",
+                "clubAway": "Hellas United 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sternschanze-6-hellas-united-1/-/spiel/023R66DKJC000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "B-Junioren",
+                "league": "L-FS",
+                "clubHome": "Concordia 1.B",
+                "clubAway": "Paloma 1.B",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/concordia-1b-j1-paloma-1b-a1/-/spiel/026BNDUBIK000000VS5489B3VVRESQAR"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Wandsetal 2.",
+                "clubAway": "Lorbeer 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/wandsetal-2-lorbeer-1/-/spiel/023R65UMLO000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Paloma 5.",
+                "clubAway": "HSV VI",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/paloma-5-hsv-vi/-/spiel/023R6699LK000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "TuS Berne 4.",
+                "clubAway": "Barsbüttel 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/tus-berne-4-barsbuettel-2/-/spiel/023R663AEO000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Poppenbüttel 1.",
+                "clubAway": "GW Eimsbüttel 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/poppenbuettel-1-gw-eimsbuettel-1/-/spiel/023R65NEV4000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "A-Junioren",
+                "league": "Bundesliga",
+                "clubHome": "FC St. Pauli",
+                "clubAway": "Hannover 96",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/fc-st-pauli-hannover-96/-/spiel/0243FIJSSS000000VS54898DVSE4SAI6"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "SV Eidelstedt 3.",
+                "clubAway": "Blau-Weiß 96 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sv-eidelstedt-3-blau-weiss-96-2/-/spiel/023R66662C000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "K-FS",
+                "clubHome": "GW Eimsbüttel 3.Fr.",
+                "clubAway": "Halstenbek-Rellingen 1.B-Mäd.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/gw-eimsbuettel-3fr-halstenbek-rellingen-1b-maed/-/spiel/025UBUNQGC000000VS54898DVVO5MRMR"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "West-Eimsbüttel 1.",
+                "clubAway": "Heidgraben 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/west-eimsbuettel-1-heidgraben-2/-/spiel/023R65S71S000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "West-Eimsbüttel 3.",
+                "clubAway": "SV Groß Borstel 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/west-eimsbuettel-3-sv-gross-borstel-2/-/spiel/023R65FDSS000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "A-Junioren",
+                "league": "Regionalliga",
+                "clubHome": "Eimsbütteler TV",
+                "clubAway": "VfB Lübeck",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/eimsbuetteler-tv-vfb-luebeck/-/spiel/023T1O3DQG000000VS54898DVST4NHAM"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Bezirksliga",
+                "clubHome": "Komet Blankenese 2.Fr.",
+                "clubAway": "SV Eidelstedt 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/komet-blankenese-2fr-sv-eidelstedt-1fr/-/spiel/023VALCHGK000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "BSV 19 1.",
+                "clubAway": "Victoria 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/bsv-19-1-victoria-3/-/spiel/023R65TDM4000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Verbandsliga",
+                "clubHome": "Altona 93 1.",
+                "clubAway": "Concordia 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/altona-93-1-concordia-1/-/spiel/023R6AFPVG000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    13,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Vorw. Wacker 2.",
+                "clubAway": "Curslack-Neuengamme 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/vorw-wacker-2-curslack-neuengamme-3/-/spiel/023R66AOOO000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    14,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "ETSV Hamburg 2.",
+                "clubAway": "Aumühle 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/etsv-hamburg-2-aumuehle-2/-/spiel/023R66AOMS000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    14,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Viktoria Harburg 1.",
+                "clubAway": "Harburger Türk-Sport 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/viktoria-harburg-1-harburger-tuerk-sport-1/-/spiel/023R6618U4000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    14,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "BU 3.",
+                "clubAway": "Hellbrook 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/bu-3-hellbrook-1/-/spiel/023R65VV5K000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    14,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "FC Hamburg 2.",
+                "clubAway": "Indian Football HH 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/fc-hamburg-2-indian-football-hh-1/-/spiel/023R65GL0C000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    14,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Wellingsbüttel 2.",
+                "clubAway": "Duwo 08 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/wellingsbuettel-2-duwo-08-1/-/spiel/023R65QSJO000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    14,
+                    0
+                ],
+                "teamType": "A-Junioren",
+                "league": "L-FS",
+                "clubHome": "SV Groß Borstel 1.A",
+                "clubAway": "HEBC 1.A",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sv-gross-borstel-1a-a1-hebc-1a-j1/-/spiel/026ACID2LO000000VS5489B3VVRESQAR"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    14,
+                    15
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "HEBC 2.",
+                "clubAway": "Buchholz 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/hebc-2-buchholz-2/-/spiel/023R65M8ES000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    14,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Walddörfer 2.",
+                "clubAway": "Barsbüttel 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/walddoerfer-2-barsbuettel-3/-/spiel/023R6699JO000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Alsterbrüder 2.",
+                "clubAway": "Sternschanze 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/alsterbrueder-2-sternschanze-3/-/spiel/023R65TDPK000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Landesliga",
+                "clubHome": "Lohbrügge 1.",
+                "clubAway": "Bergstedt 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/lohbruegge-1-bergstedt-1/-/spiel/023R65J1L8000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "SC V. M. 2.",
+                "clubAway": "Altona 93 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sc-v-m-2-altona-93-2/-/spiel/023R65M8GO000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Landesliga",
+                "clubHome": "Altengamme 1.",
+                "clubAway": "Kosova 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/altengamme-1-kosova-1/-/spiel/023R65J1A8000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Börnsen 1.",
+                "clubAway": "Eilbek 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/boernsen-1-eilbek-1/-/spiel/023R65L05S000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Landesliga",
+                "clubHome": "Inter 2000 1.",
+                "clubAway": "Voran Ohe 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/inter-2000-1-voran-ohe-1/-/spiel/023R65J1FO000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Rahlstedt 3.",
+                "clubAway": "Concordia 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/rahlstedt-3-concordia-3/-/spiel/023R663AQ0000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "TuS Berne 5.",
+                "clubAway": "Alsterbrüder 4.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/tus-berne-5-alsterbrueder-4/-/spiel/023R65DT2O000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Verbandsliga",
+                "clubHome": "Condor 1.",
+                "clubAway": "Rugenbergen 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/condor-1-rugenbergen-1/-/spiel/023R6AFQ5S000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    15,
+                    0
+                ],
+                "teamType": "A-Junioren",
+                "league": "Regionalliga",
+                "clubHome": "TSV Sasel",
+                "clubAway": "SC Borgfeld",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/tsv-sasel-sc-borgfeld/-/spiel/023T1O3DBK000000VS54898DVST4NHAM"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "BSV 19 2.",
+                "clubAway": "Waldenau 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/bsv-19-2-waldenau-1/-/spiel/023R65S7B8000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    16,
+                    0
+                ],
+                "teamType": "B-Junioren",
+                "league": "L-FS",
+                "clubHome": "Lorbeer 1.B",
+                "clubAway": "U16 Eintracht Elbmarsch",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/lorbeer-1b-a1-u16-eintracht-elbmarsch/-/spiel/026DKV0EM8000000VS5489B4VUA54NFR"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    17,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Sternschanze 5.",
+                "clubAway": "HSV V",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sternschanze-5-hsv-v/-/spiel/023R664Q8C000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    17,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Regionalliga",
+                "clubHome": "FC St. Pauli",
+                "clubAway": "Walddörfer SV",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/st-pauli-1fr-walddoerfer-1fr/-/spiel/02402NV8T4000000VS54898EVUVF00VA"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    17,
+                    0
+                ],
+                "teamType": "A-Junioren",
+                "league": "L-FS",
+                "clubHome": "TuS Berne 1.A",
+                "clubAway": "UH-Adler 1.A",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/tus-berne-1a-a1-uh-adler-1a-j1/-/spiel/025M1KP22O000000VS54898DVVO5MRMR"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    9,
+                    17,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Altengamme 4.",
+                "clubAway": "FSV Geesthacht 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/altengamme-4-fsv-geesthacht-2/-/spiel/023R65CF0K000000VS54898DVTVU1VI3"
+            }
+        ]
+    },
+    {
+        "day": [
+            2019,
+            3,
+            10
+        ],
+        "matches": [
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    9,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Eintracht Fuhlsbüttel 1.",
+                "clubAway": "VfL 93 4.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/eintracht-fuhlsbuettel-1-vfl-93-4/-/spiel/023R65GKUK000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    9,
+                    15
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Bramfeld 6.",
+                "clubAway": "Osdorfer Born 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/bramfeld-6-osdorfer-born-1/-/spiel/023R65FDR0000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    10,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Kreisliga",
+                "clubHome": "Eimsbüttel 2.Fr.",
+                "clubAway": "Moorrege 2.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/eimsbuettel-2fr-moorrege-2fr/-/spiel/023VJTVA88000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    10,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "West-Eimsbüttel 5.",
+                "clubAway": "Wellingsbüttel 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/west-eimsbuettel-5-wellingsbuettel-3/-/spiel/023R65DTC0000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    10,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "K-FS",
+                "clubHome": "Teutonia 05 3.",
+                "clubAway": "Polonia 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/teutonia-05-3-polonia-1/-/spiel/0264T61P94000000VS54898DVVICO5AC"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    10,
+                    30
+                ],
+                "teamType": "Frauen",
+                "league": "Kreisliga",
+                "clubHome": "Walddörfer 3.Fr.",
+                "clubAway": "Voran Ohe/Billst.-Horn 1.Fr. SG",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/walddoerfer-3fr-voran-ohe-billst-horn-1fr-sg/-/spiel/023VJL7R5G000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    10,
+                    30
+                ],
+                "teamType": "Frauen",
+                "league": "Bezirksliga",
+                "clubHome": "Niendorf 1.Fr.",
+                "clubAway": "Moorrege 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/niendorf-1fr-moorrege-1fr/-/spiel/023VALCHDO000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    10,
+                    45
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Eimsbüttel 3.",
+                "clubAway": "SV Lohkamp 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/eimsbuettel-3-sv-lohkamp-3/-/spiel/023R664Q34000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    10,
+                    45
+                ],
+                "teamType": "Herren",
+                "league": "Verbandsliga",
+                "clubHome": "HEBC 1.",
+                "clubAway": "Wedel 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/hebc-1-wedel-1/-/spiel/023R6AFQC8000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    10,
+                    45
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "FC Dynamo 1.",
+                "clubAway": "Alstertal-Langenhorn 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/fc-dynamo-1-alstertal-langenhorn-3/-/spiel/023R663AKC000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    10,
+                    45
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "UH-Adler 1.",
+                "clubAway": "Paloma 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/uh-adler-1-paloma-2/-/spiel/023R65NEMC000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    10,
+                    45
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "TuS Berne 3.",
+                "clubAway": "HT 16 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/tus-berne-3-ht-16-1/-/spiel/023R65UMEO000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    10,
+                    45
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Urania 1.",
+                "clubAway": "Hammonia 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/urania-1-hammonia-1/-/spiel/023R65VV98000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    10,
+                    45
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Eimsbüttel 2.",
+                "clubAway": "SV Lohkamp 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/eimsbuettel-2-sv-lohkamp-1/-/spiel/023R65TDDG000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Hammonia 2.",
+                "clubAway": "Teutonia 05 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/hammonia-2-teutonia-05-2/-/spiel/023R65TDF8000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Kreisliga",
+                "clubHome": "FC Bergedorf 85 2.Fr.",
+                "clubAway": "Dassendorf 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/fc-bergedorf-85-2fr-dassendorf-1fr/-/spiel/023VJL7QVO000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Curslack-Neuengamme 4.",
+                "clubAway": "Schwarzenbek 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/curslack-neuengamme-4-schwarzenbek-2/-/spiel/023R65CF4O000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Bostelbek 2.",
+                "clubAway": "FFC 08 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/bostelbek-2-ffc-08-1/-/spiel/023R66DKLS000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Viktoria Harburg 2.",
+                "clubAway": "Harburger Türk-Sport 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/viktoria-harburg-2-harburger-tuerk-sport-2/-/spiel/023R66DKBO000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Bezirksliga",
+                "clubHome": "1. FFC Elbinsel 1.Fr.",
+                "clubAway": "Viktoria Harburg 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/1-ffc-elbinsel-1fr-viktoria-harburg-1fr/-/spiel/023VAOQ7U8000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Concordia 2.",
+                "clubAway": "Hamwarde 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/concordia-2-hamwarde-1/-/spiel/023R65PCTK000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Hamm United 3.",
+                "clubAway": "SV Wilhelmsburg 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/hamm-united-3-sv-wilhelmsburg-3/-/spiel/023R65CF6O000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Billstedt-Horn 3.",
+                "clubAway": "Bramfeld 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/billstedt-horn-3-bramfeld-3/-/spiel/023R663AO4000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Bezirksliga",
+                "clubHome": "Rahlstedt 1.Fr.",
+                "clubAway": "Sternschanze 2.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/rahlstedt-1fr-sternschanze-2fr/-/spiel/023VAOQ7SO000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Bezirksliga",
+                "clubHome": "Alstertal-Langenhorn 1.Fr.",
+                "clubAway": "SC V. M. 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/alstertal-langenhorn-1fr-sc-v-m-1fr/-/spiel/023VAOQ7PO000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Wellingsbüttel 1.",
+                "clubAway": "Condor 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/wellingsbuettel-1-condor-2/-/spiel/023R65NERK000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Sasel 4.",
+                "clubAway": "Alstertal-Langenhorn 4.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sasel-4-alstertal-langenhorn-4/-/spiel/023R6699NG000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "1. FC Eimsbüttel 1.",
+                "clubAway": "Alsterbrüder 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/1-fc-eimsbuettel-1-alsterbrueder-3/-/spiel/023R65FDLG000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Teutonia 10 1.",
+                "clubAway": "Appen 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/teutonia-10-1-appen-1/-/spiel/023R65S7D4000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Blau-Weiss Ellas 1.",
+                "clubAway": "Groß Flottbek 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/blau-weiss-ellas-1-gross-flottbek-1/-/spiel/023R65TDKC000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    15
+                ],
+                "teamType": "Frauen",
+                "league": "Landesliga",
+                "clubHome": "BU 1.Fr.",
+                "clubAway": "Komet Blankenese 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/bu-1fr-komet-blankenese-1fr/-/spiel/023VAHM1Q4000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    15
+                ],
+                "teamType": "Herren",
+                "league": "Landesliga",
+                "clubHome": "Niendorf 2.",
+                "clubAway": "Paloma 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/niendorf-2-paloma-1/-/spiel/023R65EB4O000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Alstertal-Langenhorn 2.",
+                "clubAway": "Sasel 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/alstertal-langenhorn-2-sasel-3/-/spiel/023R65QSLK000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    11,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Eintracht Lokstedt 2.",
+                "clubAway": "Altona 93 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/eintracht-lokstedt-2-altona-93-3/-/spiel/023R667N9K000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    12,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Benfica 1.",
+                "clubAway": "FC Preußen Hamburg 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/benfica-1-fc-preussen-hamburg-1/-/spiel/023R663AGK000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    12,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "ASV Bergedorf 85 2.",
+                "clubAway": "Vahdet 2. o.W.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/asv-bergedorf-85-2-vahdet-2/-/spiel/023R65CEUK000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    12,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Oststeinbek 2.",
+                "clubAway": "SVNA 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/oststeinbek-2-svna-2/-/spiel/023R66AOJ4000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    12,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "GW Eimsbüttel 4.",
+                "clubAway": "Rissen 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/gw-eimsbuettel-4-rissen-1/-/spiel/023R66660G000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    12,
+                    0
+                ],
+                "teamType": "B-Junioren",
+                "league": "L-FS",
+                "clubHome": "Victoria 1.B",
+                "clubAway": "FC Veddel United 1.B",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/victoria-1b-a1-fc-veddel-united-1b-j1/-/spiel/026CDTVP18000000VS5489B4VUA54NFR"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    12,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Paloma 4.",
+                "clubAway": "FC Winterhude 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/paloma-4-fc-winterhude-1/-/spiel/023R664Q50000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    12,
+                    30
+                ],
+                "teamType": "Frauen",
+                "league": "Bezirksliga",
+                "clubHome": "Bramfeld 2.Fr.",
+                "clubAway": "Lorbeer 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/bramfeld-2fr-lorbeer-1fr/-/spiel/023VAOQ7R8000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    12,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Walddörfer 1.",
+                "clubAway": "Croatia 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/walddoerfer-1-croatia-1/-/spiel/023R65VV0G000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    12,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Poppenbüttel 3.",
+                "clubAway": "Farmsen 4.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/poppenbuettel-3-farmsen-4/-/spiel/023R65GL28000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    12,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Nienstedten 2.",
+                "clubAway": "Niendorf 4.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/nienstedten-2-niendorf-4/-/spiel/023R65TDGS000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    12,
+                    45
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Eilbek 2.",
+                "clubAway": "Farmsen 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/eilbek-2-farmsen-1/-/spiel/023R65VV7G000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    12,
+                    45
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "MSV Hamburg 3.",
+                "clubAway": "Oststeinbek 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/msv-hamburg-3-oststeinbek-3/-/spiel/023R65CF2K000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Landesliga",
+                "clubHome": "Sternschanze 1.",
+                "clubAway": "Union Tornesch 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sternschanze-1-union-tornesch-1/-/spiel/023R65EB6S000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Fatihspor 1.",
+                "clubAway": "Sporting Clube 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/fatihspor-1-sporting-clube-1/-/spiel/023R65UMPC000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Zonguldakspor 1.",
+                "clubAway": "FC Bingöl 12 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/zonguldakspor-1-fc-bingoel-12-1/-/spiel/023R65M898000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Bostelbek 1.",
+                "clubAway": "Süderelbe 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/bostelbek-1-suederelbe-2/-/spiel/023R66195C000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "K-FS",
+                "clubHome": "Harburger TB 2.",
+                "clubAway": "Einigkeit 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/harburger-tb-2-einigkeit-1/-/spiel/02601MVMF0000000VS54898DVT2QCQM4"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Moorburg 1.",
+                "clubAway": "SVNA 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/moorburg-1-svna-3/-/spiel/023R65CFCO000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "FSV Harburg-Rönneburg 1.",
+                "clubAway": "Finkenwerder 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/fsv-harburg-roenneburg-1-finkenwerder-2/-/spiel/023R66DKOG000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Verbandsliga",
+                "clubHome": "Einigkeit 1.Fr.",
+                "clubAway": "FC Bergedorf 85 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/einigkeit-1fr-fc-bergedorf-85-1fr/-/spiel/023VAH64S4000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "RW Wilhelmsburg 1.",
+                "clubAway": "Inter Eidelstedt 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/rw-wilhelmsburg-1-inter-eidelstedt-1/-/spiel/023R65M8D0000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "ASV Hamburg 1.",
+                "clubAway": "TuS Hamburg 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/asv-hamburg-1-tus-hamburg-1/-/spiel/023R65L09O000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Bezirksliga",
+                "clubHome": "Meiendorf 1.Fr.",
+                "clubAway": "Reinbek 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/meiendorf-1fr-reinbek-1fr/-/spiel/023VAOQ7O8000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Bramfeld 5.",
+                "clubAway": "TuS Hamburg 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/bramfeld-5-tus-hamburg-3/-/spiel/023R65GKQS000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Hamburg Hurricanes 1.",
+                "clubAway": "Sternschanze 4.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/hamburg-hurricanes-1-sternschanze-4/-/spiel/023R65VV28000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Komet Blankenese 1.",
+                "clubAway": "Germania 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/komet-blankenese-1-germania-3/-/spiel/023R666648000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Blau-Weiss Ellas 2.",
+                "clubAway": "Eintracht Lokstedt 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/blau-weiss-ellas-2-eintracht-lokstedt-3/-/spiel/023R65FDI0000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "VfL 93 3.",
+                "clubAway": "Condor 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/vfl-93-3-condor-3/-/spiel/023R65QSG4000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    13,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Eimsbüttel 1.",
+                "clubAway": "BU 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/eimsbuettel-1-bu-2/-/spiel/023R65NEPS000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    14,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Altengamme 3.",
+                "clubAway": "Dassendorf 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/altengamme-3-dassendorf-2/-/spiel/023R66AOQO000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    14,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "SV Wilhelmsburg 1.",
+                "clubAway": "Altenwerder 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sv-wilhelmsburg-1-altenwerder-1/-/spiel/023R65M87C000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    14,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Niendorf 5.",
+                "clubAway": "VfL 93 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/niendorf-5-vfl-93-2/-/spiel/023R65VVB4000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    14,
+                    0
+                ],
+                "teamType": "A-Junioren",
+                "league": "Bundesliga",
+                "clubHome": "Hamburger SV",
+                "clubAway": "1.FC Union Berlin",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/hamburger-sv-1fc-union-berlin/-/spiel/0243FIJT6K000000VS54898DVSE4SAI6"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    14,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Landesliga",
+                "clubHome": "Eintracht Lokstedt 1.",
+                "clubAway": "Nienstedten 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/eintracht-lokstedt-1-nienstedten-1/-/spiel/023R65EB2K000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    14,
+                    15
+                ],
+                "teamType": "Frauen",
+                "league": "Bezirksliga",
+                "clubHome": "GW Eimsbüttel 2.Fr.",
+                "clubAway": "Union 03 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/gw-eimsbuettel-2fr-union-03-1fr/-/spiel/023VALCHF4000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    14,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Landesliga",
+                "clubHome": "SV Eidelstedt 1.",
+                "clubAway": "FC Elmshorn 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sv-eidelstedt-1-fc-elmshorn-1/-/spiel/023R65EBB4000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    14,
+                    30
+                ],
+                "teamType": "A-Junioren",
+                "league": "Regionalliga",
+                "clubHome": "SC Victoria Hamburg",
+                "clubAway": "SV Eichede",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sc-victoria-hamburg-sv-eichede/-/spiel/023T1O3DL8000000VS54898DVST4NHAM"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    14,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "Verbandsliga",
+                "clubHome": "Teutonia 05 1.",
+                "clubAway": "Buchholz 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/teutonia-05-1-buchholz-1/-/spiel/023R6AFQ80000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    14,
+                    45
+                ],
+                "teamType": "Frauen",
+                "league": "Bezirksliga",
+                "clubHome": "Eilbek 1.Fr.",
+                "clubAway": "Altona 93 2.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/eilbek-1fr-altona-93-2fr/-/spiel/023VALCHAC000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "HEBC 3.",
+                "clubAway": "Union 03 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/hebc-3-union-03-2/-/spiel/023R667NBS000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Sternschanze 2.",
+                "clubAway": "Kummerfeld 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sternschanze-2-kummerfeld-1/-/spiel/023R65I01C000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "SV Muslime 1.",
+                "clubAway": "Hammonia 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sv-muslime-1-hammonia-3/-/spiel/023R667NN0000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "FC Veddel United 1.",
+                "clubAway": "Süderelbe 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/fc-veddel-united-1-suederelbe-3/-/spiel/023R66DK5G000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "SC V. M. 1.",
+                "clubAway": "Schwarzenbek 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sc-v-m-1-schwarzenbek-1/-/spiel/023R65L028000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Mesopotamien 1.",
+                "clubAway": "Vorwärts Ost 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/mesopotamien-1-vorwaerts-ost-1/-/spiel/023R65M8IK000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Zonguldakspor 2.",
+                "clubAway": "Süderelbe 4.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/zonguldakspor-2-suederelbe-4/-/spiel/023R659CRC000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Landesliga",
+                "clubHome": "Dersimspor 1.",
+                "clubAway": "FC Elazig Spor 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/dersimspor-1-fc-elazig-spor-1/-/spiel/023R65J18G000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Neuland 1.",
+                "clubAway": "St. Pauli IV",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/neuland-1-st-pauli-iv/-/spiel/023R65M8B0000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Einigkeit 2.",
+                "clubAway": "Meiendorf 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/einigkeit-2-meiendorf-2/-/spiel/023R65DT10000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "RW Wilhelmsburg 2.",
+                "clubAway": "Vereinigung Tunesien 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/rw-wilhelmsburg-2-vereinigung-tunesien-2/-/spiel/023R66DKEK000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Bezirksliga",
+                "clubHome": "Juventude 1.",
+                "clubAway": "Finkenwerder 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/juventude-1-finkenwerder-1/-/spiel/023R65M8KG000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Bezirksliga",
+                "clubHome": "Concordia 1.Fr.",
+                "clubAway": "UH-Adler 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/concordia-1fr-uh-adler-1fr/-/spiel/023VAOQ7MK000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "UH-Adler 3.",
+                "clubAway": "DJK Hamburg 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/uh-adler-3-djk-hamburg-1/-/spiel/023R65GKL8000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "SC Europa 1.",
+                "clubAway": "Lohbrügge 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sc-europa-1-lohbruegge-2/-/spiel/023R66AOL0000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Billstedt-Horn 1.",
+                "clubAway": "Glinde 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/billstedt-horn-1-glinde-2/-/spiel/023R65PD58000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Landesliga",
+                "clubHome": "Bramfeld 1.Fr.",
+                "clubAway": "Union Tornesch 2.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/bramfeld-1fr-union-tornesch-2fr/-/spiel/023VAHM1T4000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Verbandsliga",
+                "clubHome": "Sasel 1.",
+                "clubAway": "Meiendorf 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sasel-1-meiendorf-1/-/spiel/023R6AFQA4000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisliga",
+                "clubHome": "Duvenstedt 1.",
+                "clubAway": "Paloma 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/duvenstedt-1-paloma-3/-/spiel/023R65VV40000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "SV Groß Borstel 1.",
+                "clubAway": "Nikola Tesla 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/sv-gross-borstel-1-nikola-tesla-2/-/spiel/023R667NGG000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Stellingen 2. o.W.",
+                "clubAway": "TBS-Pinneberg 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/stellingen-2-tbs-pinneberg-3/-/spiel/023R65FDJO000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Komet Blankenese 2.",
+                "clubAway": "Niendorf 7.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/komet-blankenese-2-niendorf-7/-/spiel/023R65FDNC000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Groß Flottbek 2.",
+                "clubAway": "SV Lohkamp 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/gross-flottbek-2-sv-lohkamp-2/-/spiel/023R6665R0000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    15,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "FC Hamburger Berg 1.",
+                "clubAway": "GW Eimsbüttel 3.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/fc-hamburger-berg-1-gw-eimsbuettel-3/-/spiel/023R667NIG000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    16,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Landesliga",
+                "clubHome": "Vorw. Wacker 1.",
+                "clubAway": "Hamm United 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/vorw-wacker-1-hamm-united-1/-/spiel/023R65J1HO000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    16,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "Hellbrook 3.",
+                "clubAway": "Duwo 08 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/hellbrook-3-duwo-08-2/-/spiel/023R65DT8C000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    16,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Verbandsliga",
+                "clubHome": "GW Eimsbüttel 1.Fr.",
+                "clubAway": "Union Tornesch 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/gw-eimsbuettel-1fr-union-tornesch-1fr/-/spiel/023VAH64TK000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    17,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Verbandsliga",
+                "clubHome": "HEBC 1.Fr.",
+                "clubAway": "Eimsbüttel 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/hebc-1fr-eimsbuettel-1fr/-/spiel/023VAH64QK000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    17,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Kreisliga",
+                "clubHome": "Concordia 2.Fr.",
+                "clubAway": "SVNA 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/concordia-2fr-svna-1fr/-/spiel/023VJL7R3G000000VS54898EVUPQIL85"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    17,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse B",
+                "clubHome": "UH-Adler 4.",
+                "clubAway": "Bramfeld 4.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/uh-adler-4-bramfeld-4/-/spiel/023R65DSV4000000VS54898EVUSCTAUB"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    10,
+                    17,
+                    0
+                ],
+                "teamType": "Frauen",
+                "league": "Verbandsliga",
+                "clubHome": "Victoria 1.Fr.",
+                "clubAway": "Wellingsbüttel 1.Fr.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/victoria-1fr-wellingsbuettel-1fr/-/spiel/023VAH64P4000000VS54898EVUPQIL85"
+            }
+        ]
+    },
+    {
+        "day": [
+            2019,
+            3,
+            12
+        ],
+        "matches": [
+            {
+                "date": [
+                    2019,
+                    3,
+                    12,
+                    19,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "L-FS",
+                "clubHome": "Victoria 1.",
+                "clubAway": "FC St. Pauli",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/victoria-1-fc-st-pauli/-/spiel/0269QLMC4C000000VS5489B4VVRALJLE"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    12,
+                    19,
+                    0
+                ],
+                "teamType": "Herren",
+                "league": "Kreisklasse",
+                "clubHome": "Union 03 2.",
+                "clubAway": "Eintracht Lokstedt 2.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/union-03-2-eintracht-lokstedt-2/-/spiel/023R667NU8000000VS54898DVTVU1VI3"
+            },
+            {
+                "date": [
+                    2019,
+                    3,
+                    12,
+                    20,
+                    30
+                ],
+                "teamType": "Herren",
+                "league": "K-FS",
+                "clubHome": "St. Pauli V",
+                "clubAway": "DSC Hanseat 1.",
+                "score": ":",
+                "url": "http://www.fussball.de/spiel/st-pauli-v-dsc-hanseat-1/-/spiel/026CAEGH4S000000VS5489B3VVRESQAR"
+            }
+        ]
+    }
+]
