@@ -5,10 +5,12 @@ import './Match.scss'
 class Match extends React.Component {
 
     render() {
+        const dateFormat = new Intl.DateTimeFormat('default', { hour: '2-digit', minute: '2-digit' });
+        const kickOff = dateFormat.format(new Date(this.props.match.date));
         return (
             <div className="match columns is-multiline is-mobile is-vcentered">
                 <div className="column is-11 match-header">
-                    {this.props.match.date}&nbsp;
+                    {kickOff}&nbsp;
                     <span className="team-type">{this.props.match.teamType}</span>&nbsp;
                     <span className="team-league">{this.props.match.league}</span>
                 </div>
