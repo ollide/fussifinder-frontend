@@ -6,17 +6,21 @@ import MatchDay from './MatchDay';
 import Footer from './Footer';
 
 import matchDays from './matches.json';
+import { FilterProvider } from './FilterContext';
 
 class App extends Component {
 
   render() {
+    let matches = 0;
+    matchDays.forEach(match => matches += match.matches.length);
+
     return (
-      <>
+      <FilterProvider>
         <Header />
         <section className="section">
           <div className="container">
             <h1 className="title">Fußball in Hamburg</h1>
-            <p className="subtitle">10 Spiele in der nächsten Woche.</p>
+            <p className="subtitle">{matches} Spiele in der nächsten Woche.</p>
           </div>
         </section>
 
@@ -24,10 +28,10 @@ class App extends Component {
           <Filter />
         </section>
 
-        {matchDays.map((matchDay) => <MatchDay matchDay={matchDay} />)}
+        {matchDays.map((matchDay) => <MatchDay key={matchDay.date} matchDay={matchDay} />)}
 
         <Footer />
-      </>
+      </FilterProvider>
     );
   }
 }
