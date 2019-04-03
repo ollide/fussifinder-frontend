@@ -1,6 +1,8 @@
 import React from 'react';
 
+import './MatchDay.scss'
 import Match from './Match';
+import MatchDayAnchor from './MatchDayAnchor';
 
 class MatchDay extends React.Component {
 
@@ -11,7 +13,10 @@ class MatchDay extends React.Component {
         return (
             <>
                 <div className="matchday">
-                    <h2 className="subtitle">{day}</h2>
+                    <h2 className="subtitle">
+                        {day}
+                        <MatchDayAnchor index={this.props.index} />
+                    </h2>
                 </div>
                 {this.props.matchDay.matches.map((match) => <Match key={match.url} match={match} />)}
             </>

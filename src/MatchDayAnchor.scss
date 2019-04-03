@@ -1,0 +1,16 @@
+.prev {
+    color: #222;
+    i::before {
+        margin-right: 0;
+    }
+    &.disabled {
+        cursor: initial;
+        color: #ccc;
+    }
+}
+.next {
+    color: #222;
+    i::before {
+        margin-left: 0;
+    }
+}

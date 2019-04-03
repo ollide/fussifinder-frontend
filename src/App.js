@@ -28,7 +28,12 @@ class App extends Component {
           <Filter />
         </section>
 
-        {matchDays.map((matchDay) => <MatchDay key={matchDay.date} matchDay={matchDay} />)}
+        {matchDays.map((matchDay, index) =>
+          <MatchDay
+            key={matchDay.date}
+            index={index}
+            matchDay={matchDay}
+          />)}
 
         <Footer />
       </FilterProvider>
