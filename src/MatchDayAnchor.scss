@@ -1,15 +1,15 @@
 .prev {
-    color: #222;
+    color: #555;
     i::before {
         margin-right: 0;
     }
     &.disabled {
         cursor: initial;
-        color: #ccc;
+        color: #ddd;
     }
 }
 .next {
-    color: #222;
+    color: #555;
     i::before {
         margin-left: 0;
     }

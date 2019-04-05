@@ -2,8 +2,17 @@ import React from 'react';
 
 import './Match.scss'
 import { FilterContext } from './FilterContext';
+import MatchDetails from './MatchDetails';
 
 class Match extends React.Component {
+
+    state = {
+        showDetails: false,
+    }
+
+    toggleDetails = () => {
+        this.setState((state) => ({ showDetails: !state.showDetails }));
+    }
 
     render() {
         const match = this.props.match;
@@ -41,10 +50,12 @@ class Match extends React.Component {
                                     </div>
 
                                     <div className="column is-1 match-details">
-                                        <a href={match.url} target="_blank" rel="noopener noreferrer">
-                                            <i className="icon-angle-down"></i>
+                                        <a onClick={this.toggleDetails}>
+                                            <i className={this.state.showDetails ? "icon-angle-up" : "icon-angle-down"}></i>
                                         </a>
                                     </div>
+
+                                    {this.state.showDetails && <MatchDetails id="todo" />}
                                 </div>
                             </>)
                     }
