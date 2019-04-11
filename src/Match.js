@@ -55,7 +55,7 @@ class Match extends React.Component {
                                         </a>
                                     </div>
 
-                                    {this.state.showDetails && <MatchDetails id="todo" />}
+                                    {this.state.showDetails && <MatchDetails id={match.id} />}
                                 </div>
                             </>)
                     }
