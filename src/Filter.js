@@ -20,8 +20,8 @@ class Filter extends React.Component {
                         </div>
                         <div className="buttons has-addons league-filter">
                             <FilterLeagueButton name="VL" />
-                            <FilterLeagueButton name="BL" />
                             <FilterLeagueButton name="LL" />
+                            <FilterLeagueButton name="BL" />
                             <FilterLeagueButton name="KL" />
                             <FilterLeagueButton name="KK" />
                             <FilterLeagueButton name="FS" />

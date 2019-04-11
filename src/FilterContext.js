@@ -17,8 +17,8 @@ export class FilterProvider extends React.Component {
 
         this.leagues = {
             'Verbandsliga': 'VL',
-            'Bezirksiga': 'BL',
             'Landesliga': 'LL',
+            'Bezirksliga': 'BL',
             'Kreisliga': 'KL',
             'Kreisklasse': 'KK',
             'FS': 'FS',
