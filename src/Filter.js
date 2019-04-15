@@ -11,7 +11,8 @@ class Filter extends React.Component {
         return (
             <FilterContext.Consumer>
                 {context => (
-                    <>
+                    <div className="container filter-container">
+                        <h5 className="subtitle is-5">Alters- & Spielklassen</h5>
                         <div className="buttons has-addons team-type-filter">
                             <FilterTeamButton name="Herren" />
                             <FilterTeamButton name="Frauen" />
@@ -26,7 +27,7 @@ class Filter extends React.Component {
                             <FilterLeagueButton name="KK" />
                             <FilterLeagueButton name="FS" />
                         </div>
-                    </>
+                    </div>
                 )}
             </FilterContext.Consumer>
         )
