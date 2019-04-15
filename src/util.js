@@ -17,3 +17,6 @@ export const handleFetchJsonResponse = (response) => {
 export const preventFocus = (e) => {
     e && e.preventDefault();
 }
+
+const kickoffFormat = new Intl.DateTimeFormat('default', { hour: '2-digit', minute: '2-digit' });
+export const formatKickoff = (date) => kickoffFormat.format(new Date(date));

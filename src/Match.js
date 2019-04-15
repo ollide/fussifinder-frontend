@@ -4,12 +4,17 @@ import './Match.scss'
 import { FilterContext } from './FilterContext';
 import MatchDetails from './MatchDetails';
 
-import { preventFocus } from './util';
+import { preventFocus, formatKickoff } from './util';
 
 class Match extends React.Component {
 
-    state = {
-        showDetails: false,
+    constructor(props) {
+        super(props);
+        this.state = {
+            showDetails: false,
+        };
+
+        this.kickoff = formatKickoff(props.match.date);
     }
 
     toggleDetails = () => {
@@ -18,11 +23,7 @@ class Match extends React.Component {
 
     render() {
         const match = this.props.match;
-
-        const dateFormat = new Intl.DateTimeFormat('default', { hour: '2-digit', minute: '2-digit' });
-        const kickOff = dateFormat.format(new Date(match.date));
         return (
-
             <FilterContext.Consumer>
                 {context => {
                     const visible = context.isVisible(match.teamType, match.league);
@@ -33,7 +34,7 @@ class Match extends React.Component {
                             <>
                                 <div className="match columns is-multiline is-mobile is-vcentered">
                                     <div className="column is-11 match-header">
-                                        {kickOff}&nbsp;
+                                        {this.kickoff}&nbsp;
                     <span className="team-type">{match.teamType}</span>&nbsp;
                     <span className="team-league">{match.league}</span>
                                     </div>
