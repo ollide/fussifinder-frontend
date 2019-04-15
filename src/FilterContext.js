@@ -16,6 +16,8 @@ export class FilterProvider extends React.Component {
         }
 
         this.leagues = {
+            'Bundesliga': 'BL',
+            'Regionalliga': 'RL',
             'Verbandsliga': 'VL',
             'Landesliga': 'LL',
             'Bezirksliga': 'BL',
@@ -26,6 +28,11 @@ export class FilterProvider extends React.Component {
             'L-FS': 'FS',
             'B-FS': 'FS',
             'K-FS': 'FS',
+            'Pokal': 'P',
+            'Kreispokal': 'P',
+            'Bezirkspokal': 'P',
+            'Verbandspokal': 'P',
+            'DFB-Pokal': 'P',
         }
 
         this.toggleTeam = (name) => {
@@ -44,7 +51,18 @@ export class FilterProvider extends React.Component {
             return this.state.team[teamKey] && this.state.league[leagueKey];
         }
 
+        this.setRegion = (region) => {
+            this.setState({ region });
+        }
+
         this.state = {
+            region: {
+                type: 'CITY',
+                name: 'hamburg',
+                displayName: 'Hamburg',
+            },
+            setRegion: this.setRegion,
+
             team: {
                 Herren: true,
                 Frauen: true,
@@ -52,12 +70,14 @@ export class FilterProvider extends React.Component {
                 'B-Jun': false,
             },
             league: {
-                VL: true,
                 BL: true,
+                RL: true,
+                VL: true,
                 LL: true,
                 KL: false,
                 KK: false,
                 FS: false,
+                P: true,
             },
             toggleTeam: this.toggleTeam,
             toggleLeague: this.toggleLeague,

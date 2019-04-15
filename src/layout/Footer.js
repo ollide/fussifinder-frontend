@@ -8,9 +8,9 @@ export default () => {
             <div className="container">
                 <div className="content has-text-centered">
                     <p>
-                        <strong>Fußball in Hamburg</strong> von <a href="https://github.com/ollide">ollide</a>.
+                        <strong>Fussifinder</strong> von <a href="https://github.com/ollide">ollide</a>.
                     </p>
-                    <p><strong>FIH</strong> auf <a href="https://github.com/ollide/fussball-in-hamburg">GitHub</a>.</p>
+                    <p>Veröffentlicht auf <a href="https://github.com/ollide/fussball-in-hamburg">GitHub</a>.</p>
                 </div>
             </div>
         </footer>

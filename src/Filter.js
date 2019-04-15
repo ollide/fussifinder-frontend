@@ -26,6 +26,7 @@ class Filter extends React.Component {
                             <FilterLeagueButton name="KL" />
                             <FilterLeagueButton name="KK" />
                             <FilterLeagueButton name="FS" />
+                            <FilterLeagueButton name="P" />
                         </div>
                     </div>
                 )}
