@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.scss';
-import Header from './Header';
+import Header from './layout/Header';
 import Filter from './Filter';
 import MatchDay from './MatchDay';
-import Footer from './Footer';
+import Footer from './layout/Footer';
 
 import CONFIG from './config';
 import { handleFetchJsonResponse } from './util';
