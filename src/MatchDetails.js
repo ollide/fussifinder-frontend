@@ -49,7 +49,7 @@ class MatchDetails extends React.Component {
 
             {error && <div className="column is-12 has-text-centered">
                 <p>Details konnten nicht geladen werden.</p>
-                <a onClick={this.loadMatchDetails}>Erneut versuchen</a>
+                <button className="button" onClick={this.loadMatchDetails}>Erneut versuchen</button>
             </div>}
 
             <div className="matchdetails">
