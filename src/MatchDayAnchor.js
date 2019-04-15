@@ -8,7 +8,7 @@ class MatchDayAnchor extends React.Component {
         const anchor = 'matchday';
         const day = this.props.index + 1;
 
-        const prevAnchor = (day == 1) ? null : `#${anchor}${day - 1}`;
+        const prevAnchor = (day === 1) ? null : `#${anchor}${day - 1}`;
         const nextAnchor = `#${anchor}${day + 1}`;
         return (
             <>
