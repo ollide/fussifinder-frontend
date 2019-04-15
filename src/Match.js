@@ -4,6 +4,8 @@ import './Match.scss'
 import { FilterContext } from './FilterContext';
 import MatchDetails from './MatchDetails';
 
+import { preventFocus } from './util';
+
 class Match extends React.Component {
 
     state = {
@@ -12,10 +14,6 @@ class Match extends React.Component {
 
     toggleDetails = () => {
         this.setState((state) => ({ showDetails: !state.showDetails }));
-    }
-
-    preventFocus = (e) => {
-        e && e.preventDefault();
     }
 
     render() {
@@ -54,7 +52,7 @@ class Match extends React.Component {
                                     </div>
 
                                     <div className="column is-1 match-details">
-                                        <button tabIndex="0" onMouseDown={this.preventFocus} onClick={this.toggleDetails}>
+                                        <button tabIndex="0" onMouseDown={preventFocus} onClick={this.toggleDetails}>
                                             <i className={this.state.showDetails ? "icon-angle-up" : "icon-angle-down"}></i>
                                         </button>
                                     </div>

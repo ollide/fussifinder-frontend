@@ -18,7 +18,7 @@ class MatchDay extends React.Component {
                         <MatchDayAnchor index={this.props.index} />
                     </h2>
                 </div>
-                {this.props.matchDay.matches.map((match) => <Match key={match.url} match={match} />)}
+                {this.props.matchDay.matches.map((match) => <Match key={match.id} match={match} />)}
             </>
         )
     }

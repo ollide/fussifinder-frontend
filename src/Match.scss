@@ -2,14 +2,13 @@
 @import '~bulma/sass/base/_all.sass';
 @import '~bulma/sass/grid/columns.sass';
 
-
 .match-header {
     height: 29px;
     background-color: #f5f5f5;
     font-family: monospace;
     padding: .15rem 0;
     &:first-child {
-        padding-left: .75rem;
+        padding-left: 1rem;
     }
     &.right {
         padding-right: .5rem;
