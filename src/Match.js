@@ -14,6 +14,10 @@ class Match extends React.Component {
         this.setState((state) => ({ showDetails: !state.showDetails }));
     }
 
+    preventFocus = (e) => {
+        e && e.preventDefault();
+    }
+
     render() {
         const match = this.props.match;
 
@@ -50,9 +54,9 @@ class Match extends React.Component {
                                     </div>
 
                                     <div className="column is-1 match-details">
-                                        <a onClick={this.toggleDetails}>
+                                        <button tabIndex="0" onMouseDown={this.preventFocus} onClick={this.toggleDetails}>
                                             <i className={this.state.showDetails ? "icon-angle-up" : "icon-angle-down"}></i>
-                                        </a>
+                                        </button>
                                     </div>
 
                                     {this.state.showDetails && <MatchDetails id={match.id} />}

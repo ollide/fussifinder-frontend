@@ -26,6 +26,17 @@
     padding: 0;
     padding-right: .5rem;
     text-align: right;
+
+    button {
+        font-size: 17px;
+        border: none;
+        background: none;
+        padding: 0;
+    }
+}
+
+.match {
+    max-width: 800px;
 }
 
 .match .home-team {
