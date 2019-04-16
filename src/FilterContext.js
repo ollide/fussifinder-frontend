@@ -2,9 +2,18 @@ import React from 'react';
 
 export const FilterContext = React.createContext()
 
+const desktopWidth = 1088;
+
 export class FilterProvider extends React.Component {
     constructor(props) {
         super(props);
+
+        this.isMobile = () => {
+            return window.innerWidth < desktopWidth;
+        }
+        this.updateViewType = () => {
+            this.setState({ isMobile: this.isMobile() });
+        }
 
         this.toggleTeam = (key) => {
             this.setState(state => ({ team: { ...state.team, [key]: !state.team[key] } }));
@@ -23,6 +32,7 @@ export class FilterProvider extends React.Component {
         }
 
         this.state = {
+            isMobile: this.isMobile(),
             region: {
                 type: 'CITY',
                 name: 'hamburg',
@@ -54,6 +64,8 @@ export class FilterProvider extends React.Component {
     }
 
     componentDidMount() {
+        window.addEventListener('resize', this.updateViewType);
+
         const region = JSON.parse(localStorage.getItem('region')) || {};
         const team = JSON.parse(localStorage.getItem('team')) || {};
         const league = JSON.parse(localStorage.getItem('league')) || {};
@@ -72,6 +84,10 @@ export class FilterProvider extends React.Component {
                     ...league,
                 }
             }));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
     }
 
     componentDidUpdate() {

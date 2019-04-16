@@ -14,19 +14,19 @@ class Filter extends React.Component {
                     <div className="container filter-container">
                         <h5 className="subtitle is-5">Alters- & Spielklassen</h5>
                         <div className="buttons has-addons team-type-filter">
-                            <FilterTeamButton name="Herren" />
-                            <FilterTeamButton name="Frauen" />
-                            <FilterTeamButton name="A-Jun." filter="A-Jun" />
-                            <FilterTeamButton name="B-Jun." filter="B-Jun" />
+                            <FilterTeamButton filter="Herren" />
+                            <FilterTeamButton filter="Frauen" />
+                            <FilterTeamButton filter="A-Jun" abbrv="A-Jun." name="A-JunorInnen" />
+                            <FilterTeamButton filter="B-Jun" abbrv="A-Jun." name="B-JunorInnen" />
                         </div>
                         <div className="buttons has-addons league-filter">
-                            <FilterLeagueButton name="VL" />
-                            <FilterLeagueButton name="LL" />
-                            <FilterLeagueButton name="BL" />
-                            <FilterLeagueButton name="KL" />
-                            <FilterLeagueButton name="KK" />
-                            <FilterLeagueButton name="FS" />
-                            <FilterLeagueButton name="P" />
+                            <FilterLeagueButton filter="VL" name="Verbandsliga" />
+                            <FilterLeagueButton filter="LL" name="Landesliga" />
+                            <FilterLeagueButton filter="BL" name="Bezirksliga" />
+                            <FilterLeagueButton filter="KL" name="Kreisliga" />
+                            <FilterLeagueButton filter="KK" name="Kreisklasse" />
+                            <FilterLeagueButton filter="FS" name="Freundschaftsspiele" />
+                            <FilterLeagueButton filter="P" name="Pokal" />
                         </div>
                     </div>
                 )}

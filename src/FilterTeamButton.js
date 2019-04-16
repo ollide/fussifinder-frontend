@@ -6,14 +6,15 @@ import { FilterContext } from './FilterContext';
 class FilterTeamButton extends React.Component {
 
     render() {
-        const name = this.props.name;
-        const filter = this.props.filter || name;
+        const filter = this.props.filter;
+        const abbrv = this.props.abbrv || filter;
+        const name = this.props.name || filter;
         return (
             <FilterContext.Consumer>
                 {context => (
                     <span className={'button' + (context.team[filter] ? ' is-active-filter' : '')}
                         onClick={() => context.toggleTeam(filter)}>
-                        {name}
+                        {context.isMobile ? abbrv : name}
                     </span>
                 )}
             </FilterContext.Consumer>
