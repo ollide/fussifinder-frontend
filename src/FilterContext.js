@@ -6,49 +6,16 @@ export class FilterProvider extends React.Component {
     constructor(props) {
         super(props);
 
-        this.teamTypes = {
-            'Herren': 'Herren',
-            'Frauen': 'Frauen',
-            'A-Junioren': 'A-Jun',
-            'A-Juniorinnen': 'A-Jun',
-            'B-Junioren': 'B-Jun',
-            'B-Juniorinnen': 'B-Jun',
+        this.toggleTeam = (key) => {
+            this.setState(state => ({ team: { ...state.team, [key]: !state.team[key] } }));
         }
 
-        this.leagues = {
-            'Bundesliga': 'BL',
-            'Regionalliga': 'RL',
-            'Verbandsliga': 'VL',
-            'Landesliga': 'LL',
-            'Bezirksliga': 'BL',
-            'Kreisliga': 'KL',
-            'Kreisklasse': 'KK',
-            'FS': 'FS',
-            'r-FS': 'FS',
-            'L-FS': 'FS',
-            'B-FS': 'FS',
-            'K-FS': 'FS',
-            'Pokal': 'P',
-            'Kreispokal': 'P',
-            'Bezirkspokal': 'P',
-            'Verbandspokal': 'P',
-            'DFB-Pokal': 'P',
+        this.toggleLeague = (key) => {
+            this.setState(state => ({ league: { ...state.league, [key]: !state.league[key] } }));
         }
 
-        this.toggleTeam = (name) => {
-            const teamKey = this.teamTypes[name] || name;
-            this.setState(state => ({ team: { ...state.team, [teamKey]: !state.team[teamKey] } }));
-        }
-
-        this.toggleLeague = (name) => {
-            const leagueKey = this.leagues[name] || name;
-            this.setState(state => ({ league: { ...state.league, [leagueKey]: !state.league[leagueKey] } }));
-        }
-
-        this.isVisible = (teamType, league) => {
-            const teamKey = this.teamTypes[teamType] || teamType;
-            const leagueKey = this.leagues[league] || league;
-            return this.state.team[teamKey] && this.state.league[leagueKey];
+        this.isVisible = (teamKey, leagueKey) => {
+            return this.state.league[leagueKey] && this.state.team[teamKey];
         }
 
         this.setRegion = (region) => {
@@ -70,10 +37,11 @@ export class FilterProvider extends React.Component {
                 'B-Jun': false,
             },
             league: {
-                BL: true,
+                B: true,
                 RL: true,
                 VL: true,
                 LL: true,
+                BL: true,
                 KL: false,
                 KK: false,
                 FS: false,

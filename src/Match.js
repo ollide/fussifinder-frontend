@@ -26,7 +26,7 @@ class Match extends React.Component {
         return (
             <FilterContext.Consumer>
                 {context => {
-                    const visible = context.isVisible(match.teamType, match.league);
+                    const visible = context.isVisible(match.teamTypeKey, match.leagueKey);
                     if (!visible) {
                         return <></>
                     } else {
