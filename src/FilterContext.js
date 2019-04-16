@@ -85,6 +85,34 @@ export class FilterProvider extends React.Component {
         }
     }
 
+    componentDidMount() {
+        const region = JSON.parse(localStorage.getItem('region')) || {};
+        const team = JSON.parse(localStorage.getItem('team')) || {};
+        const league = JSON.parse(localStorage.getItem('league')) || {};
+        this.setState((state) => (
+            {
+                region: {
+                    ...state.region,
+                    ...region,
+                },
+                team: {
+                    ...state.team,
+                    ...team,
+                },
+                league: {
+                    ...state.league,
+                    ...league,
+                }
+            }));
+    }
+
+    componentDidUpdate() {
+        const { region, team, league } = this.state;
+        localStorage.setItem('region', JSON.stringify(region));
+        localStorage.setItem('team', JSON.stringify(team));
+        localStorage.setItem('league', JSON.stringify(league));
+    }
+
     render() {
         return <FilterContext.Provider value={this.state}>{this.props.children}</FilterContext.Provider>
     }
