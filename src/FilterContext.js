@@ -31,13 +31,21 @@ export class FilterProvider extends React.Component {
             this.setState({ region });
         }
 
+        let region;
+        try {
+            region = JSON.parse(localStorage.getItem('region'));
+        } catch (e) {
+            localStorage.removeItem('region');
+        }
+        region = region || {
+            type: 'CITY',
+            name: 'hamburg',
+            displayName: 'Hamburg',
+        };
+
         this.state = {
             isMobile: this.isMobile(),
-            region: {
-                type: 'CITY',
-                name: 'hamburg',
-                displayName: 'Hamburg',
-            },
+            region,
             setRegion: this.setRegion,
 
             team: {
@@ -66,15 +74,10 @@ export class FilterProvider extends React.Component {
     componentDidMount() {
         window.addEventListener('resize', this.updateViewType);
 
-        const region = JSON.parse(localStorage.getItem('region')) || {};
         const team = JSON.parse(localStorage.getItem('team')) || {};
         const league = JSON.parse(localStorage.getItem('league')) || {};
         this.setState((state) => (
             {
-                region: {
-                    ...state.region,
-                    ...region,
-                },
                 team: {
                     ...state.team,
                     ...team,
