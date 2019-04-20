@@ -13,7 +13,12 @@ class Menu extends React.Component {
             cities: [],
             districts: [],
             specials: [],
-        }
+        },
+        categories: {
+            cities: false,
+            districts: false,
+            specials: false,
+        },
     }
 
     componentDidMount() {
@@ -28,62 +33,67 @@ class Menu extends React.Component {
             });
     }
 
-    setRegion = (type, name, displayName) => {
+    setRegion(type, name, displayName) {
         this.context.setRegion({ type, name, displayName });
         this.props.toggleBurger();
     }
 
+    toggleCategory(category) {
+        this.setState(state => ({
+            categories: {
+                ...state.categories,
+                [category]: !state.categories[category]
+            }
+        }));
+    }
+
     render() {
         const { regions } = this.state;
+        const isMobile = this.context.isMobile;
+        const categories = [{
+            name: 'cities',
+            type: 'CITY',
+            displayName: 'Städte',
+            visible: this.state.categories.cities || !isMobile,
+        }, {
+            name: 'districts',
+            type: 'DISTRICT',
+            displayName: 'Landkreise',
+            visible: this.state.categories.districts || !isMobile,
+        }, {
+            name: 'specials',
+            type: 'SPECIAL',
+            displayName: 'Spezial',
+            last: true,
+            visible: this.state.categories.specials || !isMobile,
+        }];
         return (
             <>
-                <div className="navbar-item has-dropdown is-hoverable">
-                    <button className="navbar-link" onMouseDown={preventFocus}>
-                        Städte
-                    </button>
-                    <div className="navbar-dropdown">
-                        {regions.cities.map(({ name, displayName }) =>
-                            <button key={'cities-' + name} className="navbar-item"
-                                onClick={() => this.setRegion('CITY', name, displayName)}
-                                onMouseDown={preventFocus}
-                            >
-                                {displayName}
-                            </button>
-                        )}
+                {categories.map(c => (
+                    <div
+                        key={`navbar-item-${c.name}`}
+                        className="navbar-item has-dropdown is-hoverable"
+                    >
+                        <button
+                            className={'navbar-link' + (c.visible && isMobile ? ' arrow-up' : '')}
+                            onMouseDown={preventFocus}
+                            onClick={() => this.toggleCategory(c.name)}>
+                            {c.displayName}
+                        </button>
+                        {c.visible &&
+                            <div className={'navbar-dropdown' + (c.last ? ' is-right' : '')}>
+                                {regions[c.name].map(({ name, displayName }) =>
+                                    <button key={`${c.name}-${name}`} className="navbar-item"
+                                        onClick={() => this.setRegion(c.type, name, displayName)}
+                                        onMouseDown={preventFocus}
+                                    >
+                                        {displayName}
+                                    </button>
+                                )}
+                            </div>
+                        }
                     </div>
-                </div>
-
-                <div className="navbar-item has-dropdown is-hoverable">
-                    <button className="navbar-link" onMouseDown={preventFocus}>
-                        Landkreise
-                    </button>
-                    <div className="navbar-dropdown">
-                        {regions.districts.map(({ name, displayName }) =>
-                            <button key={'districts-' + name} className="navbar-item"
-                                onClick={() => this.setRegion('DISTRICT', name, displayName)}
-                                onMouseDown={preventFocus}
-                            >
-                                {displayName}
-                            </button>
-                        )}
-                    </div>
-                </div>
-
-                <div className="navbar-item has-dropdown is-hoverable">
-                    <button className="navbar-link" onMouseDown={preventFocus}>
-                        Spezial
-                    </button>
-                    <div className="navbar-dropdown is-right">
-                        {regions.specials.map(({ name, displayName }) =>
-                            <button key={'special-' + name} className="navbar-item"
-                                onClick={() => this.setRegion('SPECIAL', name, displayName)}
-                                onMouseDown={preventFocus}
-                            >
-                                {displayName}
-                            </button>
-                        )}
-                    </div>
-                </div>
+                ))}
             </>
         )
     }

@@ -2,6 +2,12 @@
 @import '~bulma/sass/base/generic.sass';
 @import '~bulma/sass/components/navbar.sass';
 
+@media screen and (max-width: 1087px) {
+    nav .navbar-menu {
+        padding: 0;
+    }
+}
+
 nav .navbar-item img {
     max-height: 2.75rem;
     margin-bottom: -1rem;

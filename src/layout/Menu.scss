@@ -16,6 +16,12 @@
 
         &.navbar-link {
             font-size: 17px;
+            &::after {
+                border-color: #9C3;
+            }
+            &.arrow-up::after {
+                transform: rotate(135deg) translate(0.25em, -0.25em);
+            }
         }
         &.navbar-item {
             font-size: 14px;
