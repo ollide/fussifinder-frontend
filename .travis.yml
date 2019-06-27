@@ -1,0 +1,32 @@
+sudo: false
+language: node_js
+node_js:
+  - stable
+cache:
+  bundle: true
+  directories:
+    - node_modules
+
+addons:
+  ssh_known_hosts: 5.45.96.20
+
+script:
+  - npm run build
+
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_b37ed9d64274_key -iv $encrypted_b37ed9d64274_iv -in fih_frontend_rsa.enc -out /tmp/fih_frontend_rsa -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 /tmp/fih_frontend_rsa
+  - ssh-add /tmp/fih_frontend_rsa
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: ssh fussifinder@5.45.96.20 'rm -r /opt/fussifinder-dev/frontend/*' && rsync -avz build/ fussifinder@5.45.96.20:/opt/fussifinder-dev/frontend
+    on:
+      branch: develop
+  - provider: script
+    skip_cleanup: true
+    script: ssh fussifinder@5.45.96.20 'rm -r /opt/fussifinder/frontend/*' && rsync -avz build/ fussifinder@5.45.96.20:/opt/fussifinder/frontend
+    on:
+      branch: master
