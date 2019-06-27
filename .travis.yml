@@ -25,3 +25,8 @@ deploy:
     script: ssh fussifinder@5.45.96.20 'rm -r /opt/fussifinder-dev/frontend/*' && rsync -avz build/ fussifinder@5.45.96.20:/opt/fussifinder-dev/frontend
     on:
       branch: develop
+  - provider: script
+    skip_cleanup: true
+    script: ssh fussifinder@5.45.96.20 'rm -r /opt/fussifinder/frontend/*' && rsync -avz build/ fussifinder@5.45.96.20:/opt/fussifinder/frontend
+    on:
+      branch: master
