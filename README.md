@@ -1,4 +1,4 @@
-# FussiFinder Frontend
+# FussiFinder Frontend [![Build Status](https://travis-ci.org/ollide/fussifinder-frontend.svg?branch=develop)](https://travis-ci.org/ollide/fussifinder-frontend)
 
 FIH displays all upcoming football matches in Hamburg, Germany.
 
