@@ -1,5 +1,5 @@
 const CONFIG = {
-    baseApiUrl: 'https://fih.ollide.org',
+    baseApiUrl: '',
 }
 
 export default CONFIG;
