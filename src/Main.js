@@ -22,17 +22,25 @@ class Main extends Component {
 
     componentDidUpdate(prevProps) {
         const { type, name } = this.props.region;
+        const zip = this.props.zip;
         const prevRegion = prevProps.region;
+        const prevZip = prevProps.zip;
         // detect region change
-        if (!this.state.isLoading && (type !== prevRegion.type || name !== prevRegion.name)) {
+        if (!this.state.isLoading
+            && (type !== prevRegion.type || name !== prevRegion.name || zip !== prevZip)) {
             this.getMatches();
         }
     }
 
     getMatches = () => {
         const { type, name } = this.props.region;
+        const zip = this.props.zip;
         this.setState({ isLoading: true });
-        fetch(`${CONFIG.baseApiUrl}/api/matches?type=${type}&name=${name}`, {
+
+        const url = `${CONFIG.baseApiUrl}/api/matches?`
+            + (zip ? `zip=${zip}` : `type=${type}&name=${name}`);
+
+        fetch(url, {
             method: 'get',
         })
             .then(handleFetchJsonResponse)

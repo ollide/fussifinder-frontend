@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <>
         <Header />
-        <Main region={this.context.region} />
+        <Main region={this.context.region} zip={this.context.zip} />
         <Footer />
       </>
     );

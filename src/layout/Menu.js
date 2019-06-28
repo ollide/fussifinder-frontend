@@ -4,9 +4,15 @@ import './Menu.scss';
 
 import CONFIG from '../config';
 import { FilterContext } from '../FilterContext';
+import ZipForm from './ZipForm';
 import { preventFocus, handleFetchJsonResponse } from '../util';
 
 class Menu extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.setZip = this.setZip.bind(this);
+    }
 
     state = {
         regions: {
@@ -36,6 +42,10 @@ class Menu extends React.Component {
     setRegion(type, name, displayName) {
         this.context.setRegion({ type, name, displayName });
         this.props.toggleBurger();
+    }
+
+    setZip(zip) {
+        this.context.setZip(zip);
     }
 
     toggleCategory(category) {
@@ -90,6 +100,11 @@ class Menu extends React.Component {
                                         {displayName}
                                     </button>
                                 )}
+                                {c.name === 'specials' &&
+                                    <div className="navbar-item">
+                                        <ZipForm zip={this.context.zip} onZipSubmit={this.setZip} />
+                                    </div>
+                                }
                             </div>
                         }
                     </div>
