@@ -46,6 +46,7 @@ class Menu extends React.Component {
 
     setZip(zip) {
         this.context.setZip(zip);
+        this.props.toggleBurger();
     }
 
     toggleCategory(category) {
