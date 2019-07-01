@@ -28,7 +28,7 @@ export class FilterProvider extends React.Component {
         }
 
         this.setRegion = (region) => {
-            this.setState({ region, zip: null });
+            this.setState({ region, zip: '' });
         }
 
         this.setZip = (zip) => {
@@ -103,7 +103,11 @@ export class FilterProvider extends React.Component {
 
     componentDidUpdate() {
         const { region, team, league, zip } = this.state;
-        localStorage.setItem('zip', zip);
+        if (zip) {
+            localStorage.setItem('zip', zip);
+        } else {
+            localStorage.removeItem('zip');
+        }
         localStorage.setItem('region', JSON.stringify(region));
         localStorage.setItem('team', JSON.stringify(team));
         localStorage.setItem('league', JSON.stringify(league));
