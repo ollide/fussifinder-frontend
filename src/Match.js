@@ -4,7 +4,7 @@ import './Match.scss'
 import { FilterContext } from './FilterContext';
 import MatchDetails from './MatchDetails';
 
-import { preventFocus, formatKickoff } from './util';
+import { preventFocus } from './util';
 
 class Match extends React.Component {
 
@@ -13,8 +13,6 @@ class Match extends React.Component {
         this.state = {
             showDetails: false,
         };
-
-        this.kickoff = formatKickoff(props.match.date);
     }
 
     toggleDetails = () => {
@@ -34,7 +32,7 @@ class Match extends React.Component {
                             <>
                                 <div className="match columns is-multiline is-mobile is-vcentered">
                                     <div className="column is-11 match-header">
-                                        {this.kickoff}&nbsp;
+                                        {match.kickoff}&nbsp;
                     <span className="team-type">{match.teamType}</span>&nbsp;
                     <span className="team-league">{match.league}</span>
                                     </div>
