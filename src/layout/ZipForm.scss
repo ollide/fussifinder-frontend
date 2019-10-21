@@ -1,7 +1,9 @@
 @import '~bulma/sass/utilities/_all.sass';
 @import '~bulma/sass/base/_all.sass';
 @import '~bulma/sass/elements/button.sass';
-@import '~bulma/sass/form/_all.sass';
+@import '~bulma/sass/form/shared.sass';
+@import '~bulma/sass/form/tools.sass';
+@import '~bulma/sass/form/input-textarea.sass';
 
 .field .button.zip-btn {
     background-color: #9C3;
