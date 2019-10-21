@@ -30,6 +30,7 @@ class ZipForm extends React.Component {
                 <div className="field has-addons">
                     <div className="control">
                         <input className="input"
+                            type="number"
                             placeholder="Postleizahl"
                             value={this.state.zip}
                             onChange={this.handleZipChange}
