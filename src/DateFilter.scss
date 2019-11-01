@@ -1,0 +1,36 @@
+input.date-filter {
+    border: none;
+    &:focus {
+        outline: none;
+    }
+    &.mobile {
+        width: 0;
+    }
+    &.desktop {
+        color: #363636;
+        width: 140px;
+        font-size: 16px;
+        margin-left: 0.4em;
+    }
+}
+
+.button.is-active-filter .date-filter.desktop {
+    background-color: #9C3;
+    color: #FFF;
+
+    &::-webkit-calendar-picker-indicator, &::-webkit-calendar-clear-button {
+        color: #363636;
+        &:hover {
+            background: none;
+        }
+    }
+}
+
+span.date-text {
+    margin-left: 0.4em;
+}
+
+.button .icon-calendar::before {
+    margin-left: 0;
+    margin-right: 0;
+}

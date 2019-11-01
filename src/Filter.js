@@ -2,6 +2,8 @@ import React from 'react';
 
 import FilterLeagueButton from './FilterLeagueButton';
 import FilterTeamButton from './FilterTeamButton';
+import FilterPeriodButton from './FilterPeriodButton';
+import DateFilter from './DateFilter';
 import './Filter.scss';
 import { FilterContext } from './FilterContext';
 
@@ -12,7 +14,7 @@ class Filter extends React.Component {
             <FilterContext.Consumer>
                 {context => (
                     <div className="container filter-container">
-                        <h5 className="subtitle is-5">Alters- & Spielklassen</h5>
+                        <h5 className="subtitle is-5">Alters- &amp; Spielklassen</h5>
                         <div className="buttons has-addons team-type-filter">
                             <FilterTeamButton filter="Herren" />
                             <FilterTeamButton filter="Frauen" />
@@ -27,6 +29,14 @@ class Filter extends React.Component {
                             <FilterLeagueButton filter="KK" name="Kreisklasse" />
                             <FilterLeagueButton filter="FS" name="Freundschaftsspiele" />
                             <FilterLeagueButton filter="P" name="Pokal" />
+                        </div>
+
+                        <h5 className="subtitle is-5">Zeitraum</h5>
+                        <div className="buttons has-addons team-type-filter">
+                            <FilterPeriodButton filter="T" name="Heute" />
+                            <FilterPeriodButton filter="D3" name="3 Tage" />
+                            <FilterPeriodButton filter="D7" name="7 Tage" />
+                            <DateFilter />
                         </div>
                     </div>
                 )}

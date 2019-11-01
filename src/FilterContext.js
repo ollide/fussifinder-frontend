@@ -23,6 +23,13 @@ export class FilterProvider extends React.Component {
             this.setState(state => ({ league: { ...state.league, [key]: !state.league[key] } }));
         }
 
+        this.setPeriod = (period) => {
+            this.setState({ period });
+            if (period === '') {
+                this.setPeriod('T');
+            }
+        }
+
         this.isVisible = (teamKey, leagueKey) => {
             return this.state.league[leagueKey] && this.state.team[teamKey];
         }
@@ -73,8 +80,10 @@ export class FilterProvider extends React.Component {
                 FS: false,
                 P: true,
             },
+            period: 'T',
             toggleTeam: this.toggleTeam,
             toggleLeague: this.toggleLeague,
+            setPeriod: this.setPeriod,
             isVisible: this.isVisible,
         }
     }
