@@ -54,14 +54,10 @@ class Main extends Component {
                     isLoading: false,
                 });
             }).catch((err) => {
-                if (err.message === 'WAIT') {
-                    setTimeout(this.getMatches, 3000);
-                } else {
-                    this.setState({
-                        isLoading: false,
-                        error: err,
-                    });
-                }
+                this.setState({
+                    isLoading: false,
+                    error: err,
+                });
             });
     }
 
