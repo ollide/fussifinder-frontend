@@ -26,7 +26,7 @@ export class FilterProvider extends React.Component {
         this.setPeriod = (period) => {
             this.setState({ period });
             if (period === '') {
-                this.setPeriod('T');
+                this.setPeriod('D3');
             }
         }
 
@@ -55,6 +55,7 @@ export class FilterProvider extends React.Component {
         };
 
         const zip = localStorage.getItem('zip') || '';
+        const period = localStorage.getItem('period') || 'D3';
 
         this.state = {
             isMobile: this.isMobile(),
@@ -80,7 +81,7 @@ export class FilterProvider extends React.Component {
                 FS: false,
                 P: true,
             },
-            period: 'T',
+            period,
             toggleTeam: this.toggleTeam,
             toggleLeague: this.toggleLeague,
             setPeriod: this.setPeriod,
@@ -111,7 +112,7 @@ export class FilterProvider extends React.Component {
     }
 
     componentDidUpdate() {
-        const { region, team, league, zip } = this.state;
+        const { region, team, league, zip, period } = this.state;
         if (zip) {
             localStorage.setItem('zip', zip);
         } else {
@@ -120,6 +121,7 @@ export class FilterProvider extends React.Component {
         localStorage.setItem('region', JSON.stringify(region));
         localStorage.setItem('team', JSON.stringify(team));
         localStorage.setItem('league', JSON.stringify(league));
+        localStorage.setItem('period', period);
     }
 
     render() {
