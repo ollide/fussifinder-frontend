@@ -22,14 +22,13 @@ class Main extends Component {
 
     componentDidUpdate(prevProps) {
         const { type, name } = this.props.region;
-        const { zip, period } = this.props;
+        const period = this.props.period;
         const prevRegion = prevProps.region;
-        const prevZip = prevProps.zip;
         const prevPeriod = prevProps.period
 
         // detect region change
         if (!this.state.isLoading
-            && (type !== prevRegion.type || name !== prevRegion.name || zip !== prevZip
+            && (type !== prevRegion.type || name !== prevRegion.name
                 || period !== prevPeriod)) {
             this.getMatches();
         }
@@ -37,12 +36,11 @@ class Main extends Component {
 
     getMatches = () => {
         const { type, name } = this.props.region;
-        const { zip, period } = this.props;
+        const period = this.props.period;
         this.setState({ isLoading: true });
 
         const url = `${CONFIG.baseApiUrl}/api/matches?`
-            + (zip ? `zip=${zip}` : `type=${type}&name=${name}`)
-            + `&period=${period}`;
+            + `type=${type}&name=${name}&period=${period}`;
 
         fetch(url, {
             method: 'get',

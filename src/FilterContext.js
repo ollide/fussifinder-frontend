@@ -35,11 +35,7 @@ export class FilterProvider extends React.Component {
         }
 
         this.setRegion = (region) => {
-            this.setState({ region, zip: '' });
-        }
-
-        this.setZip = (zip) => {
-            this.setState({ zip, region: { displayName: zip } });
+            this.setState({ region });
         }
 
         let region;
@@ -54,15 +50,12 @@ export class FilterProvider extends React.Component {
             displayName: 'Hamburg',
         };
 
-        const zip = localStorage.getItem('zip') || '';
         const period = localStorage.getItem('period') || 'D3';
 
         this.state = {
             isMobile: this.isMobile(),
             region,
-            zip,
             setRegion: this.setRegion,
-            setZip: this.setZip,
 
             team: {
                 Herren: true,
@@ -112,12 +105,7 @@ export class FilterProvider extends React.Component {
     }
 
     componentDidUpdate() {
-        const { region, team, league, zip, period } = this.state;
-        if (zip) {
-            localStorage.setItem('zip', zip);
-        } else {
-            localStorage.removeItem('zip');
-        }
+        const { region, team, league, period } = this.state;
         localStorage.setItem('region', JSON.stringify(region));
         localStorage.setItem('team', JSON.stringify(team));
         localStorage.setItem('league', JSON.stringify(league));

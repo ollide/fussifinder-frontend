@@ -9,11 +9,6 @@ import { preventFocus, handleFetchJsonResponse } from '../util';
 
 class Menu extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.setZip = this.setZip.bind(this);
-    }
-
     state = {
         regions: {
             cities: [],
@@ -41,11 +36,6 @@ class Menu extends React.Component {
 
     setRegion(type, name, displayName) {
         this.context.setRegion({ type, name, displayName });
-        this.props.toggleBurger();
-    }
-
-    setZip(zip) {
-        this.context.setZip(zip);
         this.props.toggleBurger();
     }
 
@@ -103,7 +93,7 @@ class Menu extends React.Component {
                                 )}
                                 {c.name === 'specials' &&
                                     <div className="navbar-item">
-                                        <ZipForm zip={this.context.zip} onZipSubmit={this.setZip} />
+                                        <ZipForm onZipSubmit={(zip) => this.setRegion('ZIP', zip, zip)} />
                                     </div>
                                 }
                             </div>
