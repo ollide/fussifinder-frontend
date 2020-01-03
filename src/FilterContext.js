@@ -62,6 +62,7 @@ export class FilterProvider extends React.Component {
                 Frauen: true,
                 'A-Jun': true,
                 'B-Jun': false,
+                'C-Jun': false,
             },
             league: {
                 B: true,
