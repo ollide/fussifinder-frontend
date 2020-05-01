@@ -23,6 +23,13 @@ export class FilterProvider extends React.Component {
             this.setState(state => ({ league: { ...state.league, [key]: !state.league[key] } }));
         }
 
+        this.setPeriod = (period) => {
+            this.setState({ period });
+            if (period === '') {
+                this.setPeriod('D3');
+            }
+        }
+
         this.isVisible = (teamKey, leagueKey) => {
             return this.state.league[leagueKey] && this.state.team[teamKey];
         }
@@ -43,6 +50,8 @@ export class FilterProvider extends React.Component {
             displayName: 'Hamburg',
         };
 
+        const period = localStorage.getItem('period') || 'D3';
+
         this.state = {
             isMobile: this.isMobile(),
             region,
@@ -53,6 +62,7 @@ export class FilterProvider extends React.Component {
                 Frauen: true,
                 'A-Jun': true,
                 'B-Jun': false,
+                'C-Jun': false,
             },
             league: {
                 B: true,
@@ -65,8 +75,10 @@ export class FilterProvider extends React.Component {
                 FS: false,
                 P: true,
             },
+            period,
             toggleTeam: this.toggleTeam,
             toggleLeague: this.toggleLeague,
+            setPeriod: this.setPeriod,
             isVisible: this.isVisible,
         }
     }
@@ -94,10 +106,11 @@ export class FilterProvider extends React.Component {
     }
 
     componentDidUpdate() {
-        const { region, team, league } = this.state;
+        const { region, team, league, period } = this.state;
         localStorage.setItem('region', JSON.stringify(region));
         localStorage.setItem('team', JSON.stringify(team));
         localStorage.setItem('league', JSON.stringify(league));
+        localStorage.setItem('period', period);
     }
 
     render() {

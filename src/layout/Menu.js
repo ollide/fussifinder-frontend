@@ -4,6 +4,7 @@ import './Menu.scss';
 
 import CONFIG from '../config';
 import { FilterContext } from '../FilterContext';
+import ZipForm from './ZipForm';
 import { preventFocus, handleFetchJsonResponse } from '../util';
 
 class Menu extends React.Component {
@@ -90,6 +91,11 @@ class Menu extends React.Component {
                                         {displayName}
                                     </button>
                                 )}
+                                {c.name === 'specials' &&
+                                    <div className="navbar-item">
+                                        <ZipForm onZipSubmit={(zip) => this.setRegion('ZIP', zip, zip)} />
+                                    </div>
+                                }
                             </div>
                         }
                     </div>

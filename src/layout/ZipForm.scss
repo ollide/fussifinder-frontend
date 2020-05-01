@@ -1,0 +1,16 @@
+@import '~bulma/sass/utilities/_all.sass';
+@import '~bulma/sass/base/_all.sass';
+@import '~bulma/sass/elements/button.sass';
+@import '~bulma/sass/form/shared.sass';
+@import '~bulma/sass/form/tools.sass';
+@import '~bulma/sass/form/input-textarea.sass';
+
+.field .button.zip-btn {
+    background-color: #9C3;
+    border-color: #336600;
+    color: #fff;
+    z-index: 2;
+    &:hover {
+        background-color: #80B31A;
+    }
+}

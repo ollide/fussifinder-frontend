@@ -22,17 +22,27 @@ class Main extends Component {
 
     componentDidUpdate(prevProps) {
         const { type, name } = this.props.region;
+        const period = this.props.period;
         const prevRegion = prevProps.region;
+        const prevPeriod = prevProps.period
+
         // detect region change
-        if (!this.state.isLoading && (type !== prevRegion.type || name !== prevRegion.name)) {
+        if (!this.state.isLoading
+            && (type !== prevRegion.type || name !== prevRegion.name
+                || period !== prevPeriod)) {
             this.getMatches();
         }
     }
 
     getMatches = () => {
         const { type, name } = this.props.region;
+        const period = this.props.period;
         this.setState({ isLoading: true });
-        fetch(`${CONFIG.baseApiUrl}/api/matches?type=${type}&name=${name}`, {
+
+        const url = `${CONFIG.baseApiUrl}/api/matches?`
+            + `type=${type}&name=${name}&period=${period}`;
+
+        fetch(url, {
             method: 'get',
         })
             .then(handleFetchJsonResponse)
@@ -42,14 +52,10 @@ class Main extends Component {
                     isLoading: false,
                 });
             }).catch((err) => {
-                if (err.message === 'WAIT') {
-                    setTimeout(this.getMatches, 3000);
-                } else {
-                    this.setState({
-                        isLoading: false,
-                        error: err,
-                    });
-                }
+                this.setState({
+                    isLoading: false,
+                    error: err,
+                });
             });
     }
 
