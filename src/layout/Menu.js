@@ -90,7 +90,7 @@ class Menu extends React.Component {
                         </button>
                         {c.visible &&
                             <div className={'navbar-dropdown' + (c.last ? ' is-right' : '')}>
-                                {regions[c.name].map(({ name, displayName }) =>
+                                {(regions[c.name] || []).map(({ name, displayName }) =>
                                     <button key={`${c.name}-${name}`} className="navbar-item"
                                         onClick={() => this.setRegion(c.type, name, displayName)}
                                         onMouseDown={preventFocus}
