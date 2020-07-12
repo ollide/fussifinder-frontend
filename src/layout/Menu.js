@@ -14,11 +14,13 @@ class Menu extends React.Component {
             cities: [],
             districts: [],
             specials: [],
+            associations: [],
         },
         categories: {
             cities: false,
             districts: false,
             specials: false,
+            associations: false,
         },
     }
 
@@ -65,8 +67,13 @@ class Menu extends React.Component {
             name: 'specials',
             type: 'SPECIAL',
             displayName: 'Spezial',
-            last: true,
             visible: this.state.categories.specials || !isMobile,
+        }, {
+            name: 'associations',
+            type: 'ASSOCIATION',
+            displayName: 'Verbände',
+            visible: this.state.categories.associations || !isMobile,
+            last: true,
         }];
         return (
             <>
