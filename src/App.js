@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from './layout/Header';
-import Main from './Main';
+import Routes from "./Routes";
 import Footer from './layout/Footer';
 
 import { FilterContext } from './FilterContext';
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <>
         <Header />
-        <Main region={this.context.region} zip={this.context.zip} period={this.context.period} />
+        <Routes />
         <Footer />
       </>
     );

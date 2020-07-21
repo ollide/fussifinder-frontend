@@ -5,12 +5,19 @@
 @import '~bulma/sass/form/tools.sass';
 @import '~bulma/sass/form/input-textarea.sass';
 
-.field .button.zip-btn {
-    background-color: #9C3;
-    border-color: #336600;
-    color: #fff;
-    z-index: 2;
-    &:hover {
-        background-color: #80B31A;
+.field {
+
+    .input {
+        width: 120px;
+    }
+
+    .button.zip-btn {
+        background-color: #9C3;
+        border-color: #336600;
+        color: #fff;
+        z-index: 2;
+        &:hover {
+            background-color: #80B31A;
+        }
     }
 }

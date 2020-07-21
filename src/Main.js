@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import './Main.scss';
 import Filter from './Filter';
-import MatchDay from './MatchDay';
+import MatchList from './MatchList';
 
 import CONFIG from './config';
 import { handleFetchJsonResponse } from './util';
-
-import LoadingIndicator from './LoadingIndicator';
 
 class Main extends Component {
 
@@ -82,31 +80,7 @@ class Main extends Component {
                         <Filter />
                     </section>}
 
-                <section className="section no-mobile-padding">
-                    <div className="container">
-                        {error &&
-                            <div className="section">
-                                <div className="notification is-danger">
-                                    Es ist ein Fehler aufgetreten. Probier es später noch einmal.
-                                </div>
-                            </div>
-                        }
-
-                        {isLoading ? <>
-                            <LoadingIndicator />
-                            <p className="subtitle has-text-centered has-text-weight-semibold loading-indicator">
-                                Spiele werden geladen…
-                            </p>
-                        </> : (
-                                matchDays.map((matchDay, index) =>
-                                    <MatchDay
-                                        key={matchDay.day}
-                                        index={index}
-                                        matchDay={matchDay}
-                                    />)
-                            )}
-                    </div>
-                </section>
+                <MatchList matchDays={matchDays} isLoading={isLoading} error={error} />
             </>
         );
     }

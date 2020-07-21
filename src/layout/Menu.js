@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 import './Menu.scss';
 
@@ -38,6 +39,11 @@ class Menu extends React.Component {
 
     setRegion(type, name, displayName) {
         this.context.setRegion({ type, name, displayName });
+        this.props.toggleBurger();
+        this.props.history.replace('/');
+    }
+
+    onNearbyClicked() {
         this.props.toggleBurger();
     }
 
@@ -107,6 +113,14 @@ class Menu extends React.Component {
                         }
                     </div>
                 ))}
+
+                <Link
+                    className="navbar-item"
+                    to="/nearby"
+                    onClick={(e) => this.onNearbyClicked()}
+                >
+                    Umgebung
+                </Link>
             </>
         )
     }
@@ -114,4 +128,4 @@ class Menu extends React.Component {
 
 Menu.contextType = FilterContext;
 
-export default Menu;
+export default withRouter(Menu);
