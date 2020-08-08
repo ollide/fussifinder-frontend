@@ -10,7 +10,7 @@ class DateFilter extends React.Component {
         this.dateFormat = new Intl.DateTimeFormat('default', { month: 'numeric', day: 'numeric' });
     }
 
-    DATE = /^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$/g;
+    DATE = /^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$/;
 
     handleDateChange = e => {
         let date = e.target.value;
