@@ -65,7 +65,6 @@ export class FilterProvider extends React.Component {
 
         const period = localStorage.getItem('period') || 'D3';
         const perimeter = localStorage.getItem('perimeter') || '10000';
-        const nearbyZip = localStorage.getItem('nearbyZip');
 
         this.state = {
             isMobile: this.isMobile(),
@@ -92,7 +91,6 @@ export class FilterProvider extends React.Component {
             },
             period,
             perimeter,
-            nearbyZip,
             toggleTeam: this.toggleTeam,
             toggleLeague: this.toggleLeague,
             setPeriod: this.setPeriod,
@@ -125,17 +123,12 @@ export class FilterProvider extends React.Component {
     }
 
     componentDidUpdate() {
-        const { region, team, league, period, perimeter, nearbyZip } = this.state;
+        const { region, team, league, period, perimeter } = this.state;
         localStorage.setItem('region', JSON.stringify(region));
         localStorage.setItem('team', JSON.stringify(team));
         localStorage.setItem('league', JSON.stringify(league));
         localStorage.setItem('period', period);
         localStorage.setItem('perimeter', perimeter);
-        if (nearbyZip) {
-            localStorage.setItem('nearbyZip', nearbyZip);
-        } else {
-            localStorage.removeItem('nearbyZip');
-        }
     }
 
     render() {

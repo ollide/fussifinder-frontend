@@ -38,6 +38,10 @@ class Nearby extends Component {
 
     getMatches = () => {
         const { period, perimeter, nearbyZip } = this.props;
+        if (!(period && perimeter && nearbyZip)) {
+            this.setState({ isLoading: false });
+            return;
+        }
         this.setState({ isLoading: true });
 
         const url = `${CONFIG.baseApiUrl}/api/nearby?`
