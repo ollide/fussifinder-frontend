@@ -6,7 +6,7 @@ class ZipForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            zip: '',
+            zip: props.zip || '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleZipChange = this.handleZipChange.bind(this);

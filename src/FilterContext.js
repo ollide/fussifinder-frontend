@@ -1,6 +1,11 @@
 import React from 'react';
+import { useContext } from "react";
 
 export const FilterContext = React.createContext()
+
+export function useAppContext() {
+    return useContext(FilterContext);
+}
 
 const desktopWidth = 1088;
 
@@ -30,6 +35,14 @@ export class FilterProvider extends React.Component {
             }
         }
 
+        this.setPerimeter = (perimeter) => {
+            this.setState({ perimeter });
+        }
+
+        this.setNearbyZip = (nearbyZip) => {
+            this.setState({ nearbyZip });
+        }
+
         this.isVisible = (teamKey, leagueKey) => {
             return this.state.league[leagueKey] && this.state.team[teamKey];
         }
@@ -51,6 +64,7 @@ export class FilterProvider extends React.Component {
         };
 
         const period = localStorage.getItem('period') || 'D3';
+        const perimeter = localStorage.getItem('perimeter') || '10000';
 
         this.state = {
             isMobile: this.isMobile(),
@@ -76,9 +90,12 @@ export class FilterProvider extends React.Component {
                 P: true,
             },
             period,
+            perimeter,
             toggleTeam: this.toggleTeam,
             toggleLeague: this.toggleLeague,
             setPeriod: this.setPeriod,
+            setPerimeter: this.setPerimeter,
+            setNearbyZip: this.setNearbyZip,
             isVisible: this.isVisible,
         }
     }
@@ -106,11 +123,12 @@ export class FilterProvider extends React.Component {
     }
 
     componentDidUpdate() {
-        const { region, team, league, period } = this.state;
+        const { region, team, league, period, perimeter } = this.state;
         localStorage.setItem('region', JSON.stringify(region));
         localStorage.setItem('team', JSON.stringify(team));
         localStorage.setItem('league', JSON.stringify(league));
         localStorage.setItem('period', period);
+        localStorage.setItem('perimeter', perimeter);
     }
 
     render() {

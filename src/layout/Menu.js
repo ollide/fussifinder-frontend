@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 import './Menu.scss';
 
@@ -14,11 +15,13 @@ class Menu extends React.Component {
             cities: [],
             districts: [],
             specials: [],
+            associations: [],
         },
         categories: {
             cities: false,
             districts: false,
             specials: false,
+            associations: false,
         },
     }
 
@@ -36,6 +39,11 @@ class Menu extends React.Component {
 
     setRegion(type, name, displayName) {
         this.context.setRegion({ type, name, displayName });
+        this.props.toggleBurger();
+        this.props.history.replace('/');
+    }
+
+    onNearbyClicked() {
         this.props.toggleBurger();
     }
 
@@ -65,8 +73,13 @@ class Menu extends React.Component {
             name: 'specials',
             type: 'SPECIAL',
             displayName: 'Spezial',
-            last: true,
             visible: this.state.categories.specials || !isMobile,
+        }, {
+            name: 'associations',
+            type: 'ASSOCIATION',
+            displayName: 'Verbände',
+            visible: this.state.categories.associations || !isMobile,
+            last: true,
         }];
         return (
             <>
@@ -83,7 +96,7 @@ class Menu extends React.Component {
                         </button>
                         {c.visible &&
                             <div className={'navbar-dropdown' + (c.last ? ' is-right' : '')}>
-                                {regions[c.name].map(({ name, displayName }) =>
+                                {(regions[c.name] || []).map(({ name, displayName }) =>
                                     <button key={`${c.name}-${name}`} className="navbar-item"
                                         onClick={() => this.setRegion(c.type, name, displayName)}
                                         onMouseDown={preventFocus}
@@ -100,6 +113,14 @@ class Menu extends React.Component {
                         }
                     </div>
                 ))}
+
+                <Link
+                    className="navbar-item"
+                    to="/nearby"
+                    onClick={(e) => this.onNearbyClicked()}
+                >
+                    Umgebung
+                </Link>
             </>
         )
     }
@@ -107,4 +128,4 @@ class Menu extends React.Component {
 
 Menu.contextType = FilterContext;
 
-export default Menu;
+export default withRouter(Menu);
