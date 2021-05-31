@@ -9,13 +9,13 @@ import { handleFetchJsonResponse } from './util';
 class Main extends Component {
 
     state = {
+        firstLoad: true,
         isLoading: true,
         error: null,
         matchDays: [],
     }
 
     componentDidMount() {
-        this.getMatches();
     }
 
     componentDidUpdate(prevProps) {
@@ -25,17 +25,21 @@ class Main extends Component {
         const prevPeriod = prevProps.period
 
         // detect region change
-        if (!this.state.isLoading
+        if (!this.state.isLoading && !this.state.firstLoad
             && (type !== prevRegion.type || name !== prevRegion.name
                 || period !== prevPeriod)) {
             this.getMatches();
         }
     }
 
+    onFindMatchesClick() {
+        this.getMatches();
+    }
+
     getMatches = () => {
         const { type, name } = this.props.region;
         const period = this.props.period;
-        this.setState({ isLoading: true });
+        this.setState({ isLoading: true, firstLoad: false });
 
         const url = `${CONFIG.baseApiUrl}/api/matches?`
             + `type=${type}&name=${name}&period=${period}`;
@@ -58,7 +62,7 @@ class Main extends Component {
     }
 
     render() {
-        const { isLoading, matchDays, error } = this.state;
+        const { firstLoad, isLoading, matchDays, error } = this.state;
 
         let matchCount = 0;
         matchDays.forEach(({ matches }) => matchCount += matches.length);
@@ -69,9 +73,11 @@ class Main extends Component {
                     <div className="container">
                         <h1 className="title">Fußball in {this.props.region.displayName}</h1>
 
-                        <p className="subtitle">
-                            {isLoading ? <>Spiele werden geladen…</> :
-                                <>{matchCount} Spiele in der nächsten Woche.</>}</p>
+                        {!firstLoad &&
+                            <p className="subtitle">
+                                {isLoading ? <>Spiele werden geladen…</> :
+                                    <>{matchCount} Spiele in der nächsten Woche.</>}</p>
+                        }
                     </div>
                 </section>
 
@@ -80,7 +86,15 @@ class Main extends Component {
                         <Filter />
                     </section>}
 
-                <MatchList matchDays={matchDays} isLoading={isLoading} error={error} />
+                {firstLoad ?
+                    <section className="section">
+                        <div className="container">
+                            <button className="button is-medium"
+                                onClick={() => this.onFindMatchesClick()}>Suche starten</button>
+                        </div>
+                    </section> :
+                    <MatchList matchDays={matchDays} isLoading={isLoading} error={error} />
+                }
             </>
         );
     }
