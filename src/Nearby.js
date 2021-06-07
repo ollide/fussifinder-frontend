@@ -94,7 +94,7 @@ class Nearby extends Component {
                                 <FilterPerimeterButton filter="10000" name="10km" />
                                 <FilterPerimeterButton filter="20000" name="20km" />
                                 <FilterPerimeterButton filter="50000" name="50km" />
-                                <FilterPerimeterButton filter="100000" name="100km" />
+                                <FilterPerimeterButton filter="75000" name="75km" />
                             </div>
 
                             <h5 className="subtitle is-5">Standort</h5>
