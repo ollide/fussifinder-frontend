@@ -20,7 +20,6 @@ class Filter extends React.Component {
                             <FilterTeamButton filter="Frauen" />
                             <FilterTeamButton filter="A-Jun" abbrv="U19" name="A-JunorInnen" />
                             <FilterTeamButton filter="B-Jun" abbrv="U17" name="B-JunorInnen" />
-                            <FilterTeamButton filter="C-Jun" abbrv="U15" name="C-JunorInnen" />
                         </div>
                         <div className="buttons has-addons league-filter">
                             <FilterLeagueButton filter="VL" name="Verbandsliga" />
