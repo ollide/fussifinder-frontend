@@ -23,3 +23,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: fussifinder-frontend
+        path: build
