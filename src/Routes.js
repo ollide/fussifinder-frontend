@@ -1,22 +1,26 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Main from "./Main";
 import Nearby from "./Nearby";
 
 import { useAppContext } from './FilterContext';
 
-export default function Routes() {
+export default function AppRoutes() {
     const { region, period, perimeter, nearbyZip } = useAppContext();
     return (
-        <Switch>
-            <Route exact path="/">
-                <Main region={region} period={period} />
-            </Route>
+        <Routes>
+            <Route
+                exact
+                path="/"
+                element={<Main region={region} period={period} />}
+            />
 
-            <Route exact path="/nearby">
-                <Nearby period={period} perimeter={perimeter} nearbyZip={nearbyZip} />
-            </Route>
+            <Route
+                exact
+                path="/nearby"
+                element={<Nearby period={period} perimeter={perimeter} nearbyZip={nearbyZip} />}
+            />
 
-        </Switch>
+        </Routes>
     );
 }
