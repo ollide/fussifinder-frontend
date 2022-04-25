@@ -1,13 +1,12 @@
-@import '~bulma/sass/utilities/_all.sass';
-@import '~bulma-tooltip/src/sass/index.sass';
-
 .buttons .button {
     min-width: 45px;
+
     &.is-active-filter {
         background-color: #9C3;
         border-color: #336600;
         color: #fff;
         z-index: 2;
+
         &:hover {
             border-color: #336600;
             color: #fff;

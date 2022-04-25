@@ -1,2 +1,19 @@
+$control-height: 2.25em;
+$button-padding-horizontal: 0.75em;
+
 @import '~bulma/sass/utilities/_all.sass';
 @import '~bulma/sass/base/_all.sass';
+@import '~bulma/sass/helpers/typography.sass';
+
+@import '~bulma/sass/elements/container.sass';
+@import '~bulma/sass/elements/title.sass';
+@import '~bulma/sass/elements/notification.sass';
+@import '~bulma/sass/elements/button.sass';
+@import '~bulma/sass/components/navbar.sass';
+
+
+@import '~bulma/sass/form/shared.sass';
+@import '~bulma/sass/form/tools.sass';
+@import '~bulma/sass/form/input-textarea.sass';
+
+@import '~bulma-tooltip/src/sass/index.sass';

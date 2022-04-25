@@ -1,12 +1,8 @@
-@import '~bulma/sass/utilities/_all.sass';
-@import '~bulma/sass/base/_all.sass';
-@import '~bulma/sass/elements/title.sass';
-@import '~bulma/sass/elements/container.sass';
-@import '~bulma/sass/elements/notification.sass';
 @import '~bulma/sass/layout/section.sass';
 
 .section {
   padding: 1rem 1rem;
+
   &.no-mobile-padding {
     padding: 1rem 1rem 1rem 0;
   }

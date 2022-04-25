@@ -1,9 +1,7 @@
-@import '~bulma/sass/utilities/_all.sass';
-@import '~bulma/sass/base/generic.sass';
-@import '~bulma/sass/elements/button.sass';
-
 .filter-container {
-    .buttons:not(:last-child), .subtitle {
+
+    .buttons:not(:last-child),
+    .subtitle {
         margin-bottom: 0.5rem;
     }
 }
