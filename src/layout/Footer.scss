@@ -1,1 +1,12 @@
 @import '~bulma/sass/layout/footer.sass';
+
+footer.footer {
+    margin-top: 3rem;
+    padding: 3rem 1.5rem 3rem;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-fg-color);
+
+    strong {
+        color: var(--footer-fg-strong-color);
+    }
+}

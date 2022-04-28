@@ -1,15 +1,32 @@
-.buttons .button {
+.buttons .button,
+.buttons.has-addon .button {
     min-width: 45px;
 
-    &.is-active-filter {
-        background-color: #9C3;
-        border-color: #336600;
-        color: #fff;
-        z-index: 2;
+    background-color: var(--filter-bg-color);
+    border-color: var(--filter-border-color);
+    color: var(--filter-fg-color);
 
-        &:hover {
-            border-color: #336600;
-            color: #fff;
+    &:focus,
+    &:hover,
+    &:active,
+    &:focus:hover {
+        z-index: 1;
+
+        background-color: var(--filter-bg-hover-color);
+        border-color: var(--filter-border-hover-color);
+        color: var(--filter-fg-color);
+    }
+
+    &.is-active-filter {
+        background-color: var(--filter-active-bg-color);
+        border-color: var(--filter-active-border-color);
+        color: var(--filter-active-fg-color);
+
+        &:hover,
+        &:focus {
+            background-color: var(--filter-active-bg-hover-color);
+            border-color: var(--filter-active-border-hover-color);
+            color: var(--filter-active-fg-color);
         }
     }
 }

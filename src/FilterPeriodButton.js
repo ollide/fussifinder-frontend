@@ -14,10 +14,10 @@ class FilterPeriodButton extends React.Component {
         const active = this.context.period === filter;
         const name = this.props.name;
         return (
-            <span className={'button' + (active ? ' is-active-filter' : '')}
+            <button className={'button' + (active ? ' is-active-filter' : '')}
                 onClick={() => this.onClick(filter)}>
                 {name}
-            </span>
+            </button>
         )
     }
 }

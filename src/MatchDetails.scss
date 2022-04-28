@@ -4,9 +4,15 @@
 
     .detail {
         margin-bottom: 5px;
+
         a {
-            color: #9C3;
+            color: var(--filter-active-bg-color);
+
+            &:hover {
+                color: var(--filter-active-bg-hover-color);
+            }
         }
+
         span {
             margin-left: 10px;
         }

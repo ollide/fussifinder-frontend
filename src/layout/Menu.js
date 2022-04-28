@@ -119,7 +119,7 @@ const Menu = props => {
             ))}
 
             <Link
-                className="navbar-item"
+                className="navbar-item fih-navbar-link"
                 to="/nearby"
                 onClick={onNearbyClicked}
             >

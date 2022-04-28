@@ -1,4 +1,11 @@
 .navbar-item {
+
+    .navbar-dropdown {
+        button:hover {
+            text-decoration: underline;
+        }
+    }
+
     button {
         display: block;
         width: 100%;
@@ -9,22 +16,96 @@
         text-align: left;
         cursor: pointer;
 
-        &:hover {
-            background-color: #fafafa;
-            color: #000;
-        }
-
         &.navbar-link {
             font-size: 17px;
+
             &::after {
-                border-color: #9C3;
+                border-color: var(--color-green);
             }
+
             &.arrow-up::after {
                 transform: rotate(135deg) translate(0.25em, -0.25em);
             }
         }
+
         &.navbar-item {
             font-size: 14px;
+        }
+    }
+}
+
+nav.navbar.is-dark {
+    background-color: var(--navbar-bg-color);
+
+    @media screen and (min-width: 1024px) {
+        .navbar-dropdown {
+            box-shadow: 0 1px 2px 1px var(--navbar-dropdown-shadow-color);
+            background-color: var(--navbar-dropdown-bg-color);
+
+            .navbar-item {
+                color: var(--navbar-dropdown-fg-color);
+            }
+        }
+
+        .navbar-end {
+
+            .navbar-item,
+            .navbar-item.has-dropdown,
+            .navbar-link {
+
+                &:hover,
+                &:focus,
+                &:active,
+                &:hover .navbar-link {
+                    background-color: var(--navbar-bg-hover-color);
+                }
+            }
+
+            &>a.navbar-item.fih-navbar-link {
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: var(--navbar-bg-hover-color);
+                }
+
+            }
+        }
+    }
+
+    .navbar-brand>a.navbar-item:hover {
+        background-color: var(--navbar-bg-hover-color);
+    }
+
+    .navbar-dropdown {
+        .navbar-item {
+
+            &:focus,
+            &:active,
+            &:hover {
+                background-color: var(--navbar-dropdown-bg-hover-color);
+            }
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        .navbar-menu {
+            background-color: var(--navbar-dropdown-bg-color);
+            color: var(--navbar-dropdown-fg-color);
+
+            .navbar-end>a.navbar-item.fih-navbar-link,
+            .navbar-link {
+
+                &:hover,
+                &:active {
+                    background-color: var(--navbar-dropdown-bg-hover-color);
+                }
+            }
+
+            .navbar-item,
+            .navbar-link {
+                color: var(--navbar-dropdown-fg-color);
+            }
         }
     }
 }

@@ -1,9 +1,12 @@
 $control-height: 2.25em;
 $button-padding-horizontal: 0.75em;
+$button-focus-box-shadow-color: transparent;
+$input-focus-box-shadow-color: transparent;
 
 @import '~bulma/sass/utilities/_all.sass';
 @import '~bulma/sass/base/_all.sass';
 @import '~bulma/sass/helpers/typography.sass';
+@import '~bulma/sass/helpers/color.sass';
 
 @import '~bulma/sass/elements/container.sass';
 @import '~bulma/sass/elements/title.sass';
@@ -17,3 +20,42 @@ $button-padding-horizontal: 0.75em;
 @import '~bulma/sass/form/input-textarea.sass';
 
 @import '~bulma-tooltip/src/sass/index.sass';
+
+@import 'colors.scss';
+
+html {
+    background-color: var(--bg-color);
+}
+
+a,
+a:hover {
+    color: var(--color-link);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+button,
+.button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.title {
+    color: var(--title-color);
+}
+
+.subtitle {
+    color: var(--subtitle-color);
+}
+
+input[type=number],
+input[type=number].input {
+    background-color: var(--filter-bg-color);
+    border-color: var(--filter-border-color);
+    color: var(--filter-fg-color);
+
+    &::placeholder {
+        color: var(--input-placeholder-color);
+    }
+}

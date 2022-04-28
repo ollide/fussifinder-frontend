@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './MatchList.scss';
+
 import MatchDay from './MatchDay';
 import LoadingIndicator from './LoadingIndicator';
 
@@ -21,18 +23,19 @@ const MatchList = props => {
                         Spiele werden geladen…
                     </p>
                 </> : <>
-                        {props.matchDays.map((matchDay, index) =>
-                            <MatchDay
-                                key={matchDay.day}
-                                index={index}
-                                matchDay={matchDay}
-                            />)}
+                    {props.matchDays.map((matchDay, index) =>
+                        <MatchDay
+                            key={matchDay.day}
+                            index={index}
+                            matchDay={matchDay}
+                            total={props.matchDays.length}
+                        />)}
 
-                        {!props.matchDays.length &&
-                            <div className="notification">
-                                Keine Spiele gefunden.
-                            </div>}
-                    </>}
+                    {!props.matchDays.length &&
+                        <div className="notification">
+                            Keine Spiele gefunden.
+                        </div>}
+                </>}
             </div>
 
         </section>

@@ -1,7 +1,8 @@
 .filter-container {
 
     .buttons:not(:last-child),
-    .subtitle {
+    .subtitle,
+    .subtitle:not(:last-child) {
         margin-bottom: 0.5rem;
     }
 }

@@ -12,10 +12,10 @@ class FilterTeamButton extends React.Component {
         return (
             <FilterContext.Consumer>
                 {context => (
-                    <span className={'button' + (context.team[filter] ? ' is-active-filter' : '')}
+                    <button className={'button' + (context.team[filter] ? ' is-active-filter' : '')}
                         onClick={() => context.toggleTeam(filter)}>
                         {context.isMobile ? abbrv : name}
-                    </span>
+                    </button>
                 )}
             </FilterContext.Consumer>
         )

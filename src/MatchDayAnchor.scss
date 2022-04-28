@@ -1,15 +1,24 @@
+.matchday-anchor {
+    color: var(--matchday-anchor-color);
+
+    &.disabled,
+    &.disabled:hover {
+        cursor: initial;
+        color: var(--matchday-anchor-disabled-color);
+    }
+
+    &:hover {
+        color: var(--matchday-anchor-hover-color);
+    }
+}
+
 .prev {
-    color: #555;
     i::before {
         margin-right: 0;
     }
-    &.disabled {
-        cursor: initial;
-        color: #ddd;
-    }
 }
+
 .next {
-    color: #555;
     i::before {
         margin-left: 0;
     }

@@ -7,7 +7,7 @@ export function useAppContext() {
     return useContext(FilterContext);
 }
 
-const desktopWidth = 1088;
+const desktopWidth = 1024;
 
 export class FilterProvider extends React.Component {
     constructor(props) {

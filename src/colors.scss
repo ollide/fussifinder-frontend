@@ -1,0 +1,115 @@
+@mixin fih-colors {
+    --color-scheme: light;
+
+    --color-green: #7ca300;
+    --color-green-1: #6f9200;
+    --color-green-2: #638200;
+    --color-green-3: #567200;
+    --color-green-4: #4a6100;
+
+    --color-black: #000000;
+    --color-gray-0: #f0f6fc;
+    --color-gray-1: #c9d1d9;
+    --color-gray-2: #b1bac4;
+    --color-gray-3: #8b949e;
+    --color-gray-5: #484f58;
+    --color-gray-6: #30363d;
+    --color-gray-7: #21262d;
+    --color-gray-8: #161B22;
+    --color-gray-9: #0d1117;
+    --color-white: #ffffff;
+    --color-white-1: #f5f5f5;
+    --color-white-2: #f0f0f0;
+
+    --bg-color: var(--color-white);
+    --navbar-bg-color: var(--color-gray-7);
+    --navbar-bg-hover-color: var(--color-gray-9);
+    --navbar-fg-color: var(--color-gray-0);
+    --navbar-dropdown-bg-color: var(--color-white);
+    --navbar-dropdown-bg-hover-color: var(--color-white-2);
+    --navbar-dropdown-shadow-color: #0A0A0A1A;
+    --navbar-dropdown-fg-color: var(--color-gray-8);
+    --footer-bg-color: var(--color-white-1);
+    --footer-fg-color: var(--color-gray-6);
+    --footer-fg-strong-color: var(--color-gray-7);
+    --title-color: var(--color-gray-8);
+    --subtitle-color: var(--color-gray-7);
+
+    --color-link: var(--color-green-3);
+
+    --match-header-bg-color: var(--color-white-1);
+    --match-header-fg-color: var(--subtitle-color);
+
+    --matchday-anchor-color: #555;
+    --matchday-anchor-hover-color: var(--color-green);
+    --matchday-anchor-disabled-color: #ddd;
+
+    --input-placeholder-color: var(--color-gray-3);
+    --filter-fg-color: var(--color-gray-6);
+    --filter-bg-color: var(--color-white);
+    --filter-border-color: var(--color-gray-2);
+    --filter-bg-hover-color: var(--color-white-2);
+    --filter-border-hover-color: var(--color-gray-3);
+
+    --filter-active-fg-color: var(--color-white);
+    --filter-active-bg-color: var(--color-green);
+    --filter-active-border-color: var(--color-green-2);
+    --filter-active-bg-hover-color: var(--color-green-1);
+    --filter-active-border-hover-color: var(--color-green-3);
+}
+
+@mixin fih-colors-dark {
+    --color-scheme: dark;
+
+    --bg-color: var(--color-black);
+    --navbar-bg-color: var(--color-gray-8);
+    --navbar-bg-hover-color: var(--color-gray-9);
+    --navbar-fg-color: var(--color-gray-0);
+    --navbar-dropdown-bg-color: var(--color-gray-8);
+    --navbar-dropdown-bg-hover-color: var(--color-gray-9);
+    --navbar-dropdown-shadow-color: #fafafa;
+    --navbar-dropdown-fg-color: var(--color-gray-0);
+    --footer-bg-color: var(--color-gray-9);
+    --footer-fg-color: var(--color-gray-3);
+    --footer-fg-strong-color: var(--color-gray-2);
+    --title-color: var(--color-gray-0);
+    --subtitle-color: var(--color-gray-1);
+
+    --color-link: var(--color-green-1);
+
+    --match-header-bg-color: var(--color-gray-9);
+
+    --matchday-anchor-color: #ddd;
+    --matchday-anchor-disabled-color: #555;
+
+    --input-placeholder-color: var(--color-gray-3);
+    --filter-fg-color: var(--color-gray-1);
+    --filter-bg-color: var(--color-gray-6);
+    --filter-border-color: var(--color-gray-5);
+    --filter-bg-hover-color: var(--color-gray-5);
+    --filter-border-hover-color: var(--color-gray-3);
+
+    --filter-active-fg-color: var(--color-white);
+    --filter-active-bg-color: var(--color-green);
+    --filter-active-border-color: var(--color-green-1);
+    --filter-active-bg-hover-color: var(--color-green-1);
+    --filter-active-border-hover-color: var(--color-green-2);
+}
+
+:root {
+    @include fih-colors;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include fih-colors-dark;
+    }
+}
+
+[data-color-mode=dark] {
+    @include fih-colors-dark;
+}
+
+[data-color-mode=light] {
+    @include fih-colors;
+}

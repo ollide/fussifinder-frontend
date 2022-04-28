@@ -29,14 +29,14 @@ class FilterLeagueButton extends React.Component {
         const abbrv = this.props.abbrv || filter;
         const name = this.props.name;
         return (
-            <span className={'button'
+            <button className={'button'
                 + (this.context.league[filter] ? ' is-active-filter' : '')
                 + (this.context.isMobile && this.state.showTooltip ? ' tooltip is-tooltip-bottom' : '')
             }
                 data-tooltip={name}
                 onClick={() => this.onClick(filter)}>
                 {this.context.isMobile ? abbrv : name}
-            </span>
+            </button>
         )
     }
 }

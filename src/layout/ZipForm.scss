@@ -1,17 +1,22 @@
 .field {
 
     .input {
-        width: 120px;
+        width: 125px;
+
+        &::-webkit-inner-spin-button {
+            color-scheme: var(--color-scheme);
+        }
     }
 
     .button.zip-btn {
-        background-color: #9C3;
-        border-color: #336600;
-        color: #fff;
+        background-color: var(--filter-active-bg-color);
+        border-color: var(--filter-active-border-color);
+        color: var(--filter-active-fg-color);
         z-index: 2;
 
         &:hover {
-            background-color: #80B31A;
+            background-color: var(--filter-active-bg-hover-color);
+            text-decoration: underline;
         }
     }
 }

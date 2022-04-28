@@ -15,7 +15,7 @@ class MatchDay extends React.Component {
                 <div className="matchday">
                     <h2 className="subtitle">
                         {day}
-                        <MatchDayAnchor index={this.props.index} />
+                        <MatchDayAnchor index={this.props.index} total={this.props.total} />
                     </h2>
                 </div>
                 {this.props.matchDay.matches.map((match) => <Match key={match.id} match={match} />)}
