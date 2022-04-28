@@ -31,7 +31,7 @@ class ZipForm extends React.Component {
                     <div className="control">
                         <input className="input"
                             type="number"
-                            placeholder="Postleizahl"
+                            placeholder="Postleitzahl"
                             value={this.state.zip}
                             onChange={this.handleZipChange}
                         />
