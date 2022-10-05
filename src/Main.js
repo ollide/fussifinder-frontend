@@ -90,7 +90,12 @@ class Main extends Component {
                     <section className="section">
                         <div className="container">
                             <button className="button is-medium"
-                                onClick={() => this.onFindMatchesClick()}>Suche starten</button>
+                                onClick={() => this.onFindMatchesClick()}>
+                                <span className="icon">
+                                    <i className="icon-search"></i>
+                                </span>
+                                <span>Suche starten</span>
+                            </button>
                         </div>
                     </section> :
                     <MatchList matchDays={matchDays} isLoading={isLoading} error={error} />
