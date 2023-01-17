@@ -21,6 +21,11 @@ class Match extends React.Component {
 
     render() {
         const match = this.props.match;
+        if (/android/i.test(navigator.userAgent)) {
+            // Fix links not opening in app
+            match.url = match.url.replace('https:', 'http:');
+        }
+
         return (
             <FilterContext.Consumer>
                 {context => {
