@@ -54,7 +54,7 @@ export class FilterProvider extends React.Component {
         let region;
         try {
             region = JSON.parse(localStorage.getItem('region'));
-        } catch (e) {
+        } catch {
             localStorage.removeItem('region');
         }
         region = region || {
