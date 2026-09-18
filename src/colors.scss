@@ -57,6 +57,10 @@
     --filter-active-border-color: var(--color-green-2);
     --filter-active-bg-hover-color: var(--color-green-1);
     --filter-active-border-hover-color: var(--color-green-3);
+
+    // match count badge on switched-off filters: translucent, so it also works on hover
+    --filter-count-bg-color: rgba(33, 38, 45, 0.12); // gray-7
+    --filter-count-fg-color: var(--color-gray-8);
 }
 
 @mixin fih-colors-dark {
@@ -96,6 +100,9 @@
     --filter-active-border-color: var(--color-green-1);
     --filter-active-bg-hover-color: var(--color-green-1);
     --filter-active-border-hover-color: var(--color-green-2);
+
+    --filter-count-bg-color: rgba(201, 209, 217, 0.25); // gray-1
+    --filter-count-fg-color: var(--color-gray-0);
 }
 
 :root {

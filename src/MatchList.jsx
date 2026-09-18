@@ -10,10 +10,19 @@ const MatchList = props => {
         <section className="section no-mobile-padding">
             <div className="container">
                 {props.error &&
-                    <div className="section">
+                    <>
                         <div className="notification is-danger">
-                            Es ist ein Fehler aufgetreten. Probier es später noch einmal.
+                            {props.error.message}
                         </div>
+                        <button className="button" onClick={props.onRetry}>
+                            Erneut versuchen
+                        </button>
+                    </>
+                }
+
+                {props.warning &&
+                    <div className="notification is-warning">
+                        {props.warning}
                     </div>
                 }
 
@@ -31,7 +40,7 @@ const MatchList = props => {
                             total={props.matchDays.length}
                         />)}
 
-                    {!props.matchDays.length &&
+                    {!props.matchDays.length && !props.error &&
                         <div className="notification">
                             Keine Spiele gefunden.
                         </div>}

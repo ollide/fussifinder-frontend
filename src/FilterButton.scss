@@ -31,3 +31,29 @@
         }
     }
 }
+
+.filter-count {
+    margin-left: 0.4em;
+    padding: 0 0.4em;
+    border-radius: 9999px;
+    font-size: 0.75em;
+    line-height: 1.5;
+    background-color: var(--filter-count-bg-color);
+    color: var(--filter-count-fg-color);
+}
+
+// Short labels (< 1024px): no room for an inline badge, so pin it to the button's corner instead
+@media only screen and (max-width: 1023px) {
+    .filter-count {
+        position: absolute;
+        top: -0.6rem;
+        right: -0.25rem;
+        z-index: 2;
+        min-width: 1.6em;
+        margin: 0;
+        padding: 0 0.3em;
+        font-size: 0.65rem;
+        text-align: center;
+        pointer-events: none;
+    }
+}
