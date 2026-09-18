@@ -74,6 +74,7 @@ export class FilterProvider extends React.Component {
             team: {
                 Herren: true,
                 Frauen: true,
+                'Ü32': false,
                 'A-Jun': true,
                 'B-Jun': false,
                 'C-Jun': false,

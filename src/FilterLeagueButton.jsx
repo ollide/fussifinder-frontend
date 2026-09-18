@@ -2,6 +2,7 @@ import React from 'react';
 
 import './FilterButton.scss'
 import { FilterContext } from './FilterContext';
+import FilterCount from './FilterCount';
 
 class FilterLeagueButton extends React.Component {
 
@@ -36,6 +37,7 @@ class FilterLeagueButton extends React.Component {
                 data-tooltip={name}
                 onClick={() => this.onClick(filter)}>
                 {this.context.isMobile ? abbrv : name}
+                <FilterCount count={this.context.league[filter] ? 0 : this.props.count} />
             </button>
         )
     }

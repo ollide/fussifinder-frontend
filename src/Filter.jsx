@@ -10,25 +10,36 @@ import { FilterContext } from './FilterContext';
 class Filter extends React.Component {
 
     render() {
+        const matches = (this.props.matchDays || []).flatMap(day => day.matches);
+
         return (
             <FilterContext.Consumer>
-                {() => (
+                {(context) => {
+                    // Number of matches that a switched-off filter would add: those of its team type / league
+                    // that pass the other filter row (a match hidden by both rows isn't shown by either alone)
+                    const teamCount = (key) => matches
+                        .filter(m => m.teamTypeKey === key && context.league[m.leagueKey]).length;
+                    const leagueCount = (key) => matches
+                        .filter(m => m.leagueKey === key && context.team[m.teamTypeKey]).length;
+
+                    return (
                     <div className="container filter-container">
                         <h5 className="subtitle is-5">Alters- &amp; Spielklassen</h5>
                         <div className="buttons has-addons team-type-filter">
-                            <FilterTeamButton filter="Herren" />
-                            <FilterTeamButton filter="Frauen" />
-                            <FilterTeamButton filter="A-Jun" abbrv="U19" name="A-JunorInnen" />
-                            <FilterTeamButton filter="B-Jun" abbrv="U17" name="B-JunorInnen" />
+                            <FilterTeamButton filter="Herren" count={teamCount("Herren")} />
+                            <FilterTeamButton filter="Frauen" count={teamCount("Frauen")} />
+                            <FilterTeamButton filter="Ü32" count={teamCount("Ü32")} />
+                            <FilterTeamButton filter="A-Jun" count={teamCount("A-Jun")} abbrv="U19" name="A-JunorInnen" />
+                            <FilterTeamButton filter="B-Jun" count={teamCount("B-Jun")} abbrv="U17" name="B-JunorInnen" />
                         </div>
                         <div className="buttons has-addons league-filter">
-                            <FilterLeagueButton filter="VL" name="Verbandsliga" />
-                            <FilterLeagueButton filter="LL" name="Landesliga" />
-                            <FilterLeagueButton filter="BL" name="Bezirksliga" />
-                            <FilterLeagueButton filter="KL" name="Kreisliga" />
-                            <FilterLeagueButton filter="KK" name="Kreisklasse" />
-                            <FilterLeagueButton filter="FS" name="Freundschaftsspiele" />
-                            <FilterLeagueButton filter="P" name="Pokal" />
+                            <FilterLeagueButton filter="VL" count={leagueCount("VL")} name="Verbandsliga" />
+                            <FilterLeagueButton filter="LL" count={leagueCount("LL")} name="Landesliga" />
+                            <FilterLeagueButton filter="BL" count={leagueCount("BL")} name="Bezirksliga" />
+                            <FilterLeagueButton filter="KL" count={leagueCount("KL")} name="Kreisliga" />
+                            <FilterLeagueButton filter="KK" count={leagueCount("KK")} name="Kreisklasse" />
+                            <FilterLeagueButton filter="FS" count={leagueCount("FS")} name="Freundschaftsspiele" />
+                            <FilterLeagueButton filter="P" count={leagueCount("P")} name="Pokal" />
                         </div>
 
                         <h5 className="subtitle is-5">Zeitraum</h5>
@@ -39,7 +50,8 @@ class Filter extends React.Component {
                             <DateFilter />
                         </div>
                     </div>
-                )}
+                    );
+                }}
             </FilterContext.Consumer>
         )
     }

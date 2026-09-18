@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './Main.scss';
 import Filter from './Filter';
 import MatchList from './MatchList';
+import MatchSummary from './MatchSummary';
 
-import CONFIG from './config';
-import { handleFetchJsonResponse } from './util';
+import { startMatchStream } from './matchStream';
 
 class Main extends Component {
 
@@ -13,7 +13,12 @@ class Main extends Component {
         isLoading: true,
         error: null,
         matchDays: [],
+        streamProgress: null,
+        streamFading: false,
+        warning: null,
     }
+
+    stopStream = null;
 
     componentDidMount() {
     }
@@ -25,11 +30,16 @@ class Main extends Component {
         const prevPeriod = prevProps.period
 
         // detect region change
-        if (!this.state.isLoading && !this.state.firstLoad
+        // (getMatches cancels a stream that is still running)
+        if (!this.state.firstLoad
             && (type !== prevRegion.type || name !== prevRegion.name
                 || period !== prevPeriod)) {
             this.getMatches();
         }
+    }
+
+    componentWillUnmount() {
+        this.stopStream?.();
     }
 
     onFindMatchesClick() {
@@ -39,33 +49,14 @@ class Main extends Component {
     getMatches = () => {
         const { type, name } = this.props.region;
         const period = this.props.period;
-        this.setState({ isLoading: true, firstLoad: false });
 
-        const url = `${CONFIG.baseApiUrl}/api/matches?`
-            + `type=${type}&name=${name}&period=${period}`;
-
-        fetch(url, {
-            method: 'get',
-        })
-            .then(handleFetchJsonResponse)
-            .then((json) => {
-                this.setState({
-                    matchDays: json,
-                    isLoading: false,
-                });
-            }).catch((err) => {
-                this.setState({
-                    isLoading: false,
-                    error: err,
-                });
-            });
+        this.stopStream?.();
+        this.setState({ firstLoad: false, isLoading: true, matchDays: [], streamProgress: null, streamFading: false, error: null, warning: null });
+        this.stopStream = startMatchStream('/api/matches/stream', { type, name, period }, (state) => this.setState(state));
     }
 
     render() {
-        const { firstLoad, isLoading, matchDays, error } = this.state;
-
-        let matchCount = 0;
-        matchDays.forEach(({ matches }) => matchCount += matches.length);
+        const { firstLoad, isLoading, matchDays, error, warning, streamProgress, streamFading } = this.state;
 
         return (
             <>
@@ -73,17 +64,23 @@ class Main extends Component {
                     <div className="container">
                         <h1 className="title">Fußball in {this.props.region.displayName}</h1>
 
-                        {!firstLoad &&
-                            <p className="subtitle">
+                        {!firstLoad && <>
+                            <p className="subtitle" style={{ marginBottom: '0.4rem' }}>
                                 {isLoading ? <>Spiele werden geladen…</> :
-                                    <>{matchCount} Spiele in der nächsten Woche.</>}</p>
-                        }
+                                    <MatchSummary matchDays={matchDays} />}
+                            </p>
+                            <progress
+                                className={`stream-progress${!streamProgress ? ' is-hidden' : streamFading ? ' is-fading' : ''}`}
+                                value={streamProgress?.current ?? 0}
+                                max={streamProgress?.total ?? 1}
+                            />
+                        </>}
                     </div>
                 </section>
 
                 {!error &&
                     <section className="section">
-                        <Filter />
+                        <Filter matchDays={matchDays} />
                     </section>}
 
                 {firstLoad ?
@@ -98,7 +95,8 @@ class Main extends Component {
                             </button>
                         </div>
                     </section> :
-                    <MatchList matchDays={matchDays} isLoading={isLoading} error={error} />
+                    <MatchList matchDays={matchDays} isLoading={isLoading} error={error} warning={warning}
+                        onRetry={this.getMatches} />
                 }
             </>
         );
