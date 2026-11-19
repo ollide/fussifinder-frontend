@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './LoadingIndicator.scss';
+import './LoadingIndicator.css';
 
-const LoadingIndicator = () => {
+const LoadingIndicator = ({ small = false }) => {
     return (
-        <div className="lds-wrapper">
+        <div className={'lds-wrapper' + (small ? ' is-small' : '')} role="status" aria-label="Wird geladen">
             <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         </div>
     )

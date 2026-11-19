@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ZipForm.scss';
+import './ZipForm.css';
 
 class ZipForm extends React.Component {
     constructor(props) {
@@ -25,20 +25,21 @@ class ZipForm extends React.Component {
     }
 
     render() {
+        const { id, label, placeholder = 'Postleitzahl' } = this.props;
         return (
-            <form onSubmit={this.handleSubmit}>
-                <div className="field has-addons">
-                    <div className="control">
-                        <input className="input"
-                            type="number"
-                            placeholder="Postleitzahl"
-                            value={this.state.zip}
-                            onChange={this.handleZipChange}
-                        />
-                    </div>
-                    <div className="control">
-                        <button className="button zip-btn">OK</button>
-                    </div>
+            <form className="zip-form" onSubmit={this.handleSubmit}>
+                {label && <label className="section-label" htmlFor={id}>{label}</label>}
+                <div className="zip-field">
+                    <input className="zip-input"
+                        id={id}
+                        type="number"
+                        inputMode="numeric"
+                        placeholder={placeholder}
+                        aria-label={label ? undefined : 'Postleitzahl'}
+                        value={this.state.zip}
+                        onChange={this.handleZipChange}
+                    />
+                    <button className="zip-btn">Suchen</button>
                 </div>
             </form>
         );

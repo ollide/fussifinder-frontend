@@ -1,27 +1,22 @@
 import React, { useState } from 'react';
 
-import './Footer.scss';
+import './Footer.css';
+
+const lsKey = 'fih-color-mode';
+// stored value → button label
+const modes = [['Auto', 'Auto'], ['Light', 'Hell'], ['Dark', 'Dunkel']];
+
+const applyMode = (mode) => {
+    document.documentElement.setAttribute('data-theme', mode.toLowerCase());
+}
 
 const Footer = () => {
-
-    const lsKey = 'fih-color-mode';
-    const modes = ['Auto', 'Dark', 'Light'];
-
-    const getNextMode = (mode) => {
-        return modes[(modes.indexOf(mode) + 1) % modes.length];
-    }
-
-    const applyMode = (mode) => {
-        const domMode = mode.toLowerCase();
-        document.documentElement.setAttribute('data-color-mode', domMode);
-    }
 
     const savedMode = localStorage.getItem(lsKey) || 'Auto';
     const [mode, setMode] = useState(savedMode);
     applyMode(savedMode);
 
-    const onSwitchMode = () => {
-        const newMode = getNextMode(mode);
+    const onSelectMode = (newMode) => {
         setMode(newMode);
         applyMode(newMode);
         localStorage.setItem(lsKey, newMode);
@@ -29,17 +24,18 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <div className="container">
-                <div className="content has-text-centered">
-                    <p>
-                        <strong>Fussifinder</strong> auf <a href="https://github.com/ollide/fussball-in-hamburg">GitHub</a>.
-                    </p>
-                    <button className="fih-button button is-small"
-                        style={{ marginTop: '10px' }}
-                        onClick={onSwitchMode}>
-                        <span>Theme: {mode} (Switch)</span>
+            <p>
+                <strong>Fussifinder</strong> auf <a href="https://github.com/ollide/fussball-in-hamburg">GitHub</a>
+            </p>
+            <div className="segmented segmented-small" role="group" aria-label="Darstellung">
+                {modes.map(([value, label]) => (
+                    <button key={value}
+                        className={'segment' + (mode === value ? ' is-active' : '')}
+                        aria-pressed={mode === value}
+                        onClick={() => onSelectMode(value)}>
+                        {label}
                     </button>
-                </div>
+                ))}
             </div>
         </footer>
     )

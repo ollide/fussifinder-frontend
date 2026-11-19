@@ -1,0 +1,216 @@
+.filter-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+.filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Filter chips */
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 38px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background-color: var(--surface);
+    color: var(--text);
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+@media (hover: hover) {
+    .chip:hover {
+        border-color: var(--border-strong);
+        background-color: var(--hover-bg);
+    }
+}
+
+.chip.is-active {
+    border-color: var(--accent-border);
+    background-color: var(--accent);
+    color: var(--on-accent);
+    font-weight: 600;
+}
+
+@media (hover: hover) {
+    .chip.is-active:hover {
+        border-color: var(--accent-hover);
+        background-color: var(--accent-hover);
+    }
+}
+
+.chip svg {
+    flex-shrink: 0;
+}
+
+/* Hidden matches a switched-off filter would show */
+.filter-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background-color: var(--badge-bg);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* Full league name below an abbreviated (mobile) chip, shown while the chip is hovered or focused */
+.chip.tooltip::before,
+.chip.tooltip::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* arrow */
+.chip.tooltip::after {
+    content: '';
+    margin-top: 2px;
+    margin-left: -6px;
+    border: 6px solid transparent;
+    border-top-width: 0;
+    border-bottom-color: var(--tooltip-bg);
+}
+
+/* box */
+.chip.tooltip::before {
+    content: attr(data-tooltip);
+    margin-top: 8px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-fg);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: pre;
+    transform: translateX(-50%);
+}
+
+.chip.tooltip:hover::before,
+.chip.tooltip:hover::after,
+.chip.tooltip:focus::before,
+.chip.tooltip:focus::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Date: calendar segment (mobile devices) */
+
+.date-segment {
+    position: relative;
+    flex: 0 0 auto;
+    min-width: 48px;
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+.date-segment .date-input {
+    width: 0;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.date-segment .icon-calendar {
+    font-size: 17px;
+}
+
+/* Date: field below the period control (other devices) */
+
+.date-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-control);
+    color: var(--muted);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+@media (hover: hover) {
+    .date-field:hover {
+        border-color: var(--border-strong);
+    }
+}
+
+.date-field:focus-within {
+    border-color: var(--focus);
+    box-shadow: 0 0 0 1px var(--focus);
+}
+
+.date-field.is-active {
+    border-color: var(--accent-border);
+    box-shadow: inset 0 0 0 1px var(--accent-border);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.date-field .date-input {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.date-field .date-input:focus-visible {
+    outline: none;
+}
+
+@media (min-width: 1024px) {
+    .filter-card {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .chip {
+        height: 34px;
+        padding: 0 12px;
+        font-size: 14px;
+    }
+
+    .chip svg {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+/* very narrow screens: five perimeter segments must fit */
+@media (max-width: 359px) {
+    .segment {
+        padding: 0 4px;
+        font-size: 14px;
+    }
+}

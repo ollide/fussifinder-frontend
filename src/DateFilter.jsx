@@ -1,8 +1,9 @@
 import React from 'react';
 
-import './DateFilter.scss'
 import { FilterContext } from './FilterContext';
 
+// Mobile devices: calendar segment at the end of the period control (tapping it opens the native date picker).
+// Elsewhere: a "Bestimmter Tag:" date field below the period control.
 class DateFilter extends React.Component {
 
     constructor(props) {
@@ -20,22 +21,28 @@ class DateFilter extends React.Component {
     render() {
         const active = this.DATE.test(this.context.period);
         const date = active ? this.context.period : '';
-        const mobile = window.isMobile;
-        return (
-            <span className={'button' + (active ? ' is-active-filter' : '')}>
-                <label>
-                    <i className="icon-calendar"></i>
-                    <input className={'date-filter' + (mobile ? ' mobile' : ' desktop')}
-                        type="date"
-                        value={date}
-                        onChange={this.handleDateChange}
-                    />
+        const input = <input className="date-input"
+            type="date"
+            value={date}
+            onChange={this.handleDateChange}
+        />;
 
-                    {mobile && date && <span className="date-text">
-                        {this.dateFormat.format(new Date(date))}</span>}
-
+        if (window.isMobile) {
+            return (
+                <label className={'segment date-segment' + (active ? ' is-active' : '')} aria-label="Datum wählen">
+                    <i className="icon-calendar" aria-hidden="true"></i>
+                    {input}
+                    {date && <span>{this.dateFormat.format(new Date(date))}</span>}
                 </label>
-            </span>
+            );
+        }
+
+        return (
+            <label className={'date-field' + (active ? ' is-active' : '')}>
+                <i className="icon-calendar" aria-hidden="true"></i>
+                <span>Bestimmter Tag:</span>
+                {input}
+            </label>
         )
     }
 }

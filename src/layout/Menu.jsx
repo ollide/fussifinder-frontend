@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 
-import './Menu.scss';
+import './Menu.css';
 
 import CONFIG from '../config';
 import { useAppContext } from '../FilterContext';
 import ZipForm from './ZipForm';
+import { CheckIcon, ChevronIcon } from '../icons';
 import { preventFocus, handleFetchJsonResponse } from '../util';
 
 const Menu = props => {
@@ -44,12 +45,16 @@ const Menu = props => {
 
     const setRegion = (type, name, displayName) => {
         context.setRegion({ type, name, displayName });
-        props.toggleBurger();
+        if (props.open) {
+            props.toggleBurger();
+        }
         navigate('/');
     }
 
     const onNearbyClicked = () => {
-        props.toggleBurger();
+        if (props.open) {
+            props.toggleBurger();
+        }
     }
 
     const toggleCategory = (category) => {
@@ -59,58 +64,71 @@ const Menu = props => {
         }));
     }
 
-    const getCategoryList = () => {
-        const isMobile = context.isMobile;
-        return [{
-            name: 'cities',
-            type: 'CITY',
-            displayName: 'Städte',
-            visible: categories.cities || !isMobile,
-        }, {
-            name: 'districts',
-            type: 'DISTRICT',
-            displayName: 'Landkreise',
-            visible: categories.districts || !isMobile,
-        }, {
-            name: 'specials',
-            type: 'SPECIAL',
-            displayName: 'Spezial',
-            visible: categories.specials || !isMobile,
-        }, {
-            name: 'associations',
-            type: 'ASSOCIATION',
-            displayName: 'Verbände',
-            visible: categories.associations || !isMobile,
-            last: true,
-        }];
-    }
+    const isMobile = context.isMobile;
+    const { region } = context;
+
+    // Mobile: accordion groups. Desktop: every group is rendered, its dropdown opens on hover / focus (CSS)
+    const categoryList = [{
+        name: 'cities',
+        type: 'CITY',
+        displayName: 'Städte',
+    }, {
+        name: 'districts',
+        type: 'DISTRICT',
+        displayName: 'Landkreise',
+    }, {
+        name: 'specials',
+        type: 'SPECIAL',
+        displayName: 'Spezial',
+    }, {
+        name: 'associations',
+        type: 'ASSOCIATION',
+        displayName: 'Verbände',
+        last: true,
+    }].map(c => ({ ...c, visible: categories[c.name] || !isMobile }));
+
+    // Mobile: first entry of the menu. Desktop: pill right of the dropdowns
+    const nearbyLink = (
+        <Link className="nav-nearby" to="/nearby" onClick={onNearbyClicked}>
+            <i className="icon-location" aria-hidden="true"></i>
+            <span>{isMobile ? 'Spiele in der Umgebung' : 'Umgebung'}</span>
+        </Link>
+    );
 
     return (
-        <>
-            {getCategoryList().map(c => (
-                <div
-                    key={`navbar-item-${c.name}`}
-                    className="navbar-item has-dropdown is-hoverable"
-                >
+        <nav id="main-menu" className={'nav-menu' + (props.open ? ' is-open' : '')} aria-label="Regionen">
+            {isMobile && <>{nearbyLink}<div className="nav-divider" /></>}
+
+            {categoryList.map(c => (
+                <div key={`nav-group-${c.name}`} className={'nav-group' + (c.last ? ' is-last' : '')}>
                     <button
-                        className={'navbar-link' + (c.visible && context.isMobile ? ' arrow-up' : '')}
+                        className="nav-group-toggle"
+                        aria-expanded={isMobile ? c.visible : undefined}
                         onMouseDown={preventFocus}
                         onClick={() => toggleCategory(c.name)}>
-                        {c.displayName}
+                        <span>{c.displayName}</span>
+                        <ChevronIcon size={isMobile ? 20 : 16} className={'nav-chevron' + (isMobile && c.visible ? ' is-open' : '')} />
                     </button>
                     {c.visible &&
-                        <div className={'navbar-dropdown' + (c.last ? ' is-right' : '')}>
-                            {(regions[c.name] || []).map(({ name, displayName }) =>
-                                <button key={`${c.name}-${name}`} className="navbar-item"
-                                    onClick={() => setRegion(c.type, name, displayName)}
-                                    onMouseDown={preventFocus}
-                                >
-                                    {displayName}
-                                </button>
-                            )}
-                            {c.name === 'specials' &&
-                                <div className="navbar-item">
-                                    <ZipForm onZipSubmit={(zip) => setRegion('ZIP', zip, zip)} />
+                        <div className="nav-dropdown">
+                            {(regions[c.name] || []).map(({ name, displayName }) => {
+                                const selected = region.type === c.type && region.name === name;
+                                return (
+                                    <button key={`${c.name}-${name}`}
+                                        className={'nav-region' + (selected ? ' is-selected' : '')}
+                                        aria-current={selected ? 'true' : undefined}
+                                        onClick={() => setRegion(c.type, name, displayName)}
+                                        onMouseDown={preventFocus}
+                                    >
+                                        <span>{displayName}</span>
+                                        {selected && <CheckIcon size={18} strokeWidth={2.5} />}
+                                    </button>
+                                );
+                            })}
+                            {c.name === 'specials' && !isMobile &&
+                                <div className="nav-zip">
+                                    <ZipForm id="menu-zip" placeholder="Postleitzahl"
+                                        onZipSubmit={(zip) => setRegion('ZIP', zip, zip)} />
                                 </div>
                             }
                         </div>
@@ -118,14 +136,16 @@ const Menu = props => {
                 </div>
             ))}
 
-            <Link
-                className="navbar-item fih-navbar-link"
-                to="/nearby"
-                onClick={onNearbyClicked}
-            >
-                Umgebung
-            </Link>
-        </>
+            {!isMobile && nearbyLink}
+
+            {isMobile && <div className="nav-divider" />}
+            {isMobile &&
+                <div className="nav-zip">
+                    <ZipForm id="menu-zip" label="Nach Postleitzahl" placeholder="z. B. 20095"
+                        onZipSubmit={(zip) => setRegion('ZIP', zip, zip)} />
+                </div>
+            }
+        </nav>
     )
 }
 

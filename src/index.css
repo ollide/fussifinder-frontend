@@ -1,0 +1,332 @@
+/* Design tokens. Light is the default; dark applies via the OS setting (theme "Auto")
+   or explicitly via data-theme="dark" on <html> (set by the footer's theme switch). */
+:root {
+    color-scheme: light;
+
+    --brand: #7ca300;
+
+    --bg: #f4f5f7;
+    --surface: #ffffff;
+    --border: #dfe3e8;
+    --border-strong: #b1bac4;
+    --text: #161b22;
+    --muted: #57606a;
+    --link: #567200;
+    --hover-bg: #f0f2f4;
+    --tag-bg: #eef0f3;
+    --badge-bg: rgba(33, 38, 45, 0.1);
+    --focus: #567200;
+
+    --accent: #567200;
+    --accent-hover: #4a6100;
+    --accent-border: #4a6100;
+    --on-accent: #ffffff;
+    --selected-bg: #eef4dc;
+    --selected-fg: #4a6100;
+
+    --nav: #21262d;
+    --nav-fg: #f0f6fc;
+    --nav-hover: rgba(240, 246, 252, 0.1);
+
+    --seg-bg: #e4e7eb;
+    --seg-on: #ffffff;
+    --seg-shadow: 0 1px 2px rgba(16, 24, 40, 0.12);
+
+    --shadow-pop: 0 12px 24px rgba(16, 24, 40, 0.12);
+    --backdrop: rgba(13, 17, 23, 0.4);
+    --tooltip-bg: rgba(33, 38, 45, 0.92);
+    --tooltip-fg: #ffffff;
+
+    --danger-bg: #ffebe9;
+    --danger-border: #ffcecb;
+    --danger-fg: #82071e;
+    --warning-bg: #fff8c5;
+    --warning-border: #eed888;
+    --warning-fg: #4d2d00;
+
+    --radius-card: 14px;
+    --radius-control: 10px;
+    --font: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        color-scheme: dark;
+
+        --bg: #0d1117;
+        --surface: #161b22;
+        --border: #30363d;
+        --border-strong: #6e7681;
+        --text: #f0f6fc;
+        --muted: #8b949e;
+        --link: #8fbc00;
+        --hover-bg: #21262d;
+        --tag-bg: #21262d;
+        --badge-bg: rgba(201, 209, 217, 0.18);
+        --focus: #8fbc00;
+
+        --accent: #7ca300;
+        --accent-hover: #8fbc00;
+        --accent-border: #7ca300;
+        --on-accent: #0d1117;
+        --selected-bg: rgba(124, 163, 0, 0.16);
+        --selected-fg: #8fbc00;
+
+        --nav: #010409;
+
+        --seg-bg: #0d1117;
+        --seg-on: #30363d;
+        --seg-shadow: none;
+
+        --shadow-pop: 0 12px 24px rgba(1, 4, 9, 0.6);
+        --backdrop: rgba(1, 4, 9, 0.6);
+        --tooltip-bg: rgba(240, 246, 252, 0.92);
+        --tooltip-fg: #0d1117;
+
+        --danger-bg: rgba(248, 81, 73, 0.1);
+        --danger-border: rgba(248, 81, 73, 0.4);
+        --danger-fg: #ffa198;
+        --warning-bg: rgba(187, 128, 9, 0.15);
+        --warning-border: rgba(187, 128, 9, 0.4);
+        --warning-fg: #e3b341;
+    }
+}
+
+/* Same values as the media query above (plain CSS has no mixins) */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+    --border-strong: #6e7681;
+    --text: #f0f6fc;
+    --muted: #8b949e;
+    --link: #8fbc00;
+    --hover-bg: #21262d;
+    --tag-bg: #21262d;
+    --badge-bg: rgba(201, 209, 217, 0.18);
+    --focus: #8fbc00;
+
+    --accent: #7ca300;
+    --accent-hover: #8fbc00;
+    --accent-border: #7ca300;
+    --on-accent: #0d1117;
+    --selected-bg: rgba(124, 163, 0, 0.16);
+    --selected-fg: #8fbc00;
+
+    --nav: #010409;
+
+    --seg-bg: #0d1117;
+    --seg-on: #30363d;
+    --seg-shadow: none;
+
+    --shadow-pop: 0 12px 24px rgba(1, 4, 9, 0.6);
+    --backdrop: rgba(1, 4, 9, 0.6);
+    --tooltip-bg: rgba(240, 246, 252, 0.92);
+    --tooltip-fg: #0d1117;
+
+    --danger-bg: rgba(248, 81, 73, 0.1);
+    --danger-border: rgba(248, 81, 73, 0.4);
+    --danger-fg: #ffa198;
+    --warning-bg: rgba(187, 128, 9, 0.15);
+    --warning-border: rgba(187, 128, 9, 0.4);
+    --warning-fg: #e3b341;
+}
+
+/* Base */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--bg);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 280px;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+img,
+svg {
+    display: block;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button,
+input {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+}
+
+/* Fontello glyphs: the font's default side margins would throw off icon alignment */
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Shared controls */
+
+.card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-control);
+    background-color: var(--surface);
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+@media (hover: hover) {
+    .btn:hover {
+        border-color: var(--border-strong);
+        background-color: var(--hover-bg);
+    }
+}
+
+.btn-primary {
+    border-color: var(--accent-border);
+    background-color: var(--accent);
+    color: var(--on-accent);
+    font-weight: 600;
+}
+
+@media (hover: hover) {
+    .btn-primary:hover {
+        border-color: var(--accent-hover);
+        background-color: var(--accent-hover);
+    }
+}
+
+/* Segmented control: a group of .segment buttons, one of them .is-active */
+.segmented {
+    display: flex;
+    gap: 2px;
+    padding: 3px;
+    border-radius: var(--radius-control);
+    background-color: var(--seg-bg);
+}
+
+.segment {
+    flex: 1 1 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 0;
+    height: 38px;
+    padding: 0 8px;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    color: var(--text);
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+@media (hover: hover) {
+    .segment:hover {
+        background-color: var(--hover-bg);
+    }
+}
+
+.segmented .segment.is-active {
+    background-color: var(--seg-on);
+    box-shadow: var(--seg-shadow);
+    font-weight: 600;
+}
+
+.segmented-small {
+    display: inline-flex;
+    border-radius: 9px;
+}
+
+.segmented-small .segment {
+    flex: 0 0 auto;
+    height: 32px;
+    padding: 0 12px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+/* Small uppercase label above a group of controls */
+.section-label {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+    .segment {
+        height: 34px;
+        border-radius: 7px;
+        font-size: 14px;
+    }
+
+    .segmented-small .segment {
+        height: 30px;
+    }
+}

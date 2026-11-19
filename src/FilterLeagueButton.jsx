@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './FilterButton.scss'
 import { FilterContext } from './FilterContext';
 import FilterCount from './FilterCount';
+import { CheckIcon } from './icons';
 
 class FilterLeagueButton extends React.Component {
 
@@ -29,15 +29,20 @@ class FilterLeagueButton extends React.Component {
         const filter = this.props.filter;
         const abbrv = this.props.abbrv || filter;
         const name = this.props.name;
+        const active = !!this.context.league[filter];
+        const mobile = this.context.isMobile;
         return (
-            <button className={'button'
-                + (this.context.league[filter] ? ' is-active-filter' : '')
-                + (this.context.isMobile && this.state.showTooltip ? ' tooltip is-tooltip-bottom' : '')
+            <button className={'chip'
+                + (active ? ' is-active' : '')
+                + (mobile && this.state.showTooltip ? ' tooltip' : '')
             }
+                aria-pressed={active}
+                aria-label={mobile ? name : undefined}
                 data-tooltip={name}
                 onClick={() => this.onClick(filter)}>
-                {this.context.isMobile ? abbrv : name}
-                <FilterCount count={this.context.league[filter] ? 0 : this.props.count} />
+                {active && <CheckIcon />}
+                <span>{mobile ? abbrv : name}</span>
+                <FilterCount count={active ? 0 : this.props.count} />
             </button>
         )
     }

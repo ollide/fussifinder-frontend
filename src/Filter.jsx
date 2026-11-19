@@ -4,7 +4,7 @@ import FilterLeagueButton from './FilterLeagueButton';
 import FilterTeamButton from './FilterTeamButton';
 import FilterPeriodButton from './FilterPeriodButton';
 import DateFilter from './DateFilter';
-import './Filter.scss';
+import './Filter.css';
 import { FilterContext } from './FilterContext';
 
 class Filter extends React.Component {
@@ -22,34 +22,47 @@ class Filter extends React.Component {
                     const leagueCount = (key) => matches
                         .filter(m => m.leagueKey === key && context.team[m.teamTypeKey]).length;
 
+                    const mobileDevice = window.isMobile;
+
                     return (
-                    <div className="container filter-container">
-                        <h5 className="subtitle is-5">Alters- &amp; Spielklassen</h5>
-                        <div className="buttons has-addons team-type-filter">
-                            <FilterTeamButton filter="Herren" count={teamCount("Herren")} />
-                            <FilterTeamButton filter="Frauen" count={teamCount("Frauen")} />
-                            <FilterTeamButton filter="Ü32" count={teamCount("Ü32")} />
-                            <FilterTeamButton filter="A-Jun" count={teamCount("A-Jun")} abbrv="U19" name="A-JunorInnen" />
-                            <FilterTeamButton filter="B-Jun" count={teamCount("B-Jun")} abbrv="U17" name="B-JunorInnen" />
-                        </div>
-                        <div className="buttons has-addons league-filter">
-                            <FilterLeagueButton filter="VL" count={leagueCount("VL")} name="Verbandsliga" />
-                            <FilterLeagueButton filter="LL" count={leagueCount("LL")} name="Landesliga" />
-                            <FilterLeagueButton filter="BL" count={leagueCount("BL")} name="Bezirksliga" />
-                            <FilterLeagueButton filter="KL" count={leagueCount("KL")} name="Kreisliga" />
-                            <FilterLeagueButton filter="KK" count={leagueCount("KK")} name="Kreisklasse" />
-                            <FilterLeagueButton filter="FS" count={leagueCount("FS")} name="Freundschaftsspiele" />
-                            <FilterLeagueButton filter="P" count={leagueCount("P")} name="Pokal" />
+                    <aside className="card filter-card" aria-label="Filter">
+                        <div className="filter-section">
+                            <h2 className="section-label">Altersklassen</h2>
+                            <div className="chips team-type-filter">
+                                <FilterTeamButton filter="Herren" count={teamCount("Herren")} />
+                                <FilterTeamButton filter="Frauen" count={teamCount("Frauen")} />
+                                <FilterTeamButton filter="Ü32" count={teamCount("Ü32")} />
+                                <FilterTeamButton filter="A-Jun" count={teamCount("A-Jun")} abbrv="U19" name="A-JuniorInnen" />
+                                <FilterTeamButton filter="B-Jun" count={teamCount("B-Jun")} abbrv="U17" name="B-JuniorInnen" />
+                            </div>
                         </div>
 
-                        <h5 className="subtitle is-5">Zeitraum</h5>
-                        <div className="buttons has-addons team-type-filter">
-                            <FilterPeriodButton filter="T" name="Heute" />
-                            <FilterPeriodButton filter="D3" name="3 Tage" />
-                            <FilterPeriodButton filter="D7" name="7 Tage" />
-                            <DateFilter />
+                        <div className="filter-section">
+                            <h2 className="section-label">Spielklassen</h2>
+                            <div className="chips league-filter">
+                                <FilterLeagueButton filter="VL" count={leagueCount("VL")} name="Verbandsliga" />
+                                <FilterLeagueButton filter="LL" count={leagueCount("LL")} name="Landesliga" />
+                                <FilterLeagueButton filter="BL" count={leagueCount("BL")} name="Bezirksliga" />
+                                <FilterLeagueButton filter="KL" count={leagueCount("KL")} name="Kreisliga" />
+                                <FilterLeagueButton filter="KK" count={leagueCount("KK")} name="Kreisklasse" />
+                                <FilterLeagueButton filter="FS" count={leagueCount("FS")} name="Freundschaftsspiele" />
+                                <FilterLeagueButton filter="P" count={leagueCount("P")} name="Pokal" />
+                            </div>
                         </div>
-                    </div>
+
+                        <div className="filter-section">
+                            <h2 className="section-label">Zeitraum</h2>
+                            <div className="segmented period-filter" role="group" aria-label="Zeitraum">
+                                <FilterPeriodButton filter="T" name="Heute" />
+                                <FilterPeriodButton filter="D3" name="3 Tage" />
+                                <FilterPeriodButton filter="D7" name="7 Tage" />
+                                {mobileDevice && <DateFilter />}
+                            </div>
+                            {!mobileDevice && <DateFilter />}
+                        </div>
+
+                        {this.props.children}
+                    </aside>
                     );
                 }}
             </FilterContext.Consumer>

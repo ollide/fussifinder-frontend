@@ -1,8 +1,9 @@
 import React from 'react';
 
-import './Match.scss'
+import './Match.css'
 import { FilterContext } from './FilterContext';
 import MatchDetails from './MatchDetails';
+import { ChevronIcon } from './icons';
 
 import { preventFocus } from './util';
 
@@ -32,39 +33,40 @@ class Match extends React.Component {
                     const visible = context.isVisible(match.teamTypeKey, match.leagueKey);
                     if (!visible) {
                         return <></>
-                    } else {
-                        return (
-                            <>
-                                <div className="match columns is-multiline is-mobile is-vcentered">
-                                    <div className="column is-11 match-header">
-                                        {match.kickoff}&nbsp;
-                    <span className="team-type">{match.teamType}</span>&nbsp;
-                    <span className="team-league">{match.league}</span>
-                                    </div>
-                                    <div className="column is-1 match-header right">
-                                        <a href={match.url} target="_blank" rel="noopener noreferrer">
-                                            <i className="icon-link-ext"></i>
-                                        </a>
-                                    </div>
-
-                                    <div className="column is-5 home-team">
-                                        {match.clubHome}
-                                    </div>
-                                    <div className="column is-1 match-separator">:</div>
-                                    <div className="column is-5 away-team">
-                                        {match.clubAway}
-                                    </div>
-
-                                    <div className="column is-1 match-details">
-                                        <button tabIndex="0" onMouseDown={preventFocus} onClick={this.toggleDetails}>
-                                            <i className={this.state.showDetails ? "icon-angle-up" : "icon-angle-down"}></i>
-                                        </button>
-                                    </div>
-
-                                    {this.state.showDetails && <MatchDetails id={match.id} />}
-                                </div>
-                            </>)
                     }
+                    const { showDetails } = this.state;
+                    const detailsId = `match-details-${match.id}`;
+                    return (
+                        <article className="match card">
+                            <div className="match-main">
+                                <div className="match-time">{match.kickoff}</div>
+                                <div className="match-teams">
+                                    <div className="match-team">{match.clubHome}</div>
+                                    <div className="match-team">{match.clubAway}</div>
+                                    <div className="match-meta">{match.teamType} · {match.league}</div>
+                                </div>
+                                <div className="match-tags" aria-hidden="true">
+                                    <span className="match-tag">{match.teamType}</span>
+                                    <span className="match-tag">{match.league}</span>
+                                </div>
+                                <div className="match-actions">
+                                    <a className="match-action match-link" href={match.url}
+                                        target="_blank" rel="noopener noreferrer"
+                                        aria-label="Spiel auf fussball.de öffnen">
+                                        <i className="icon-link-ext" aria-hidden="true"></i>
+                                    </a>
+                                    <button className="match-action match-toggle"
+                                        aria-label={showDetails ? 'Details ausblenden' : 'Details anzeigen'}
+                                        aria-expanded={showDetails}
+                                        aria-controls={showDetails ? detailsId : undefined}
+                                        onMouseDown={preventFocus} onClick={this.toggleDetails}>
+                                        <ChevronIcon className={'match-chevron' + (showDetails ? ' is-open' : '')} />
+                                    </button>
+                                </div>
+                            </div>
+
+                            {showDetails && <MatchDetails id={match.id} domId={detailsId} />}
+                        </article>)
                 }}
             </FilterContext.Consumer>
         )

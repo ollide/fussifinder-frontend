@@ -1,6 +1,5 @@
 import React from 'react';
 
-import './FilterButton.scss'
 import { FilterContext } from './FilterContext';
 
 class FilterPeriodButton extends React.Component {
@@ -14,7 +13,8 @@ class FilterPeriodButton extends React.Component {
         const active = this.context.period === filter;
         const name = this.props.name;
         return (
-            <button className={'button' + (active ? ' is-active-filter' : '')}
+            <button className={'segment' + (active ? ' is-active' : '')}
+                aria-pressed={active}
                 onClick={() => this.onClick(filter)}>
                 {name}
             </button>

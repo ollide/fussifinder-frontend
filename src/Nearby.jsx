@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './Main.scss';
+import './Main.css';
 import Filter from './Filter';
 
 import { startMatchStream } from './matchStream';
 
 import MatchList from './MatchList';
-import MatchSummary from './MatchSummary';
+import PageHead from './PageHead';
 import ZipForm from './layout/ZipForm';
 import FilterPerimeterButton from './FilterPerimeterButton';
 import { FilterContext } from './FilterContext';
@@ -66,50 +66,39 @@ class Nearby extends Component {
         const { nearbyZip } = this.props;
 
         return (
-            <>
-                <section className="section">
-                    <div className="container">
-                        <h1 className="title">Fußball in der Nähe</h1>
+            <main className="page">
+                <PageHead title="Fußball in der Nähe" firstLoad={firstLoad} isLoading={isLoading}
+                    matchDays={matchDays} streamProgress={streamProgress} streamFading={streamFading} />
 
-                        {!firstLoad && <>
-                            <p className="subtitle" style={{ marginBottom: '0.4rem' }}>
-                                {isLoading ? <>Spiele werden geladen…</> :
-                                    <MatchSummary matchDays={matchDays} />}
-                            </p>
-                            <progress
-                                className={`stream-progress${!streamProgress ? ' is-hidden' : streamFading ? ' is-fading' : ''}`}
-                                value={streamProgress?.current ?? 0}
-                                max={streamProgress?.total ?? 1}
-                            />
-                        </>}
-                    </div>
-                </section>
-
-                <section className="section">
-                    <Filter matchDays={matchDays} />
-
-                    <div className="container filter-container" style={{ paddingTop: '0.8rem' }}>
-                        <h5 className="subtitle is-5">Umkreis</h5>
-                        <div className="buttons has-addons league-filter">
-                            <FilterPerimeterButton filter="5000" name="5km" />
-                            <FilterPerimeterButton filter="10000" name="10km" />
-                            <FilterPerimeterButton filter="20000" name="20km" />
-                            <FilterPerimeterButton filter="50000" name="50km" />
-                            <FilterPerimeterButton filter="75000" name="75km" />
+                <div className="page-body">
+                    <Filter matchDays={matchDays}>
+                        <div className="filter-section">
+                            <h2 className="section-label">Umkreis</h2>
+                            <div className="segmented" role="group" aria-label="Umkreis">
+                                <FilterPerimeterButton filter="5000" name="5km" />
+                                <FilterPerimeterButton filter="10000" name="10km" />
+                                <FilterPerimeterButton filter="20000" name="20km" />
+                                <FilterPerimeterButton filter="50000" name="50km" />
+                                <FilterPerimeterButton filter="75000" name="75km" />
+                            </div>
                         </div>
 
-                        <h5 className="subtitle is-5">Standort</h5>
-                        <FilterContext.Consumer>
-                            {context => (
-                                <ZipForm zip={nearbyZip} onZipSubmit={context.setNearbyZip} />
-                            )}
-                        </FilterContext.Consumer>
-                    </div>
-                </section>
+                        <div className="filter-section">
+                            <FilterContext.Consumer>
+                                {context => (
+                                    <ZipForm id="nearby-zip" label="Standort" zip={nearbyZip}
+                                        onZipSubmit={context.setNearbyZip} />
+                                )}
+                            </FilterContext.Consumer>
+                        </div>
+                    </Filter>
 
-                {!firstLoad && <MatchList matchDays={matchDays} isLoading={isLoading} error={error} warning={warning}
-                    onRetry={this.getMatches} />}
-            </>
+                    <div className="page-results">
+                        {!firstLoad && <MatchList matchDays={matchDays} isLoading={isLoading} error={error} warning={warning}
+                            onRetry={this.getMatches} />}
+                    </div>
+                </div>
+            </main>
         );
     }
 }

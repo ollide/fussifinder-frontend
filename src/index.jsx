@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router';
 
 import { FilterProvider } from './FilterContext';
 
-import './index.scss';
+import './index.css';
 import './iconfont.css'
 
 import App from './App';

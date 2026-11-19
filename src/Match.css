@@ -1,0 +1,193 @@
+.match {
+    overflow: hidden;
+}
+
+/* Mobile: time | teams + meta line | actions stacked */
+.match-main {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 12px;
+    padding: 14px 8px 14px 16px;
+}
+
+.match-time {
+    padding-top: 1px;
+    font-size: 17px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.match-teams {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.match-team {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.match-meta {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.match-tags {
+    display: none;
+}
+
+.match-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.match-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+}
+
+@media (hover: hover) {
+    .match-action:hover {
+        background-color: var(--hover-bg);
+        text-decoration: none;
+    }
+}
+
+.match-link {
+    color: var(--link);
+    font-size: 17px;
+}
+
+.match-toggle {
+    color: var(--muted);
+}
+
+.match-chevron {
+    transition: transform 0.15s ease;
+}
+
+.match-chevron.is-open {
+    transform: rotate(180deg);
+}
+
+/* Details below a divider, aligned with the team names */
+.match-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 16px 14px 84px;
+    border-top: 1px solid var(--border);
+    font-size: 15px;
+}
+
+.detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.4;
+}
+
+.detail i {
+    flex-shrink: 0;
+    width: 18px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.detail-link,
+.detail-link i {
+    color: var(--link);
+}
+
+.match-details-error {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+@media (max-width: 359px) {
+    .match-main {
+        grid-template-columns: 48px minmax(0, 1fr) auto;
+        gap: 8px;
+        padding-left: 12px;
+    }
+
+    .match-details {
+        padding-left: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .match-chevron {
+        transition: none;
+    }
+}
+
+/* Desktop: time | teams | tags | actions in one row */
+@media (min-width: 1024px) {
+    .match-main {
+        grid-template-columns: 64px minmax(0, 1fr) auto auto;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 12px 14px 20px;
+    }
+
+    .match-time {
+        padding-top: 0;
+        font-size: 18px;
+    }
+
+    .match-meta {
+        display: none;
+    }
+
+    .match-tags {
+        display: flex;
+        gap: 6px;
+    }
+
+    .match-tag {
+        padding: 3px 10px;
+        border-radius: 999px;
+        background-color: var(--tag-bg);
+        color: var(--muted);
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .match-actions {
+        flex-direction: row;
+    }
+
+    .match-action {
+        height: 40px;
+    }
+
+    .match-details {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px 28px;
+        padding: 12px 20px 14px 100px;
+    }
+
+    .detail {
+        gap: 8px;
+    }
+}

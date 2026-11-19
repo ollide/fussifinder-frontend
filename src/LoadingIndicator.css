@@ -16,7 +16,7 @@
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background: var(--color-green);
+  background: var(--brand);
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 
@@ -68,4 +68,14 @@
   100% {
     transform: translate(19px, 0);
   }
+}
+
+.lds-wrapper.is-small .lds-ellipsis {
+  height: 24px;
+}
+
+.lds-wrapper.is-small .lds-ellipsis div {
+  top: 7px;
+  width: 10px;
+  height: 10px;
 }

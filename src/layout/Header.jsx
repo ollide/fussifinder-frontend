@@ -1,12 +1,13 @@
 import React from 'react';
 
 import Menu from './Menu';
+import { MenuIcon, CloseIcon } from '../icons';
 
 import { preventFocus } from '../util';
 
 import iconwebp from './icon.webp';
 import icon from './icon.png'
-import './Header.scss';
+import './Header.css';
 
 class Header extends React.Component {
 
@@ -19,37 +20,36 @@ class Header extends React.Component {
     }
 
     render() {
+        const open = this.state.activeBurger;
         return (
-            <header>
-                <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
-                    <div className="navbar-brand">
-                        <a className="navbar-item is-family-code has-text-weight-semibold" href="/">
+            <>
+                <header className="navbar">
+                    <div className="navbar-inner">
+                        <a className="navbar-brand" href="/">
                             <picture>
                                 <source type="image/webp" srcSet={iconwebp} />
-                                <img src={icon} alt="Stadion" />
+                                <img src={icon} alt="Stadion" width="44" height="44" />
                             </picture>
-                            Fussifinder
+                            <span className="navbar-wordmark">Fussifinder</span>
                         </a>
 
                         <button
-                            className={"navbar-burger burger " + (this.state.activeBurger && 'is-active')}
-                            aria-label="menu" aria-expanded="false"
+                            className="navbar-burger"
+                            aria-label={open ? 'Menü schließen' : 'Menü öffnen'}
+                            aria-expanded={open}
+                            aria-controls="main-menu"
                             onClick={this.toggleBurger}
                             onMouseDown={preventFocus}
                         >
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
+                            {open ? <CloseIcon /> : <MenuIcon />}
                         </button>
-                    </div>
 
-                    <div className={"navbar-menu " + (this.state.activeBurger && 'is-active')}>
-                        <div className="navbar-end">
-                            <Menu toggleBurger={this.toggleBurger} />
-                        </div>
+                        <Menu open={open} toggleBurger={this.toggleBurger} />
                     </div>
-                </nav>
-            </header >)
+                </header>
+                {open && <div className="menu-backdrop" aria-hidden="true" onClick={this.toggleBurger} />}
+            </>
+        )
     }
 }
 
