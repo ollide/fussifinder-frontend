@@ -1,14 +1,15 @@
 import React from 'react';
 
 import { FilterContext } from './FilterContext';
+import { CalendarIcon } from './icons';
 
 // Mobile devices: calendar segment at the end of the period control (tapping it opens the native date picker).
-// Elsewhere: a "Bestimmter Tag:" date field below the period control.
+// Elsewhere: a date field below the period control.
 class DateFilter extends React.Component {
 
     constructor(props) {
         super(props)
-        this.dateFormat = new Intl.DateTimeFormat('default', { month: 'numeric', day: 'numeric' });
+        this.dateFormat = new Intl.DateTimeFormat('de-DE', { month: 'numeric', day: 'numeric' });
     }
 
     DATE = /^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$/;
@@ -30,7 +31,7 @@ class DateFilter extends React.Component {
         if (window.isMobile) {
             return (
                 <label className={'segment date-segment' + (active ? ' is-active' : '')} aria-label="Datum wählen">
-                    <i className="icon-calendar" aria-hidden="true"></i>
+                    <CalendarIcon />
                     {input}
                     {date && <span>{this.dateFormat.format(new Date(date))}</span>}
                 </label>
@@ -38,9 +39,8 @@ class DateFilter extends React.Component {
         }
 
         return (
-            <label className={'date-field' + (active ? ' is-active' : '')}>
-                <i className="icon-calendar" aria-hidden="true"></i>
-                <span>Bestimmter Tag:</span>
+            <label className={'date-field' + (active ? ' is-active' : '')} aria-label="Datum wählen">
+                <CalendarIcon />
                 {input}
             </label>
         )

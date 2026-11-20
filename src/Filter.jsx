@@ -29,13 +29,13 @@ const LEAGUES = [
 const PERIODS = { T: 'Heute', D3: '3 Tage', D7: '7 Tage' };
 
 const lsKey = 'filter-open';
-const dateFormat = new Intl.DateTimeFormat('default', { day: '2-digit', month: '2-digit' });
+const dateFormat = new Intl.DateTimeFormat('de-DE', { day: '2-digit', month: '2-digit' });
 
 const periodLabel = (period) => PERIODS[period]
     || (/^\d{4}-\d{2}-\d{2}$/.test(period) ? dateFormat.format(new Date(period)) : period);
 
 // Mobile: collapsed to a summary row by default (remembered); desktop: always open as sidebar.
-// `summary`: extra summary parts for the children (e.g. perimeter), `forceOpen`: children need input
+// `summary`: extra summary parts for the children (e.g. perimeter)
 class Filter extends React.Component {
 
     state = {
@@ -73,7 +73,7 @@ class Filter extends React.Component {
                         .filter(m => m.leagueKey === key && context.team[m.teamTypeKey]).length;
 
                     const mobileDevice = window.isMobile;
-                    const collapsible = context.isMobile && !this.props.forceOpen;
+                    const collapsible = context.isMobile;
                     const open = !collapsible || this.state.open;
 
                     const summary = [

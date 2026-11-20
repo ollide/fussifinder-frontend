@@ -1,6 +1,8 @@
 import React from 'react';
 import { useContext } from "react";
 
+import { DEFAULT_KM, DEFAULT_REGION, NEARBY, sameRegion } from './regions';
+
 export const FilterContext = React.createContext()
 
 export function useAppContext() {
@@ -8,6 +10,28 @@ export function useAppContext() {
 }
 
 const desktopWidth = 1024;
+const MAX_RECENTS = 4;
+
+const isRegion = (r) => r && typeof r.type === 'string' && typeof r.name === 'string';
+
+// Recent regions from localStorage; before routes existed only the last region was stored (key 'region')
+const loadRecents = (perimeter) => {
+    try {
+        const recents = JSON.parse(localStorage.getItem('recent-regions'));
+        if (Array.isArray(recents) && recents.length) {
+            return recents.filter(isRegion).slice(0, MAX_RECENTS);
+        }
+        const region = JSON.parse(localStorage.getItem('region'));
+        localStorage.removeItem('region');
+        if (isRegion(region)) {
+            // the old postal code region becomes a search around that postal code
+            return [region.type === 'ZIP' ? { type: NEARBY, name: region.name, km: perimeter / 1000 } : region];
+        }
+    } catch {
+        localStorage.removeItem('recent-regions');
+    }
+    return [DEFAULT_REGION];
+};
 
 export class FilterProvider extends React.Component {
     constructor(props) {
@@ -39,37 +63,30 @@ export class FilterProvider extends React.Component {
             this.setState({ perimeter });
         }
 
-        this.setNearbyZip = (nearbyZip) => {
-            this.setState({ nearbyZip });
-        }
-
         this.isVisible = (teamKey, leagueKey) => {
             return this.state.league[leagueKey] && this.state.team[teamKey];
         }
 
-        this.setRegion = (region) => {
-            this.setState({ region });
-        }
+        // What hides a match: its team type and/or league, as shown on the match ([] if it's visible)
+        this.hiddenBy = (match) => [
+            ...(this.state.team[match.teamTypeKey] ? [] : [match.teamType]),
+            ...(this.state.league[match.leagueKey] ? [] : [match.league]),
+        ]
 
-        let region;
-        try {
-            region = JSON.parse(localStorage.getItem('region'));
-        } catch {
-            localStorage.removeItem('region');
+        // Most recently shown regions, newest first; the first one is what '/' opens
+        this.addRecent = (region) => {
+            this.setState(state => ({
+                recents: [region, ...state.recents.filter(r => !sameRegion(r, region))].slice(0, MAX_RECENTS),
+            }));
         }
-        region = region || {
-            type: 'CITY',
-            name: 'hamburg',
-            displayName: 'Hamburg',
-        };
 
         const period = localStorage.getItem('period') || 'D3';
-        const perimeter = localStorage.getItem('perimeter') || '10000';
+        const perimeter = localStorage.getItem('perimeter') || String(DEFAULT_KM * 1000);
 
         this.state = {
             isMobile: this.isMobile(),
-            region,
-            setRegion: this.setRegion,
+            recents: loadRecents(perimeter),
+            addRecent: this.addRecent,
 
             team: {
                 Herren: true,
@@ -96,8 +113,8 @@ export class FilterProvider extends React.Component {
             toggleLeague: this.toggleLeague,
             setPeriod: this.setPeriod,
             setPerimeter: this.setPerimeter,
-            setNearbyZip: this.setNearbyZip,
             isVisible: this.isVisible,
+            hiddenBy: this.hiddenBy,
         }
     }
 
@@ -120,12 +137,12 @@ export class FilterProvider extends React.Component {
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.updateDimensions);
+        window.removeEventListener('resize', this.updateViewType);
     }
 
     componentDidUpdate() {
-        const { region, team, league, period, perimeter } = this.state;
-        localStorage.setItem('region', JSON.stringify(region));
+        const { recents, team, league, period, perimeter } = this.state;
+        localStorage.setItem('recent-regions', JSON.stringify(recents));
         localStorage.setItem('team', JSON.stringify(team));
         localStorage.setItem('league', JSON.stringify(league));
         localStorage.setItem('period', period);

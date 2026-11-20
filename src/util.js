@@ -14,9 +14,6 @@ export const preventFocus = (e) => {
     e && e.preventDefault();
 }
 
-const kickoffFormat = new Intl.DateTimeFormat('default', { hour: '2-digit', minute: '2-digit' });
-export const formatKickoff = (date) => kickoffFormat.format(new Date(date));
-
 // serverFailed: the server was reachable and reported a fatal error itself
 export const streamError = (streamTotal, matchCount, serverFailed = false) => {
     if (serverFailed) {

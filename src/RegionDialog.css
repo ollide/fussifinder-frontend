@@ -1,0 +1,298 @@
+/* Mobile (< 1024px): bottom sheet, its top a quarter down the screen (within thumb reach) */
+
+.region-dialog {
+    position: fixed;
+    inset: auto 0 0 0;
+    width: 100%;
+    max-width: none;
+    height: min(75dvh, 680px);
+    max-height: calc(100dvh - 48px);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 16px 16px 0 0;
+    background-color: var(--surface);
+    box-shadow: var(--shadow-pop);
+    color: var(--text);
+    overflow: hidden;
+}
+
+.region-dialog::backdrop {
+    background-color: var(--backdrop);
+}
+
+/* while searching it grows: the keyboard covers the lower half */
+.region-dialog:has(.region-search input:focus) {
+    height: calc(100dvh - 48px);
+}
+
+/* the page behind the open dialog doesn't scroll */
+html:has(.region-dialog[open]) {
+    overflow: hidden;
+}
+
+.region-dialog-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.region-dialog-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 8px 0 16px;
+}
+
+.region-dialog-head h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.region-dialog-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    color: var(--muted);
+}
+
+.region-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    height: 44px;
+    margin: 8px 16px 0;
+    padding: 0 12px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-control);
+    color: var(--muted);
+}
+
+.region-search:focus-within {
+    border-color: var(--focus);
+    box-shadow: 0 0 0 1px var(--focus);
+}
+
+.region-search svg {
+    flex-shrink: 0;
+}
+
+.region-search input {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--text);
+    font-size: 16px;
+}
+
+.region-search input:focus-visible {
+    outline: none;
+}
+
+.region-search input::placeholder {
+    color: var(--muted);
+    opacity: 1;
+}
+
+.region-dialog-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1 1 auto;
+    min-height: 0;
+    padding: 16px 16px 0;
+}
+
+.region-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.region-section .chip {
+    height: 36px;
+    font-size: 14px;
+}
+
+.region-section .chip .icon-pin {
+    color: var(--link);
+}
+
+.region-section .chip.is-active .icon-pin {
+    color: inherit;
+}
+
+.region-tabs {
+    flex-shrink: 0;
+}
+
+.region-tabs .segment {
+    font-size: 14px;
+}
+
+.region-tab-count {
+    display: none;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+/* only the list scrolls: search, recent regions and tabs stay in place */
+.region-list,
+.region-results {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    margin: -8px -8px 0;
+    padding: 0 8px 16px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    list-style: none;
+}
+
+.region-item,
+.region-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    min-height: 48px;
+    padding: 6px 12px;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    color: var(--text);
+    font-size: 16px;
+    text-align: left;
+}
+
+.region-item.is-selected {
+    background-color: var(--selected-bg);
+    color: var(--selected-fg);
+    font-weight: 600;
+}
+
+.region-result-name strong {
+    font-weight: 700;
+}
+
+.region-result-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+}
+
+.region-result .icon-pin {
+    flex-shrink: 0;
+    color: var(--link);
+}
+
+.region-type {
+    flex-shrink: 0;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background-color: var(--tag-bg);
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.region-results-count {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.region-list-info {
+    padding: 12px;
+    color: var(--muted);
+}
+
+@media (hover: hover) {
+    .region-dialog-close:hover,
+    .region-item:hover,
+    .region-result:hover {
+        background-color: var(--hover-bg);
+    }
+
+    .region-item.is-selected:hover {
+        background-color: var(--selected-bg);
+    }
+}
+
+/* Desktop: centered dialog */
+
+@media (min-width: 1024px) {
+    .region-dialog,
+    .region-dialog:has(.region-search input:focus) {
+        inset: 96px 0 auto 0;
+        height: auto;
+        width: 600px;
+        max-height: calc(100vh - 160px);
+        margin: 0 auto;
+        border-radius: 16px;
+    }
+
+    .region-dialog-inner {
+        height: min(720px, calc(100vh - 160px));
+    }
+
+    .region-dialog-head {
+        padding: 14px 12px 0 24px;
+    }
+
+    .region-dialog-head h2 {
+        font-size: 20px;
+    }
+
+    .region-search {
+        height: 42px;
+        margin: 12px 24px 0;
+    }
+
+    .region-search input {
+        font-size: 15px;
+    }
+
+    .region-dialog-body {
+        padding: 18px 24px 0;
+    }
+
+    .region-section .chip {
+        height: 32px;
+    }
+
+    .region-tab-count {
+        display: inline;
+    }
+
+    .region-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: min-content;
+        gap: 2px 6px;
+        padding-bottom: 20px;
+    }
+
+    .region-item {
+        min-height: 36px;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 15px;
+    }
+
+    .region-result {
+        min-height: 44px;
+        font-size: 15px;
+    }
+}

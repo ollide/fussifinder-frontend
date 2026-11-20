@@ -1,20 +1,14 @@
 import React from 'react';
 
-import LoadingIndicator from './LoadingIndicator';
-
 import CONFIG from './config';
+import { PinIcon, PitchIcon, TrophyIcon } from './icons';
 import { handleFetchJsonResponse } from './util';
 
 class MatchDetails extends React.Component {
 
     state = {
         isLoading: true,
-        details: {
-            address: '-',
-            competition: '-',
-            ground: '-',
-            pitch: '-',
-        },
+        details: null,
         error: null,
     }
 
@@ -46,24 +40,32 @@ class MatchDetails extends React.Component {
         const { details, isLoading, error } = this.state;
         return (
             <div className="match-details" id={this.props.domId}>
-                {isLoading ? <LoadingIndicator small /> : error ?
+                {isLoading ?
+                    // placeholder rows with the loaded details' layout: the card doesn't jump when they arrive
+                    <div className="match-details-loading" role="status" aria-label="Details werden geladen">
+                        {[TrophyIcon, PitchIcon, PinIcon].map((Icon, i) =>
+                            <div className="detail" key={i}>
+                                <Icon />
+                                <span className="detail-placeholder"></span>
+                            </div>)}
+                    </div> : error ?
                     <div className="match-details-error">
                         <p>Details konnten nicht geladen werden.</p>
                         <button className="btn" onClick={this.loadMatchDetails}>Erneut versuchen</button>
                     </div> : <>
                         <div className="detail">
-                            <i className="icon-award" aria-hidden="true"></i>
+                            <TrophyIcon />
                             <span>{details.competition}</span>
                         </div>
                         <div className="detail">
-                            <i className="icon-soccer-ball" aria-hidden="true"></i>
+                            <PitchIcon />
                             <span>{details.ground} · {details.pitch}</span>
                         </div>
                         <a className="detail detail-link"
                             href={"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(details.address)}
                             target="_blank" rel="noopener noreferrer"
                         >
-                            <i className="icon-location" aria-hidden="true"></i>
+                            <PinIcon />
                             <span>{details.address}</span>
                         </a>
                     </>}

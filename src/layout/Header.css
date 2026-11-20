@@ -1,83 +1,49 @@
-.navbar {
-    position: relative;
-    z-index: 30;
-    flex-shrink: 0;
-    background-color: var(--nav);
-    color: var(--nav-fg);
-    --focus: #8fbc00;
+.site-header {
+    width: 100%;
+    max-width: 1184px;
+    margin: 0 auto;
+    padding: 10px 16px 0;
 }
 
-.navbar-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: var(--navbar-height);
-    padding: 0 8px 0 12px;
-}
-
-.navbar-brand {
-    display: flex;
+.brand {
+    display: inline-flex;
     align-items: center;
     gap: 8px;
-    min-width: 0;
-    padding: 4px 8px 4px 2px;
+    min-height: 44px;
+    padding-right: 6px;
     border-radius: 8px;
-    color: var(--nav-fg);
+    color: var(--text);
 }
 
-.navbar-brand:hover {
+.brand:hover {
     text-decoration: none;
 }
 
-.navbar-brand img {
-    width: 44px;
-    height: 44px;
+.stadium-mark {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    color: var(--link);
 }
 
-.navbar-wordmark {
+.brand-wordmark {
     font-family: var(--font-mono);
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.02em;
 }
 
-.navbar-burger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border: 0;
-    border-radius: 8px;
-    background: none;
-    color: var(--nav-fg);
-}
-
-@media (hover: hover) {
-    .navbar-burger:hover {
-        background-color: var(--nav-hover);
-    }
-}
-
-/* Dims the page below the open mobile menu */
-.menu-backdrop {
-    position: fixed;
-    inset: 0;
-    z-index: 20;
-    background-color: var(--backdrop);
-}
-
 @media (min-width: 1024px) {
-    .navbar-inner {
-        max-width: 1184px;
-        height: var(--navbar-height);
-        margin: 0 auto;
-        padding: 0 24px 0 18px;
+    .site-header {
+        padding: 16px 24px 0;
     }
 
-    .navbar-burger,
-    .menu-backdrop {
-        display: none;
+    .stadium-mark {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand-wordmark {
+        font-size: 16px;
     }
 }

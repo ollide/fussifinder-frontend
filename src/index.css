@@ -5,32 +5,29 @@
 
     --brand: #7ca300;
 
-    --bg: #f4f5f7;
+    --bg: #f6f8fa;
     --surface: #ffffff;
-    --border: #dfe3e8;
-    --border-strong: #b1bac4;
-    --text: #161b22;
-    --muted: #57606a;
-    --link: #567200;
-    --hover-bg: #f0f2f4;
-    --tag-bg: #eef0f3;
-    --badge-bg: rgba(33, 38, 45, 0.1);
-    --focus: #567200;
+    --border: #d1d9e0;
+    --border-strong: #8c959f;
+    --text: #1f2328;
+    --muted: #59636e;
+    --link: #4d7c0f;
+    --hover-bg: #eff2f5;
+    --tag-bg: #eff2f5;
+    --badge-bg: rgba(31, 35, 40, 0.08);
+    --focus: #4d7c0f;
 
-    --accent: #567200;
-    --accent-hover: #4a6100;
-    --accent-border: #4a6100;
-    --on-accent: #ffffff;
-    --selected-bg: #eef4dc;
-    --selected-fg: #4a6100;
+    /* the dark mode's lime with dark text */
+    --accent: #8fbc00;
+    --accent-hover: #7ca300;
+    --accent-border: #7ca300;
+    --on-accent: #0d1117;
+    --selected-bg: rgba(124, 163, 0, 0.14);
+    --selected-fg: #3f6212;
 
-    --nav: #21262d;
-    --nav-fg: #f0f6fc;
-    --nav-hover: rgba(240, 246, 252, 0.1);
-
-    --seg-bg: #e4e7eb;
+    --seg-bg: #eff2f5;
     --seg-on: #ffffff;
-    --seg-shadow: 0 1px 2px rgba(16, 24, 40, 0.12);
+    --seg-shadow: 0 1px 2px rgba(31, 35, 40, 0.12), 0 0 0 1px rgba(31, 35, 40, 0.06);
 
     --shadow-pop: 0 12px 24px rgba(16, 24, 40, 0.12);
     --backdrop: rgba(13, 17, 23, 0.4);
@@ -44,7 +41,6 @@
     --warning-border: #eed888;
     --warning-fg: #4d2d00;
 
-    --navbar-height: 56px;
     --radius-card: 14px;
     --radius-control: 10px;
     --font: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
@@ -74,7 +70,6 @@
         --selected-bg: rgba(124, 163, 0, 0.16);
         --selected-fg: #8fbc00;
 
-        --nav: #010409;
 
         --seg-bg: #0d1117;
         --seg-on: #30363d;
@@ -117,7 +112,6 @@
     --selected-bg: rgba(124, 163, 0, 0.16);
     --selected-fg: #8fbc00;
 
-    --nav: #010409;
 
     --seg-bg: #0d1117;
     --seg-on: #30363d;
@@ -148,6 +142,8 @@ html {
     background-color: var(--bg);
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    /* no gray/blue flash on tap (Android, iOS): controls show their own states */
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -199,19 +195,11 @@ input {
 
 button {
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
 }
 
 :focus-visible {
     outline: 2px solid var(--focus);
     outline-offset: 2px;
-}
-
-/* Fontello glyphs: the font's default side margins would throw off icon alignment */
-[class^="icon-"]::before,
-[class*=" icon-"]::before {
-    margin-left: 0;
-    margin-right: 0;
 }
 
 /* Shared controls */
@@ -245,18 +233,11 @@ button {
     }
 }
 
-.btn-primary {
-    border-color: var(--accent-border);
-    background-color: var(--accent);
-    color: var(--on-accent);
+.btn-small {
+    height: 36px;
+    padding: 0 14px;
+    font-size: 14px;
     font-weight: 600;
-}
-
-@media (hover: hover) {
-    .btn-primary:hover {
-        border-color: var(--accent-hover);
-        background-color: var(--accent-hover);
-    }
 }
 
 /* Segmented control: a group of .segment buttons, one of them .is-active */
@@ -322,10 +303,6 @@ button {
 }
 
 @media (min-width: 1024px) {
-    :root {
-        --navbar-height: 60px;
-    }
-
     .segment {
         height: 34px;
         border-radius: 7px;

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { ChevronIcon } from './icons';
 
+// Links to the previous and next day (the ids are on the days' sections: a stuck header isn't where its day starts)
 class MatchDayAnchor extends React.Component {
 
     render() {
@@ -13,8 +14,7 @@ class MatchDayAnchor extends React.Component {
         const hasNext = day < this.props.total;
         return (
             <>
-                <a id={anchor + day}
-                    href={prevAnchor}
+                <a href={prevAnchor}
                     className={'matchday-anchor prev' + (prevAnchor ? '' : ' disabled')}
                     aria-label="Vorheriger Spieltag"
                     aria-disabled={!prevAnchor || undefined}

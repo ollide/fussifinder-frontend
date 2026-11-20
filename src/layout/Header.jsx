@@ -1,56 +1,16 @@
 import React from 'react';
 
-import Menu from './Menu';
-import { MenuIcon, CloseIcon } from '../icons';
-
-import { preventFocus } from '../util';
-
-import iconwebp from './icon.webp';
-import icon from './icon.png'
+import StadiumMark from './StadiumMark';
 import './Header.css';
 
-class Header extends React.Component {
-
-    state = {
-        activeBurger: false,
-    }
-
-    toggleBurger = () => {
-        this.setState((state) => ({ activeBurger: !state.activeBurger }));
-    }
-
-    render() {
-        const open = this.state.activeBurger;
-        return (
-            <>
-                <header className="navbar">
-                    <div className="navbar-inner">
-                        <a className="navbar-brand" href="/">
-                            <picture>
-                                <source type="image/webp" srcSet={iconwebp} />
-                                <img src={icon} alt="Stadion" width="44" height="44" />
-                            </picture>
-                            <span className="navbar-wordmark">Fussifinder</span>
-                        </a>
-
-                        <button
-                            className="navbar-burger"
-                            aria-label={open ? 'Menü schließen' : 'Menü öffnen'}
-                            aria-expanded={open}
-                            aria-controls="main-menu"
-                            onClick={this.toggleBurger}
-                            onMouseDown={preventFocus}
-                        >
-                            {open ? <CloseIcon /> : <MenuIcon />}
-                        </button>
-
-                        <Menu open={open} toggleBurger={this.toggleBurger} />
-                    </div>
-                </header>
-                {open && <div className="menu-backdrop" aria-hidden="true" onClick={this.toggleBurger} />}
-            </>
-        )
-    }
-}
+// Brand line above the page title; the region is chosen from the title (RegionDialog)
+const Header = () => (
+    <header className="site-header">
+        <a className="brand" href="/">
+            <StadiumMark />
+            <span className="brand-wordmark">Fussifinder</span>
+        </a>
+    </header>
+);
 
 export default Header;

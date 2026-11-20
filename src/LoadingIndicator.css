@@ -69,13 +69,3 @@
     transform: translate(19px, 0);
   }
 }
-
-.lds-wrapper.is-small .lds-ellipsis {
-  height: 24px;
-}
-
-.lds-wrapper.is-small .lds-ellipsis div {
-  top: 7px;
-  width: 10px;
-  height: 10px;
-}
