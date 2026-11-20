@@ -1,21 +1,21 @@
 .page {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     width: 100%;
     max-width: 1184px;
     margin: 0 auto;
-    padding: 20px 16px 8px;
+    padding: 16px 16px 8px;
 }
 
 .page-head {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
 }
 
 .page-title {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.01em;
@@ -24,13 +24,13 @@
 
 .page-subtitle {
     color: var(--muted);
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .page-body {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 }
 
 .page-results {
@@ -87,35 +87,34 @@
 .stream-progress {
     -webkit-appearance: none;
     appearance: none;
+    position: absolute;
+    top: calc(var(--navbar-height) - 3px);
+    left: 0;
+    z-index: 31;
     display: block;
     width: 100%;
-    max-width: 480px;
-    height: 6px;
-    margin-top: 8px;
+    height: 3px;
+    margin: 0;
     padding: 0;
     overflow: hidden;
     border: none;
-    border-radius: 999px;
-    background-color: var(--border);
+    border-radius: 0;
+    background-color: transparent;
     color: var(--brand);
     animation: progress-in 0.3s ease forwards;
 }
 
 .stream-progress::-webkit-progress-bar {
-    background-color: var(--border);
+    background-color: transparent;
 }
 
 .stream-progress::-webkit-progress-value {
     background-color: var(--brand);
+    transition: width 0.3s ease;
 }
 
 .stream-progress::-moz-progress-bar {
     background-color: var(--brand);
-}
-
-.stream-progress.is-hidden {
-    opacity: 0;
-    animation: none;
 }
 
 .stream-progress.is-fading {
@@ -126,6 +125,10 @@
     .page {
         gap: 24px;
         padding: 32px 24px;
+    }
+
+    .page-head {
+        gap: 4px;
     }
 
     .page-title {

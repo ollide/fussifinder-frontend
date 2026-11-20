@@ -1,8 +1,64 @@
-.filter-card {
+.filter-body {
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 16px;
+}
+
+/* Mobile: summary row that opens / closes the filters */
+.filter-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 52px;
+    padding: 10px 12px 10px 16px;
+    border: 0;
+    border-radius: var(--radius-card);
+    background: none;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.35;
+    text-align: left;
+}
+
+.filter-toggle > svg:first-child {
+    flex-shrink: 0;
+    color: var(--link);
+}
+
+.filter-toggle-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+.filter-toggle-text.is-open {
+    font-weight: 600;
+}
+
+.filter-chevron {
+    flex-shrink: 0;
+    color: var(--muted);
+    transition: transform 0.15s ease;
+}
+
+.filter-chevron.is-open {
+    transform: rotate(180deg);
+}
+
+.filter-card.is-collapsible .filter-body {
+    padding-top: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .filter-chevron {
+        transition: none;
+    }
 }
 
 .filter-section {
@@ -190,7 +246,7 @@
 }
 
 @media (min-width: 1024px) {
-    .filter-card {
+    .filter-body {
         gap: 20px;
         padding: 20px;
     }

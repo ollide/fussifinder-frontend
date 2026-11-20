@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 56px;
+    height: var(--navbar-height);
     padding: 0 8px 0 12px;
 }
 
@@ -71,7 +71,7 @@
 @media (min-width: 1024px) {
     .navbar-inner {
         max-width: 1184px;
-        height: 60px;
+        height: var(--navbar-height);
         margin: 0 auto;
         padding: 0 24px 0 18px;
     }

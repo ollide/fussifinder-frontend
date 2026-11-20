@@ -44,6 +44,7 @@
     --warning-border: #eed888;
     --warning-fg: #4d2d00;
 
+    --navbar-height: 56px;
     --radius-card: 14px;
     --radius-control: 10px;
     --font: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
@@ -162,6 +163,7 @@ body {
 }
 
 #root {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -320,6 +322,10 @@ button {
 }
 
 @media (min-width: 1024px) {
+    :root {
+        --navbar-height: 60px;
+    }
+
     .segment {
         height: 34px;
         border-radius: 7px;

@@ -2,24 +2,27 @@ import React from 'react';
 
 import MatchSummary from './MatchSummary';
 
-// Page title, match summary and the stream's progress bar
-const PageHead = ({ title, firstLoad, isLoading, matchDays, streamProgress, streamFading }) => (
-    <div className="page-head">
-        <h1 className="page-title">{title}</h1>
+// Page title, match summary and the stream's progress bar (drawn along the navbar's bottom edge)
+const PageHead = ({ title, firstLoad, isLoading, matchDays, streamProgress, streamFading }) => {
+    const streaming = streamProgress && streamProgress.current < streamProgress.total;
+    return (
+        <div className="page-head">
+            <h1 className="page-title">{title}</h1>
 
-        {!firstLoad && <>
-            <p className="page-subtitle">
-                {isLoading ? <>Spiele werden geladen…</> :
-                    <MatchSummary matchDays={matchDays} />}
-            </p>
-            <progress
-                className={`stream-progress${!streamProgress ? ' is-hidden' : streamFading ? ' is-fading' : ''}`}
-                value={streamProgress?.current ?? 0}
-                max={streamProgress?.total ?? 1}
-                aria-label="Ladefortschritt"
-            />
-        </>}
-    </div>
-);
+            {!firstLoad && <>
+                <p className="page-subtitle" aria-live="polite">
+                    {isLoading ? <>Spiele werden geladen…</> :
+                        <MatchSummary matchDays={matchDays} progress={streaming ? streamProgress : null} />}
+                </p>
+                {streamProgress && <progress
+                    className={'stream-progress' + (streamFading ? ' is-fading' : '')}
+                    value={streamProgress.current}
+                    max={streamProgress.total || 1}
+                    aria-label="Ladefortschritt"
+                />}
+            </>}
+        </div>
+    );
+};
 
 export default PageHead;

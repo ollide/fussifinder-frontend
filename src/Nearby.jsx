@@ -63,7 +63,7 @@ class Nearby extends Component {
 
     render() {
         const { firstLoad, isLoading, matchDays, error, warning, streamProgress, streamFading } = this.state;
-        const { nearbyZip } = this.props;
+        const { nearbyZip, perimeter } = this.props;
 
         return (
             <main className="page">
@@ -71,7 +71,8 @@ class Nearby extends Component {
                     matchDays={matchDays} streamProgress={streamProgress} streamFading={streamFading} />
 
                 <div className="page-body">
-                    <Filter matchDays={matchDays}>
+                    <Filter matchDays={matchDays} forceOpen={!nearbyZip}
+                        summary={[`${perimeter / 1000} km um ${nearbyZip}`]}>
                         <div className="filter-section">
                             <h2 className="section-label">Umkreis</h2>
                             <div className="segmented" role="group" aria-label="Umkreis">
